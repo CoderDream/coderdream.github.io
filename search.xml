@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[iOS]]></title>
+    <title><![CDATA[macOS]]></title>
+    <url>%2F2019%2F01%2F14%2FmacOS%2F</url>
+    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+        <tag>Maven</tag>
+        <tag>WebStorm</tag>
+        <tag>NodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019年第3周]]></title>
+    <url>%2F2019%2F01%2F14%2F2019Week03%2F</url>
+    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第4章 Activiti6.0引擎配置]]></title>
     <url>%2F2019%2F01%2F14%2FActiviti6InAction_Chapter04%2F</url>
-    <content type="text"><![CDATA[第4章 Activiti6.0引擎配置本章为大家介绍Activiti6.0配置，所有的配置都是通过ProcessEngineConfiguration类来设置的，其中主要的配置包括数据源，数据类型，创建数据库表的策略，作业执行器的配置，流程历史数据记录的详细级别，Activiti对日志的配置支持，以及在流程执行过程中定义方便定位信息的mdc变量，Activiti提供的事件处理程序ActivitiEven… 4-1 本章概述4-2 创建流程引擎配置-config_samples4-3 创建流程引擎配置-archetype12Admin@Admin-PC MINGW64 /d/Java/GitHub/Activiti6/tooling/archetypes/activiti-archetype-unittest (study6)$ mvn clean install 4-4 数据库配置-dbconfig4-5 数据库配置-dbconfig_code4-6 日志记录配置-logging4-7 日志记录配置-logging_mdc4-8 历史记录配置-history-14-9 历史记录配置-history-24-10 事件处理及监听器配置-eventlog4-11 事件处理及监听器配置-eventLinstener-14-12 事件处理及监听器配置-eventLinstener-24-13 命令拦截器配置-command-14-14 命令拦截器配置-command-24-15 作业执行器配置-job-14-16 作业执行器配置-job-24-17 Activiti与spring集成-14-18 Activiti与spring集成-24-19 Activiti与spring集成-3]]></content>
+    <content type="text"><![CDATA[第4章 Activiti6.0引擎配置本章为大家介绍Activiti6.0配置，所有的配置都是通过ProcessEngineConfiguration类来设置的，其中主要的配置包括数据源，数据类型，创建数据库表的策略，作业执行器的配置，流程历史数据记录的详细级别，Activiti对日志的配置支持，以及在流程执行过程中定义方便定位信息的mdc变量，Activiti提供的事件处理程序ActivitiEven… 4-1 本章概述4-2 创建流程引擎配置-config_samples4-3 创建流程引擎配置-archetype12Admin@Admin-PC MINGW64 /d/Java/GitHub/Activiti6/tooling/archetypes/activiti-archetype-unittest (study6)$ mvn clean install 执行完上面的命令，就可以在新建工程的时候使用这个脚手架了： 4-4 数据库配置-dbconfig4-5 数据库配置-dbconfig_code4-6 日志记录配置-logging4-7 日志记录配置-logging_mdc4-8 历史记录配置-history-14-9 历史记录配置-history-24-10 事件处理及监听器配置-eventlog4-11 事件处理及监听器配置-eventLinstener-14-12 事件处理及监听器配置-eventLinstener-24-13 命令拦截器配置-command-14-14 命令拦截器配置-command-24-15 作业执行器配置-job-14-16 作业执行器配置-job-24-17 Activiti与spring集成-14-18 Activiti与spring集成-24-19 Activiti与spring集成-3]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -111,9 +137,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>TeamViewer</tag>
-        <tag>GitHub</tag>
         <tag>Activiti6</tag>
+        <tag>GitHub</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
