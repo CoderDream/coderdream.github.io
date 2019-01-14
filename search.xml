@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS]]></title>
+    <url>%2F2019%2F01%2F14%2FActiviti6InAction_Chapter04%2F</url>
+    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>SpriteKit</tag>
+        <tag>Swift4</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo 系统 BlueLake 主题安装与设置]]></title>
     <url>%2F2019%2F01%2F09%2FHexo%2F</url>
-    <content type="text"><![CDATA[文章目录 安装与初始化 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 添加本地搜索 设置阅读全文 解决busuanzi无效的方法 安装与初始化 安装hexo： 1$ npm install hexo-cli -g 创建网站目录： 1$ mkdir blog 通过blog目录创建站点： 1$ hexo init blog 安装过程： 12345678admindeMacBook-Pro:~ admin hexo init blogINFO Cloning hexo-starter to ~/bloghexo-site@0.0.0 /Users/admin/blog... 部分省略 ├── range-parser@1.2.0 └── statuses@1.3.0 INFO Start blogging with Hexo! 安装完成后,进入blog站点目录,安装一下npm插件支持： 12$ cd blog$ npm install 启动站点： 123$ hexo serverINFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 查看站点：在浏览器中查看http://localhost:4000/ 配置GitHub在blog目录,打开_config.yml 1$ vim _config.yml 修改配置文件_config.yml中deploy下的内容 123456# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/CoderDream/coderdream.github.io.git branch: master Github部署配置参数详解 12345deploy: 表示部署设置type: 部署类型,支持git,herokurepo: 部署位置 git仓库项目的位置branch: 部署到Github的分支名称message: 自定义提交信息 设置语言 1language: zh-CN 安装部署插件配置修改完成后,需要安装部署插件:安装 hexo-deployer-git 插件: 在blog目录执行以下命令即可 1$ npm install hexo-deployer-git --save 插件安装完成后,执行项目清理和静态网页生成 12$ hexo clean$ hexo genarate 安装完成后进行部署 1$ hexo deploy 一键发布 1hexo clean; hexo generate; hexo deploy 查看结果然后到你的Github上项目的主页,看看master分支上的代码更新时间 给自己的Hexo博客加上图片 首先把blog（hexo）目录下的_config.yml里的psot_asset_folder:设置为true 在blog（hexo）目录下执行: 1npm install hexo-asset-image --save 在blog（hexo）目录下Git Bash Here，运行hexo n “博客名”来生成md博客时，会在_post目录下看到一个与博客同名的文件夹。 将想要上传的图片先扔到文件夹下，然后在博客中使用markdown的格式引入图片：1![你想要输入的替代文字](xxxx/图片名.jpg) Hexo中提供文件下载功能 在source目录下新建dounload文件夹，将需要上传的文件xx.xls复制到该目录。 在_posts博文中，插入：1[点击下载](/download/xx.xls&quot;) 添加本地搜索默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件：1$ npm install hexo-generator-json-content@2.2.0 --save 然后在根_config.yml添加配置： 123456789101112131415161718jsonContent: meta: false pages: false posts: title: true date: true path: true text: true raw: false content: false slug: false updated: false comments: false link: false permalink: false excerpt: false categories: false tags: true 最后在主题_config.yml添加配置(themes/BlueLake/_config.yml)： 1local_search: true 设置阅读全文 您可以在文章的 front-matter 中添加 description，并提供文章摘录，或在文章中使用下面的代码手动进行截断（Hexo推荐的方式）。1&lt;escape&gt;&lt;!-- more --&gt;&lt;/escape&gt; 解决busuanzi无效的方法 使用nodepad++的【搜索】-&gt;【查找】-&gt;【文件查找】的【在文件中替换】： 1dn-lbstatics.qbox.me 替换为 busuanzi.ibruce.info 如图所示 参考文档： Hexo 创建“关于我”界面 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 BlueLake官网 解决 busuanzi 无效的方法（hexo-theme-next）]]></content>
+    <content type="text"><![CDATA[文章目录 安装与初始化 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 添加本地搜索 设置阅读全文 解决busuanzi无效的方法 &nbsp;&nbsp; 安装与初始化 安装hexo： 1$ npm install hexo-cli -g 创建网站目录： 1$ mkdir blog 通过blog目录创建站点： 1$ hexo init blog 安装过程： 12345678admindeMacBook-Pro:~ admin hexo init blogINFO Cloning hexo-starter to ~/bloghexo-site@0.0.0 /Users/admin/blog... 部分省略 ├── range-parser@1.2.0 └── statuses@1.3.0 INFO Start blogging with Hexo! 安装完成后,进入blog站点目录,安装一下npm插件支持(如果是其他电脑克隆了这个项目，需要执行下面的安装命令)： 12$ cd blog$ npm install 启动站点： 123$ hexo serverINFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 查看站点：在浏览器中查看http://localhost:4000/ 配置GitHub在blog目录,打开_config.yml 1$ vim _config.yml 修改配置文件_config.yml中deploy下的内容 1234567&amp;nbsp;# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/CoderDream/coderdream.github.io.git branch: master Github部署配置参数详解 12345deploy: 表示部署设置type: 部署类型,支持git,herokurepo: 部署位置 git仓库项目的位置branch: 部署到Github的分支名称message: 自定义提交信息 设置语言 1language: zh-CN 安装部署插件配置修改完成后,需要安装部署插件:安装 hexo-deployer-git 插件: 在blog目录执行以下命令即可 1$ npm install hexo-deployer-git --save 插件安装完成后,执行项目清理和静态网页生成 12$ hexo clean$ hexo genarate 安装完成后进行部署 1$ hexo deploy 一键发布 1hexo clean; hexo generate; hexo deploy 查看结果然后到你的Github上项目的主页,看看master分支上的代码更新时间 给自己的Hexo博客加上图片 首先把blog（hexo）目录下的_config.yml里的psot_asset_folder:设置为true 在blog（hexo）目录下执行: 1npm install hexo-asset-image --save 在blog（hexo）目录下Git Bash Here，运行hexo n “博客名”来生成md博客时，会在_post目录下看到一个与博客同名的文件夹。 将想要上传的图片先扔到文件夹下，然后在博客中使用markdown的格式引入图片：1![你想要输入的替代文字](xxxx/图片名.jpg) Hexo中提供文件下载功能 在source目录下新建dounload文件夹，将需要上传的文件xx.xls复制到该目录。 在_posts博文中，插入：1[点击下载](/download/xx.xls&quot;) 添加本地搜索默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件：1$ npm install hexo-generator-json-content@2.2.0 --save 然后在根_config.yml添加配置： 123456789101112131415161718jsonContent: meta: false pages: false posts: title: true date: true path: true text: true raw: false content: false slug: false updated: false comments: false link: false permalink: false excerpt: false categories: false tags: true 最后在主题_config.yml添加配置(themes/BlueLake/_config.yml)： 1local_search: true 设置阅读全文 您可以在文章的 front-matter 中添加 description，并提供文章摘录，或在文章中使用下面的代码手动进行截断（Hexo推荐的方式）。1&lt;escape&gt;&lt;!-- more --&gt;&lt;/escape&gt; 解决busuanzi无效的方法 使用nodepad++的【搜索】-&gt;【查找】-&gt;【文件查找】的【在文件中替换】： 1dn-lbstatics.qbox.me 替换为 busuanzi.ibruce.info 如图所示 &nbsp;&nbsp;参考文档： Hexo 创建“关于我”界面 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 BlueLake官网 解决 busuanzi 无效的方法（hexo-theme-next）]]></content>
       <tags>
         <tag>Hexo</tag>
         <tag>BlueLake</tag>
@@ -17,8 +29,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>Hexo</tag>
+        <tag>GitHub</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
         <tag>SpringMVC</tag>
@@ -30,7 +42,7 @@
   <entry>
     <title><![CDATA[iOS]]></title>
     <url>%2F2019%2F01%2F09%2FiOS%2F</url>
-    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包]]></content>
+    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包]]></content>
       <categories>
         <category>iOS</category>
       </categories>
@@ -79,6 +91,21 @@
         <tag>JUnit</tag>
         <tag>log4j</tag>
         <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2018年第52周]]></title>
+    <url>%2F2018%2F12%2F24%2F2018Week52%2F</url>
+    <content type="text"><![CDATA[2018年第52周（2018/12/24~2018/12/30） TeamViewer无限自动改ID版 V14.0.13488.0绿色版 Failed to load the JNI shared library 解决方法 一个简单 Web App 用于查看你的 GitHub star 总数以及项目排行版 查看自己的项目fork和star 关于mysql-connector-java（JDBC驱动）的一些坑 查看mysql库中所有表的大小和记录数 中国游戏市场增长放缓 但已爆发的小游戏2019年更值得期待 Activiti6.0踩坑记录（一）-用admin登录后台配置终端提示“Endpoint configuration for ‘Activiti app’ is invalid 简书Activiti文章 Spring-Boot + Mybatis 综合模块化开发,合并打包 activiti user guide activiti quick start Activiti相关博文 Activiti工作流 - 11篇 1.工作流概念 1.Activiti6-快速开始]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>Activiti6</tag>
+        <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
+        <tag>Spring-Boot</tag>
+        <tag>小游戏</tag>
       </tags>
   </entry>
 </search>
