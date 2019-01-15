@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[macOS]]></title>
     <url>%2F2019%2F01%2F14%2FmacOS%2F</url>
-    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA]]></content>
+    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype]]></content>
       <categories>
         <category>macOS</category>
       </categories>
@@ -17,7 +17,7 @@
   <entry>
     <title><![CDATA[2019年第3周]]></title>
     <url>%2F2019%2F01%2F14%2F2019Week03%2F</url>
-    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置]]></content>
+    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -66,9 +66,9 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
-        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -138,8 +138,8 @@
       </categories>
       <tags>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
