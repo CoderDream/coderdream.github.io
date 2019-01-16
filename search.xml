@@ -66,9 +66,9 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -90,7 +90,7 @@
   <entry>
     <title><![CDATA[IntelliJ IDEA]]></title>
     <url>%2F2019%2F01%2F09%2Fidea%2F</url>
-    <content type="text"><![CDATA[文章目录 IntelliJ IDEA IntelliJ IDEA 鼠标移动到类上显示文档document（JavaDoc）内容 为jdk下载或指定 JavaDoc IntelliJ IDEA Maven的仓库路径：D:\Java\repo 下载jar，在项目的pom.xml文件增加如下依赖，然后选中项目，点击右键【Run As】-&gt;【Maven Install】： 12345&lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt; &lt;version&gt;3.0.1&lt;/version&gt;&lt;/dependency&gt; 将源码放到jar包下载的位置，如：D:\Java\repo\javax\servlet\javax.servlet-api\3.0.1 源代码的名称为：javax.servlet-api-3.0.1-sources.jar 关联源代码 选中项目，使用组合键【Ctrl+Alt+Shift+S】打开【Project Structure】面板 【Platform Settings】-&gt;【Globals Libraries】-&gt;【】，然后点击中间【+】图标来增加源代码包，如：D:\Java\jdk1.8.0_191\src.zip或http://docs.oracle.com/javase/8/docs/api/ 最终效果： IntelliJ IDEA 鼠标移动到类上显示文档document（JavaDoc）内容 【File】-&gt;【Settings】-&gt;【Editor】-&gt;【General】-&gt;【Show quick documentation on mouse move】 为jdk下载或指定 JavaDoc 选中项目，使用组合键【Ctrl+Alt+Shift+S】打开【Project Structure】面板 【Platform Settings】-&gt;【SDKs】-&gt;【XX（1.8）】-&gt;【Documentation Paths】，然后点击【+】图标来增加源代码包，如：D:\Java\jdk1.8.0_191\src.zip或http://docs.oracle.com/javase/8/docs/api/ 参考文档： IntelliJ idea鼠标移动到类上显示文档document（javadoc）内容 代码生成利器：IDEA 强大的 Live Templates]]></content>
+    <content type="text"><![CDATA[文章目录 IntelliJ IDEA IntelliJ IDEA 鼠标移动到类上显示文档document（JavaDoc）内容 为jdk下载或指定 JavaDoc IntelliJ IDEA Maven的仓库路径：D:\Java\repo 下载jar，在项目的pom.xml文件增加如下依赖，然后选中项目，点击右键【Run As】-&gt;【Maven Install】： 12345&lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt; &lt;version&gt;3.0.1&lt;/version&gt;&lt;/dependency&gt; 将源码放到jar包下载的位置，如：D:\Java\repo\javax\servlet\javax.servlet-api\3.0.1 源代码的名称为：javax.servlet-api-3.0.1-sources.jar 关联源代码 选中项目，使用组合键【Ctrl+Alt+Shift+S】打开【Project Structure】面板 【Platform Settings】-&gt;【Globals Libraries】-&gt;【】，然后点击中间【+】图标来增加源代码包，如：D:\Java\jdk1.8.0_191\src.zip或http://docs.oracle.com/javase/8/docs/api/ 最终效果： IntelliJ IDEA 鼠标移动到类上显示文档document（JavaDoc）内容 【File】-&gt;【Settings】-&gt;【Editor】-&gt;【General】-&gt;【Show quick documentation on mouse move】 为jdk下载或指定 JavaDoc 选中项目，使用组合键【Ctrl+Alt+Shift+S】打开【Project Structure】面板 【Platform Settings】-&gt;【SDKs】-&gt;【XX（1.8）】-&gt;【Documentation Paths】，然后点击【+】图标来增加源代码包，如：D:\Java\jdk1.8.0_191\src.zip或http://docs.oracle.com/javase/8/docs/api/ 参考文档： IntelliJ idea鼠标移动到类上显示文档document（javadoc）内容 代码生成利器：IDEA 强大的 Live Templates 快捷键 Ctrl+B 快速打开光标处的类或方法 CTRL+ALT+B 找所有的子类 Ctrl+H 显示类结构图（类的继承层次） Ctrl+N，可以快速打开类 Ctrl+Shift+N，可以快速打开文件]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -137,9 +137,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>Activiti6</tag>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
+        <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
