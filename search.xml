@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hackintosh 黑苹果乐园]]></title>
     <url>%2F2019%2F01%2F17%2FHackintosh%2F</url>
-    <content type="text"><![CDATA[文章目录 网卡 驱动网卡 AR9565无线网卡驱动（10.14和10.12系统下亲测完美） 12发表于 2018-12-30 17:17:28 |只看该作者直接把这个放进资源库 ▸ Extensions里 （或者系统 ▸ 资源库 ▸ Extensions里），什么都不用删！ AR9285 Mojava无法驱动 Mojave驱动ar956x 9485 946x的解决方案 etnperlong1234567891011121314好的，经过半个上午的折腾，我的AR9565终于在10.14上驱动起来了，感谢楼主提供的驱动，我后来还补上了ATH9KInjector.kext（来自国际友人修改的1.2.6版本ATH9KFixUp）以下是我的修复方案：1. 将楼主提供的附件里AtherosAirport40.kext，安装到/S/L/E/IO80211Family.kext/Contents/Plugins/里2. 下载最新LiLu 1.2.7，Clover注入（一般黑果都会有的吧，更新下版本号就好）3. 将楼主提供的附件里ATH9KFixup.kext用Clover注入4. 修改config，按楼主的说明加上-lilubetaall 和 -ath95655. 下载我这里的附件并解压得到ATH9KInjector.kext，安装到/S/L/E/6. 重建缓存，重启参考国际友人做法，用10.13.4的IO80211Family替换，然后用全套国际友人修改的1.2.6版本ATH9KFixUp，会导致只能打开WiFi不能搜索，用楼主的附件糅合在一起之后，成功驱动！PS：用老版本的BTFirmwareUpload貌似还可以驱动蓝牙，手机可以搜索到黑果的蓝牙信号，但是并没有进一步测试]]></content>
+    <content type="text"><![CDATA[文章目录 驱动 网卡 驱动网卡 AR9565无线网卡驱动（10.14和10.12系统下亲测完美） 12发表于 2018-12-30 17:17:28 |只看该作者直接把这个放进资源库 ▸ Extensions里 （或者系统 ▸ 资源库 ▸ Extensions里），什么都不用删！ AR9285 Mojava无法驱动 Mojave驱动ar956x 9485 946x的解决方案 etnperlong1234567891011121314好的，经过半个上午的折腾，我的AR9565终于在10.14上驱动起来了，感谢楼主提供的驱动，我后来还补上了ATH9KInjector.kext（来自国际友人修改的1.2.6版本ATH9KFixUp）以下是我的修复方案：1. 将楼主提供的附件里AtherosAirport40.kext，安装到/S/L/E/IO80211Family.kext/Contents/Plugins/里2. 下载最新LiLu 1.2.7，Clover注入（一般黑果都会有的吧，更新下版本号就好）3. 将楼主提供的附件里ATH9KFixup.kext用Clover注入4. 修改config，按楼主的说明加上-lilubetaall 和 -ath95655. 下载我这里的附件并解压得到ATH9KInjector.kext，安装到/S/L/E/6. 重建缓存，重启参考国际友人做法，用10.13.4的IO80211Family替换，然后用全套国际友人修改的1.2.6版本ATH9KFixUp，会导致只能打开WiFi不能搜索，用楼主的附件糅合在一起之后，成功驱动！PS：用老版本的BTFirmwareUpload貌似还可以驱动蓝牙，手机可以搜索到黑果的蓝牙信号，但是并没有进一步测试]]></content>
       <categories>
         <category>Hackintosh</category>
       </categories>
