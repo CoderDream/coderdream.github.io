@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hackintosh 黑苹果乐园]]></title>
+    <url>%2F2019%2F01%2F17%2FHackintosh%2F</url>
+    <content type="text"><![CDATA[网卡 AR9565无线网卡驱动（10.14和10.12系统下亲测完美） 电 12发表于 2018-12-30 17:17:28 |只看该作者直接把这个放进资源库 ▸ Extensions里 （或者系统 ▸ 资源库 ▸ Extensions里），什么都不用删！ AR9285 Mojava无法驱动 Mojave驱动ar956x 9485 946x的解决方案]]></content>
+      <categories>
+        <category>Hackintosh</category>
+      </categories>
+      <tags>
+        <tag>AR9485</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS]]></title>
     <url>%2F2019%2F01%2F14%2FmacOS%2F</url>
     <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype]]></content>
@@ -17,13 +28,14 @@
   <entry>
     <title><![CDATA[2019年第3周]]></title>
     <url>%2F2019%2F01%2F14%2F2019Week03%2F</url>
-    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v]]></content>
+    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v 可能是目前最全面的Markdown写作解决方案]]></content>
       <categories>
         <category>周报</category>
       </categories>
       <tags>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -102,9 +114,9 @@
   <entry>
     <title><![CDATA[Java]]></title>
     <url>%2F2019%2F01%2F09%2FJava%2F</url>
-    <content type="text"><![CDATA[我的分类是Java]]></content>
+    <content type="text"><![CDATA[TODO]]></content>
       <categories>
-        <category>type1</category>
+        <category>Java</category>
       </categories>
   </entry>
   <entry>
@@ -137,9 +149,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>TeamViewer</tag>
-        <tag>GitHub</tag>
         <tag>Activiti6</tag>
+        <tag>GitHub</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
