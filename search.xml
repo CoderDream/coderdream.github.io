@@ -28,7 +28,7 @@
   <entry>
     <title><![CDATA[2019年第3周]]></title>
     <url>%2F2019%2F01%2F14%2F2019Week03%2F</url>
-    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v 可能是目前最全面的Markdown写作解决方案]]></content>
+    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v 可能是目前最全面的Markdown写作解决方案 为什么程序员们愿意在GitHub上开源自己的成果?]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -77,9 +77,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>GitHub</tag>
         <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
@@ -90,7 +90,7 @@
   <entry>
     <title><![CDATA[iOS]]></title>
     <url>%2F2019%2F01%2F09%2FiOS%2F</url>
-    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包]]></content>
+    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） 作者：刀客传奇链接：https://www.jianshu.com/p/79bb282a9b3a來源：简书简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档]]></content>
       <categories>
         <category>iOS</category>
       </categories>
@@ -150,8 +150,8 @@
       </categories>
       <tags>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
