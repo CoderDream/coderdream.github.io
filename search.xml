@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019年第4周]]></title>
+    <url>%2F2019%2F01%2F21%2F2019Week04%2F</url>
+    <content type="text"><![CDATA[2019年第4周（2019/01/21~2019/01/27） Slf4j MDC 使用和 基于 Logback 的实现分析]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>slf4j</tag>
+        <tag>logBack</tag>
+        <tag>MDC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[NodeJS 相关]]></title>
     <url>%2F2019%2F01%2F19%2FNodeJS%2F</url>
     <content type="text"><![CDATA[修改 nrm 源: 1nrm add taobao https://registry.npm.taobao.org 增加 GitHub 变量 12$ git config --global user.name &quot;your name&quot;$ git config --global user.email &quot;your_email@youremail.com&quot; 参考文档： 设置npm的registry Github 简明教程]]></content>
