@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[2019年第4周]]></title>
     <url>%2F2019%2F01%2F21%2F2019Week04%2F</url>
-    <content type="text"><![CDATA[2019年第4周（2019/01/21~2019/01/27） Slf4j MDC 使用和 基于 Logback 的实现分析]]></content>
+    <content type="text"><![CDATA[2019年第4周（2019/01/21~2019/01/27） Slf4j MDC 使用和 基于 Logback 的实现分析 Notepad++ 删除空行的技巧]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -11,6 +11,7 @@
         <tag>slf4j</tag>
         <tag>logBack</tag>
         <tag>MDC</tag>
+        <tag>Notepad++</tag>
       </tags>
   </entry>
   <entry>
