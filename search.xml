@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[NodeJS 相关]]></title>
+    <url>%2F2019%2F01%2F19%2FNodeJS%2F</url>
+    <content type="text"><![CDATA[修改 nrm 源: 1nrm add taobao https://registry.npm.taobao.org 增加 GitHub 变量 12$ git config --global user.name &quot;your name&quot;$ git config --global user.email &quot;your_email@youremail.com&quot; 参考文档： 设置npm的registry Github 简明教程]]></content>
+      <categories>
+        <category>NodeJS</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Hackintosh 黑苹果乐园]]></title>
     <url>%2F2019%2F01%2F17%2FHackintosh%2F</url>
     <content type="text"><![CDATA[文章目录 驱动 网卡 驱动网卡 AR9565无线网卡驱动（10.14和10.12系统下亲测完美） 12发表于 2018-12-30 17:17:28 |只看该作者直接把这个放进资源库 ▸ Extensions里 （或者系统 ▸ 资源库 ▸ Extensions里），什么都不用删！ AR9285 Mojava无法驱动 Mojave驱动ar956x 9485 946x的解决方案 etnperlong1234567891011121314好的，经过半个上午的折腾，我的AR9565终于在10.14上驱动起来了，感谢楼主提供的驱动，我后来还补上了ATH9KInjector.kext（来自国际友人修改的1.2.6版本ATH9KFixUp）以下是我的修复方案：1. 将楼主提供的附件里AtherosAirport40.kext，安装到/S/L/E/IO80211Family.kext/Contents/Plugins/里2. 下载最新LiLu 1.2.7，Clover注入（一般黑果都会有的吧，更新下版本号就好）3. 将楼主提供的附件里ATH9KFixup.kext用Clover注入4. 修改config，按楼主的说明加上-lilubetaall 和 -ath95655. 下载我这里的附件并解压得到ATH9KInjector.kext，安装到/S/L/E/6. 重建缓存，重启参考国际友人做法，用10.13.4的IO80211Family替换，然后用全套国际友人修改的1.2.6版本ATH9KFixUp，会导致只能打开WiFi不能搜索，用楼主的附件糅合在一起之后，成功驱动！PS：用老版本的BTFirmwareUpload貌似还可以驱动蓝牙，手机可以搜索到黑果的蓝牙信号，但是并没有进一步测试]]></content>
@@ -14,7 +22,7 @@
   <entry>
     <title><![CDATA[macOS]]></title>
     <url>%2F2019%2F01%2F14%2FmacOS%2F</url>
-    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype]]></content>
+    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 关于在Mac下用Unix命令操作移动硬盘的步骤 Mac 如何查找出大文件？ linux\mac 日常入门命令行使用——搜索文件\文件夹 常用软件 IINA - 以成为苹果 Mac 平台上最强的好用万能视频播放器而生！ 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype]]></content>
       <categories>
         <category>macOS</category>
       </categories>
@@ -28,7 +36,7 @@
   <entry>
     <title><![CDATA[2019年第3周]]></title>
     <url>%2F2019%2F01%2F14%2F2019Week03%2F</url>
-    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v 可能是目前最全面的Markdown写作解决方案 为什么程序员们愿意在GitHub上开源自己的成果?]]></content>
+    <content type="text"><![CDATA[2019年第3周（2019/01/14~2019/01/20） IntelliJ IDEA 如何删除自定义的 Maven 骨架(Archetype) 修改Idea默认的全局设置 IdeaUI 2018 链接：http://pan.baidu.com/s/1bpnlLAR 密码：rl9v 可能是目前最全面的Markdown写作解决方案 为什么程序员们愿意在GitHub上开源自己的成果? Adblock Plus广告过滤白名单公开：谷歌、微软、亚马逊在列(属性-&gt;可允许广告，关掉Taboola广告)]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -36,6 +44,7 @@
         <tag>IDEA</tag>
         <tag>Maven</tag>
         <tag>Markdown</tag>
+        <tag>AdBlock</tag>
       </tags>
   </entry>
   <entry>
@@ -63,7 +72,7 @@
   <entry>
     <title><![CDATA[Hexo 系统 BlueLake 主题安装与设置]]></title>
     <url>%2F2019%2F01%2F09%2FHexo%2F</url>
-    <content type="text"><![CDATA[文章目录 安装与初始化 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 添加本地搜索 设置阅读全文 解决busuanzi无效的方法 &nbsp;&nbsp; 安装与初始化 安装hexo： 1$ npm install hexo-cli -g 创建网站目录： 1$ mkdir blog 通过blog目录创建站点： 1$ hexo init blog 安装过程： 12345678admindeMacBook-Pro:~ admin hexo init blogINFO Cloning hexo-starter to ~/bloghexo-site@0.0.0 /Users/admin/blog... 部分省略 ├── range-parser@1.2.0 └── statuses@1.3.0 INFO Start blogging with Hexo! 安装完成后,进入blog站点目录,安装一下npm插件支持(如果是其他电脑克隆了这个项目，需要执行下面的安装命令)： 12$ cd blog$ npm install 启动站点： 123$ hexo serverINFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 查看站点：在浏览器中查看http://localhost:4000/ 配置GitHub在blog目录,打开_config.yml 1$ vim _config.yml 修改配置文件_config.yml中deploy下的内容 1234567&amp;nbsp;# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/CoderDream/coderdream.github.io.git branch: master Github部署配置参数详解 12345deploy: 表示部署设置type: 部署类型,支持git,herokurepo: 部署位置 git仓库项目的位置branch: 部署到Github的分支名称message: 自定义提交信息 设置语言 1language: zh-CN 安装部署插件配置修改完成后,需要安装部署插件:安装 hexo-deployer-git 插件: 在blog目录执行以下命令即可 1$ npm install hexo-deployer-git --save 插件安装完成后,执行项目清理和静态网页生成 12$ hexo clean$ hexo genarate 安装完成后进行部署 1$ hexo deploy 一键发布 1hexo clean; hexo generate; hexo deploy 查看结果然后到你的Github上项目的主页,看看master分支上的代码更新时间 给自己的Hexo博客加上图片 首先把blog（hexo）目录下的_config.yml里的psot_asset_folder:设置为true 在blog（hexo）目录下执行: 1npm install hexo-asset-image --save 在blog（hexo）目录下Git Bash Here，运行hexo n “博客名”来生成md博客时，会在_post目录下看到一个与博客同名的文件夹。 将想要上传的图片先扔到文件夹下，然后在博客中使用markdown的格式引入图片：1![你想要输入的替代文字](xxxx/图片名.jpg) Hexo中提供文件下载功能 在source目录下新建dounload文件夹，将需要上传的文件xx.xls复制到该目录。 在_posts博文中，插入：1[点击下载](/download/xx.xls&quot;) 添加本地搜索默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件：1$ npm install hexo-generator-json-content@2.2.0 --save 然后在根_config.yml添加配置： 123456789101112131415161718jsonContent: meta: false pages: false posts: title: true date: true path: true text: true raw: false content: false slug: false updated: false comments: false link: false permalink: false excerpt: false categories: false tags: true 最后在主题_config.yml添加配置(themes/BlueLake/_config.yml)： 1local_search: true 设置阅读全文 您可以在文章的 front-matter 中添加 description，并提供文章摘录，或在文章中使用下面的代码手动进行截断（Hexo推荐的方式）。1&lt;escape&gt;&lt;!-- more --&gt;&lt;/escape&gt; 解决busuanzi无效的方法 使用nodepad++的【搜索】-&gt;【查找】-&gt;【文件查找】的【在文件中替换】： 1dn-lbstatics.qbox.me 替换为 busuanzi.ibruce.info 如图所示 &nbsp;&nbsp;参考文档： Hexo 创建“关于我”界面 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 BlueLake官网 解决 busuanzi 无效的方法（hexo-theme-next）]]></content>
+    <content type="text"><![CDATA[文章目录 安装与初始化 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 添加本地搜索 设置阅读全文 解决busuanzi无效的方法 &nbsp; 安装与初始化 安装hexo：Windows1$ npm install hexo-cli -g macOS1$ sudo npm install hexo-cli -g 创建网站目录： 1$ mkdir blog 通过blog目录创建站点： 1$ hexo init blog 安装过程： 12345678admindeMacBook-Pro:~ admin hexo init blogINFO Cloning hexo-starter to ~/bloghexo-site@0.0.0 /Users/admin/blog... 部分省略 ├── range-parser@1.2.0 └── statuses@1.3.0 INFO Start blogging with Hexo! 安装完成后,进入blog站点目录,安装一下npm插件支持(如果是其他电脑克隆了这个项目，需要执行下面的安装命令)： 12$ cd blog$ npm install 启动站点： 123$ hexo serverINFO Start processingINFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop. 查看站点：在浏览器中查看http://localhost:4000/ 配置GitHub在blog目录,打开_config.yml 1$ vim _config.yml 修改配置文件_config.yml中deploy下的内容 1234567&amp;nbsp;# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/CoderDream/coderdream.github.io.git branch: master Github部署配置参数详解 12345deploy: 表示部署设置type: 部署类型,支持git,herokurepo: 部署位置 git仓库项目的位置branch: 部署到Github的分支名称message: 自定义提交信息 设置语言 1language: zh-CN 安装部署插件配置修改完成后,需要安装部署插件:安装 hexo-deployer-git 插件: 在blog目录执行以下命令即可 1$ npm install hexo-deployer-git --save 插件安装完成后,执行项目清理和静态网页生成 12$ hexo clean$ hexo genarate 安装完成后进行部署 1$ hexo deploy 一键发布 1hexo clean; hexo generate; hexo deploy 查看结果然后到你的Github上项目的主页,看看master分支上的代码更新时间 给自己的Hexo博客加上图片 首先把blog（hexo）目录下的_config.yml里的psot_asset_folder:设置为true 在blog（hexo）目录下执行: 1npm install hexo-asset-image --save 在blog（hexo）目录下Git Bash Here，运行hexo n “博客名”来生成md博客时，会在_post目录下看到一个与博客同名的文件夹。 将想要上传的图片先扔到文件夹下，然后在博客中使用markdown的格式引入图片：1![你想要输入的替代文字](xxxx/图片名.jpg) Hexo中提供文件下载功能 在source目录下新建dounload文件夹，将需要上传的文件xx.xls复制到该目录。 在_posts博文中，插入：1[点击下载](/download/xx.xls&quot;) 添加本地搜索默认本地搜索是用原生JS写的，但还需要HEXO插件创建的JSON数据文件配合。安装插件hexo-generator-json-content来创建JSON数据文件：1$ npm install hexo-generator-json-content@2.2.0 --save 然后在根_config.yml添加配置： 123456789101112131415161718jsonContent: meta: false pages: false posts: title: true date: true path: true text: true raw: false content: false slug: false updated: false comments: false link: false permalink: false excerpt: false categories: false tags: true 最后在主题_config.yml添加配置(themes/BlueLake/_config.yml)： 1local_search: true 设置阅读全文 您可以在文章的 front-matter 中添加 description，并提供文章摘录，或在文章中使用下面的代码手动进行截断（Hexo推荐的方式）。1&lt;escape&gt;&lt;!-- more --&gt;&lt;/escape&gt; 解决busuanzi无效的方法 使用nodepad++的【搜索】-&gt;【查找】-&gt;【文件查找】的【在文件中替换】： 1dn-lbstatics.qbox.me 替换为 busuanzi.ibruce.info 如图所示 &nbsp;&nbsp;参考文档： Hexo 创建“关于我”界面 给自己的Hexo博客加上图片 Hexo中提供文件下载功能 BlueLake官网 解决 busuanzi 无效的方法（hexo-theme-next）]]></content>
       <tags>
         <tag>Hexo</tag>
         <tag>BlueLake</tag>
@@ -90,7 +99,7 @@
   <entry>
     <title><![CDATA[iOS]]></title>
     <url>%2F2019%2F01%2F09%2FiOS%2F</url>
-    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） 作者：刀客传奇链接：https://www.jianshu.com/p/79bb282a9b3a來源：简书简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档]]></content>
+    <content type="text"><![CDATA[游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） SpriteKit框架详细解析（一） —— 基本概览（一） SpriteKit框架详细解析（二） —— 一个简单的动画实例（一） SpriteKit框架详细解析（三） —— 创建一个简单的2D游戏（一） SpriteKit框架详细解析（四） —— 创建一个简单的2D游戏（二） SpriteKit框架详细解析（五） —— 基于SpriteKit的游戏编程的三角函数（一） SpriteKit框架详细解析（六） —— 基于SpriteKit的游戏编程的三角函数（二） 教你用 SpriteKit 做一个自己的”割绳子“游戏（Swift 3） SpriteKit框架之最全动作介绍 没有之一 SpriteKit实现经典英雄打怪小游戏 Spritekit 小游戏- 熊猫快跑之运气与实力并存 SpriteKit学习笔记(子节点随父节点移动) SpriteKit框架之鸿蒙初辟 (iOS)SpriteKit 制作简易手游虚拟摇杆(UIKit通用) Double零组件系列 SpriteKit Tutorial for Beginners (翻译)用 Swift 创建有 AI(人工智能) 的 Tic Tac Toe 游戏 (原文)用 Swift 以及 AI 创建你自己的 iOS 游戏 巧用 ARKit 和 SpriteKit 从零开始做 AR 游戏 Building an AR game with ARKit and SpriteKit 通过 SpriteKit 内置工具粒子发射器实现酷炫的可定制装载动画 SpriteKit学习笔记（一） SpriteKit学习笔记（二） SceneKit 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档 iOS 客户端微信扫码登录 iOS App冷启动治理：来自美团外卖的实践 开发者眼中 iOS 11 都更新了什么？]]></content>
       <categories>
         <category>iOS</category>
       </categories>
@@ -150,8 +159,8 @@
       </categories>
       <tags>
         <tag>Activiti6</tag>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
