@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[2019年第4周]]></title>
     <url>%2F2019%2F01%2F21%2F2019Week04%2F</url>
-    <content type="text"><![CDATA[2019年第4周（2019/01/21~2019/01/27） Slf4j MDC 使用和 基于 Logback 的实现分析 Notepad++ 删除空行的技巧 Wine 4.0 正式版发布 游戏玩家来试试怎么样？ ios个人小游戏开发者如何做到年收益过百万？ 2018 年少数派读者最喜欢的 15 款应用 &amp; 游戏 中国独立开发者项目列表 7年开发笔记（总结）：iOS个人开发者的困境与突破 七麦数据-各种APP 排行榜 2018我的人生游戏指南-欲望与「成救」模式 用玩游戏的方式学习 Git 这是你们想要的编程入门与学习方法 三天时间，我写出了自己的 Todo 应用 我把一款时间管理软件，升级了60次 天气应用 Flat Weather 的设计历程 | Matrix 精选 2016, 一个独立开发者的心路历程 | 2016 与我的数字生活]]></content>
+    <content type="text"><![CDATA[2019年第4周（2019/01/21~2019/01/27） Slf4j MDC 使用和 基于 Logback 的实现分析 Notepad++ 删除空行的技巧 Wine 4.0 正式版发布 游戏玩家来试试怎么样？ ios个人小游戏开发者如何做到年收益过百万？ 2018 年少数派读者最喜欢的 15 款应用 &amp; 游戏 中国独立开发者项目列表 7年开发笔记（总结）：iOS个人开发者的困境与突破 七麦数据-各种APP 排行榜 2018我的人生游戏指南-欲望与「成救」模式 用玩游戏的方式学习 Git 这是你们想要的编程入门与学习方法 三天时间，我写出了自己的 Todo 应用 我把一款时间管理软件，升级了60次 天气应用 Flat Weather 的设计历程 | Matrix 精选 2016, 一个独立开发者的心路历程 | 2016 与我的数字生活 &nbsp;]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -127,9 +127,9 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -198,9 +198,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
@@ -213,9 +213,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
