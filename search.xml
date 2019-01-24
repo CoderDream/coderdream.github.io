@@ -62,7 +62,7 @@
   <entry>
     <title><![CDATA[macOS]]></title>
     <url>%2F2019%2F01%2F14%2FmacOS%2F</url>
-    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 关于在Mac下用Unix命令操作移动硬盘的步骤 Mac 如何查找出大文件？ linux\mac 日常入门命令行使用——搜索文件\文件夹 常用软件 IINA - 以成为苹果 Mac 平台上最强的好用万能视频播放器而生！ 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype]]></content>
+    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 关于在Mac下用Unix命令操作移动硬盘的步骤 Mac 如何查找出大文件？ linux\mac 日常入门命令行使用——搜索文件\文件夹 常用软件 IINA - 以成为苹果 Mac 平台上最强的好用万能视频播放器而生！ 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype 如何删除GIT中的.DS_Store &nbsp;]]></content>
       <categories>
         <category>macOS</category>
       </categories>
@@ -199,9 +199,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
@@ -214,9 +214,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
