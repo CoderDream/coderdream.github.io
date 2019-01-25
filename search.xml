@@ -126,10 +126,10 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
-        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -139,7 +139,7 @@
   <entry>
     <title><![CDATA[iOS]]></title>
     <url>%2F2019%2F01%2F09%2FiOS%2F</url>
-    <content type="text"><![CDATA[&nbsp; SwiftException Swift 异常捕获try catch的使用 &nbsp; 游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） SpriteKit框架详细解析（一） —— 基本概览（一） SpriteKit框架详细解析（二） —— 一个简单的动画实例（一） SpriteKit框架详细解析（三） —— 创建一个简单的2D游戏（一） SpriteKit框架详细解析（四） —— 创建一个简单的2D游戏（二） SpriteKit框架详细解析（五） —— 基于SpriteKit的游戏编程的三角函数（一） SpriteKit框架详细解析（六） —— 基于SpriteKit的游戏编程的三角函数（二） 教你用 SpriteKit 做一个自己的”割绳子“游戏（Swift 3） SpriteKit框架之最全动作介绍 没有之一 SpriteKit实现经典英雄打怪小游戏 Spritekit 小游戏- 熊猫快跑之运气与实力并存 SpriteKit学习笔记(子节点随父节点移动) SpriteKit框架之鸿蒙初辟 (iOS)SpriteKit 制作简易手游虚拟摇杆(UIKit通用) Double零组件系列 SpriteKit Tutorial for Beginners (翻译)用 Swift 创建有 AI(人工智能) 的 Tic Tac Toe 游戏 (原文)用 Swift 以及 AI 创建你自己的 iOS 游戏 巧用 ARKit 和 SpriteKit 从零开始做 AR 游戏 Building an AR game with ARKit and SpriteKit 通过 SpriteKit 内置工具粒子发射器实现酷炫的可定制装载动画 SpriteKit学习笔记（一） SpriteKit学习笔记（二） SpriteKit 苹果官方文档翻译（Swift）：1 iOS SpriteKit 小游戏开发实例 - Flappy Bird SceneKit 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 &nbsp; 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档 iOS 客户端微信扫码登录 iOS App冷启动治理：来自美团外卖的实践 开发者眼中 iOS 11 都更新了什么？ 王巍博客，值得研读 Swift - 获取当前时间的时间戳（时间戳与时间互相转换） Swift4中对于日期时间的处理（Date、DateComponents、Calendar、DateFormatter、Locale）(超详细) 开源和开放设计 - Make Icons Witch Sketch Sketch Sketch APP UI 10天特训 - 1 Sketch APP UI 10天特训 - 2 Sketch APP UI 10天特训 - 3 Sketch APP UI 10天特训 - 4 Sketch APP UI 10天特训 - 5 Sketch Tutorial - 从零开始学Sketch 第一课 Sketch Tutorial - 从零开始学Sketch 第二课 Sketch Tutorial - 从零开始学Sketch 第三课 Sketch Tutorial - 从零开始学Sketch 第四课 Sketch Tutorial - 从零开始学Sketch 第五课 Sketch Tutorial - 从零开始学Sketch 第六课 Sketch入门（一）安装及了解基本功能 Sketch入门（二）练习APP登录界面设计 Sketch入门（三）如何切图 Sketch技巧（一）常用快捷键 Sketch技巧（二）自定义快捷键 Sketch技巧（三）八个高效的快捷方式 Sketch技巧（四）Sketch高效实用的插件 &nbsp;]]></content>
+    <content type="text"><![CDATA[&nbsp; SwiftException Swift 异常捕获try catch的使用 &nbsp; 游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） SpriteKit框架详细解析（一） —— 基本概览（一） SpriteKit框架详细解析（二） —— 一个简单的动画实例（一） SpriteKit框架详细解析（三） —— 创建一个简单的2D游戏（一） SpriteKit框架详细解析（四） —— 创建一个简单的2D游戏（二） SpriteKit框架详细解析（五） —— 基于SpriteKit的游戏编程的三角函数（一） SpriteKit框架详细解析（六） —— 基于SpriteKit的游戏编程的三角函数（二） 教你用 SpriteKit 做一个自己的”割绳子“游戏（Swift 3） SpriteKit框架之最全动作介绍 没有之一 SpriteKit实现经典英雄打怪小游戏 Spritekit 小游戏- 熊猫快跑之运气与实力并存 SpriteKit学习笔记(子节点随父节点移动) SpriteKit框架之鸿蒙初辟 (iOS)SpriteKit 制作简易手游虚拟摇杆(UIKit通用) Double零组件系列 SpriteKit Tutorial for Beginners (翻译)用 Swift 创建有 AI(人工智能) 的 Tic Tac Toe 游戏 (原文)用 Swift 以及 AI 创建你自己的 iOS 游戏 巧用 ARKit 和 SpriteKit 从零开始做 AR 游戏 Building an AR game with ARKit and SpriteKit 通过 SpriteKit 内置工具粒子发射器实现酷炫的可定制装载动画 SpriteKit学习笔记（一） SpriteKit学习笔记（二） SpriteKit 苹果官方文档翻译（Swift）：1 iOS SpriteKit 小游戏开发实例 - Flappy Bird SceneKit 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 解决最新版 Cocoapods repo安装慢更新慢的问题 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 &nbsp; 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档 iOS 客户端微信扫码登录 iOS App冷启动治理：来自美团外卖的实践 开发者眼中 iOS 11 都更新了什么？ 王巍博客，值得研读 Swift - 获取当前时间的时间戳（时间戳与时间互相转换） Swift4中对于日期时间的处理（Date、DateComponents、Calendar、DateFormatter、Locale）(超详细) 开源和开放设计 - Make Icons Witch Sketch Sketch Sketch APP UI 10天特训 - 1 Sketch APP UI 10天特训 - 2 Sketch APP UI 10天特训 - 3 Sketch APP UI 10天特训 - 4 Sketch APP UI 10天特训 - 5 Sketch Tutorial - 从零开始学Sketch 第一课 Sketch Tutorial - 从零开始学Sketch 第二课 Sketch Tutorial - 从零开始学Sketch 第三课 Sketch Tutorial - 从零开始学Sketch 第四课 Sketch Tutorial - 从零开始学Sketch 第五课 Sketch Tutorial - 从零开始学Sketch 第六课 Sketch入门（一）安装及了解基本功能 Sketch入门（二）练习APP登录界面设计 Sketch入门（三）如何切图 Sketch技巧（一）常用快捷键 Sketch技巧（二）自定义快捷键 Sketch技巧（三）八个高效的快捷方式 Sketch技巧（四）Sketch高效实用的插件 &nbsp;]]></content>
       <categories>
         <category>iOS</category>
       </categories>
@@ -147,6 +147,7 @@
         <tag>SpriteKit</tag>
         <tag>Swift4</tag>
         <tag>Sketch</tag>
+        <tag>Cocoapods</tag>
       </tags>
   </entry>
   <entry>
@@ -199,9 +200,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>Activiti6</tag>
         <tag>TeamViewer</tag>
         <tag>GitHub</tag>
-        <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
@@ -214,9 +215,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>Activiti6</tag>
         <tag>TeamViewer</tag>
         <tag>GitHub</tag>
-        <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
