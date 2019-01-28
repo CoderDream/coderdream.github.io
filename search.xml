@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019年第5周]]></title>
+    <url>%2F2019%2F01%2F28%2F2019Week05%2F</url>
+    <content type="text"><![CDATA[2019年第5周（2019/01/28~2019/02/03） Github 简明教程 &nbsp;]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[微信公众号与小程序]]></title>
     <url>%2F2019%2F01%2F28%2FWeChat%2F</url>
     <content type="text"><![CDATA[安装部署 微擎小程序模块安装教程 &nbsp;]]></content>
