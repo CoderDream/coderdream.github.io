@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Selenium 自动化测试]]></title>
+    <url>%2F2019%2F01%2F29%2FSelenium%2F</url>
+    <content type="text"><![CDATA[知识点滴 Java selenium - 父子、兄弟、相邻节点定位方式详解 Selenium在定位的class含有空格的复合类的解决办法 Java + Selenium + WebDriver八大元素定位方式 Java+Selenium3方法篇23-iframe切换的问题 Java+selenium之WebDriver常见特殊情况如iframe/弹窗处理(四) Java+Selenium3POM自动化测试框架设计系列 Java+Selenium3POM自动化测试框架设计系列 Java+Selenium3.0关键字驱动框架设计教程 捏不死的小蚂蚁的Selenium文章 Selenium 教程 (一) 介绍 (二)环境搭建方法一 (三)环境搭建 基于Maven (四)使用浏览器调试工具 (五)元素定位大全 (六)xpath 定位 (七)CSS 定位 (八) IDE 用法 (九)常见web UI 元素操作 及API使用 (十)操作浏览器 (十一)操作弹出对话框 (十二)操作弹出窗口 (十三)智能等待页面加载完成 (十四)处理Iframe 中的元素 &nbsp;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Selenium</tag>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年第5周]]></title>
     <url>%2F2019%2F01%2F28%2F2019Week05%2F</url>
-    <content type="text"><![CDATA[2019年第5周（2019/01/28~2019/02/03） Github 简明教程 &nbsp;]]></content>
+    <content type="text"><![CDATA[2019年第5周（2019/01/28~2019/02/03） Github 简明教程 如何快速辨别Excel中两列数据是否相同{=IF(C2=B2,”相同”,”不同”)} &nbsp;]]></content>
       <categories>
         <category>周报</category>
       </categories>
       <tags>
         <tag>GitHub</tag>
+        <tag>Excel</tag>
       </tags>
   </entry>
   <entry>
@@ -188,7 +201,7 @@
   <entry>
     <title><![CDATA[Java]]></title>
     <url>%2F2019%2F01%2F09%2FJava%2F</url>
-    <content type="text"><![CDATA[TODO]]></content>
+    <content type="text"><![CDATA[JAVA学习笔记-数组的三种初始化方式12//静态初始化int c[] = &#123;23,43,56,78&#125;;//长度：4，索引范围：[0,3]]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -223,9 +236,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
@@ -238,9 +251,9 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
+        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
