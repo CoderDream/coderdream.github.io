@@ -217,10 +217,10 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>IDEA</tag>
-        <tag>Maven</tag>
         <tag>GitHub</tag>
         <tag>Hexo</tag>
+        <tag>IDEA</tag>
+        <tag>Maven</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
