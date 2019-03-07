@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019年第10周]]></title>
+    <url>%2F2019%2F03%2F05%2F2019Week10%2F</url>
+    <content type="text"><![CDATA[2019年第10周（2019/03/04~2019/03/10） 文件快拷工具FastCopy的基本操作 千万级别文件Copy工具 Foxmail7.2 账号帐号邮件备份和恢复 如何屏蔽adobe激活服务器 ？ Adblock使用简明教程 Chrome插件 &nbsp;]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>FastCopy</tag>
+        <tag>Foxmail</tag>
+        <tag>Chrome</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年第9周]]></title>
     <url>%2F2019%2F02%2F26%2F2019Week09%2F</url>
     <content type="text"><![CDATA[2019年第9周（2019/02/25~2019/03/03） UIImageView异步加载网络图片并显示图片的方法示例_Swift 4教程 4.IOS(swift)-scrollView(tableView) ·图片加载逻辑的优化 追剧、办公、看小说…7个网站，让你万事无忧 前员工告诉你，怎么撸交行信用卡的羊毛 瞒天过海，移花接木—分享一下我心中十五部顶级的高智商犯罪电影 入坑8年的烘培老鸟带你了解，拥有1台【顶配台式蒸烤箱】是怎样的一种体验？ Swift基础之使用Alamofire库进行网络请求和断点下载 【iOS开发】Alamofire框架的使用一 —— 基本用法 【iOS开发】Alamofire框架的使用一 —— 基本用法 【iOS开发】Alamofire框架的使用二 —— 高级用法 Alamofire 4.0 迁移指南 AlamoFire的使用(下载队列，断点续传) iOS9 http不能访问网络——在Xcode中将https改成http方式 swift 4 tableViewCell动态加载网络图片问题处理 iOS开发学习笔记之swift3.0几种加载网络图片的方法 Alamofire 框架浅析 Alamofire的设计之道 用 Swift 编写网络层单元测试 Swift Alamofire Alamofire 使用心得 翻译_Alamofire的使用教程 PowerDesigner显示Comment注释 编写高效的 XCTest 测试: Arrange，Act 和 Assert TDD的iOS开发初步以及Kiwi使用入门 Unit Testing Tutorial: Mocking Objects 如何为网络接口编写单元测试 iOS单元测试和UI测试 使用swift给objc项目做单元测试 开源项目——『看知乎』iOS 版 Swift API 设计指南（上） Swift API 设计指南（下） 试水 Mac 开发 —— 代码生成器 Swift性能的一些测试 iOS如何开始单元测试（swift版） Swift中的单元测试 一些好用swift三方框架 用这些 iOS 技巧让你的 APP 性能更佳 Swift：通过示例避免内存泄漏 来一次有侧重点的区分Swift与Objective-C AppDelegate的模块化+瘦身 Swift下UserDefaults的常见使用和注意事项 &nbsp;]]></content>
@@ -218,9 +231,9 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -292,9 +305,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
@@ -307,9 +320,9 @@
         <category>周报</category>
       </categories>
       <tags>
+        <tag>TeamViewer</tag>
         <tag>GitHub</tag>
         <tag>Activiti6</tag>
-        <tag>TeamViewer</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
       </tags>
