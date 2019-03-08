@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SourceTree]]></title>
+    <url>%2F2019%2F03%2F14%2FSourceTree%2F</url>
+    <content type="text"><![CDATA[系统设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 关于在Mac下用Unix命令操作移动硬盘的步骤 Mac 如何查找出大文件？ linux\mac 日常入门命令行使用——搜索文件\文件夹 苹果Mac操作系统下怎么显示隐藏文件 常用软件 IINA - 以成为苹果 Mac 平台上最强的好用万能视频播放器而生！ LICEcapLICEcap 是一个神奇的免费的Gif 屏幕录像软件，它可将屏幕录像的内容直接保存为高质量(每帧颜色数量可超过256)GIF动态图片格式。并且支持特别标记鼠标操作动态效果，支持 elapsed time 和 title frame 及自定义热键功能，并自由调整录制窗口大小，你完全可以使用LICEcap录制出GIF图片格式的视频教程，看起来显得很专业! 应用开发 Mac安装、配置Maven WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 手写Maven的archetype项目脚手架 删除IntelliJ Idea中Maven Archetype 如何删除GIT中的.DS_Store &nbsp;]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>SourceTree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Cocoapods]]></title>
+    <url>%2F2019%2F03%2F08%2FCocoaPods%2F</url>
+    <content type="text"><![CDATA[Pods /usr/bin/git clone https://github.com/CocoaPods/Specs.git master 清华大学 CocoaPods 镜像使用帮助 CocoaPods最新安装及跳过pod setup快速安装教程 首次 pod setup 慢解决方案 CocoaPods 的简单快速安装方法 CocoaPods安装 详细 RubyGems 镜像 iOS安装CocoaPods详细过程 使用国内镜像下载cocoapods -&gt;master Cocoapods 使用技巧每次我们执行pod install、pod update时都会更新整个specs库，这样非常费时，所以想在不更新specs库的前提下安装三方库。只有当觉得specs库太旧了之后或者specs库里面找不到某个三方库时才进行更新specs库。 12pod install --verbose --no-repo-updatepod update --verbose --no-repo-update 作者：SuperDanny链接：https://www.jianshu.com/p/098a7dcf67e4来源：简书简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 &nbsp;]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>CocoaPods</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年第10周]]></title>
     <url>%2F2019%2F03%2F05%2F2019Week10%2F</url>
-    <content type="text"><![CDATA[2019年第10周（2019/03/04~2019/03/10） 文件快拷工具FastCopy的基本操作 千万级别文件Copy工具 Foxmail7.2 账号帐号邮件备份和恢复 如何屏蔽adobe激活服务器 ？ Adblock使用简明教程 Chrome插件 &nbsp;]]></content>
+    <content type="text"><![CDATA[2019年第10周（2019/03/04~2019/03/10） 文件快拷工具FastCopy的基本操作 千万级别文件Copy工具 Foxmail7.2 账号帐号邮件备份和恢复 如何屏蔽adobe激活服务器 ？ Adblock使用简明教程 Chrome插件 64位Navicat Premium 12.0.29安装、激活与使用教程 SQL取前几条数据 &nbsp;]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -11,6 +34,7 @@
         <tag>FastCopy</tag>
         <tag>Foxmail</tag>
         <tag>Chrome</tag>
+        <tag>Navicat</tag>
       </tags>
   </entry>
   <entry>
@@ -49,7 +73,7 @@
   <entry>
     <title><![CDATA[ETL最佳实践之生成产品维度]]></title>
     <url>%2F2019%2F02%2F20%2FETL_ProductDim%2F</url>
-    <content type="text"><![CDATA[生成产品维度数据 刷新 Project_Detail 表的上一个版本的项目ID &nbsp; 生成产品维度数据1. 思路 数据库：业务库、BI库 涉及的表：业务库（ISBG_Project）、BI库（PRODUCT_AEGIS 、Project_Detail） 将 ISBG_Project表 中的 BeProduct、BeProductName 两个字段查询出来得到结果集，然后刷新维度表的数据，有就略过，没有就新增 刷新 Project_Detail 的 产品信息 查询脚本 12345678910111213SELECT a.BeProduct, a.BeProductNameFROM ISBG_Project aWHERE a.BeProduct IS NOT NULLAND a.BeProductName IS NOT NULLAND a.BeProduct != ''AND a.BeProductName != ''GROUP BY a.BeProduct, a.BeProductName 查询结果 12345BeProduct BeProductName IPD Hisales...中间件云-开发 中间件云终端设计&amp;验证&amp;软件开发过程管理 CMC 刷新 Project_Detail 表的上一个版本的项目ID1. 思路 数据库：业务库、BI库 涉及的表：业务库（ISBG_Project）、BI库（Project_Detail） 通过脚本查询得到所有版本信息，按项目开始时间排序并增加行号，当前项目的行号减一即为前一个项目， 将得到的 ProjectID 刷新到 Project_Detail表 的 PreviousVersionProjectID 查询脚本 123456789101112131415161718192021SELECT ROW_NUMBER () OVER ( ORDER BY a.ProjectStartDateTime ) AS row_number, a.id, a.ProjectStartDateTime, a.BeProduct, a.BeProductNameFROM ISBG_Project aJOIN ( SELECT ip.BeProduct, ip.BeProductName FROM ISBG_Project ip WHERE id = '3a88df6c-83be-4903-a923-f2c80abcf3be') b ON a.BeProduct = b.BeProductAND a.BeProductName = b.BeProductName 查询结果 1234RowNumber id ProjectStartDateTime BeProduct BeProductName1 290a08b8-241a-486b-90a0-7d57e9ce32ab 2018-10-24 00:00:00.000 Innovation PQM2 3a88df6c-83be-4903-a923-f2c80abcf3be 2018-11-19 00:00:00.000 innovation PQM3 d375e63a-a952-48c0-84a6-3666ef9630fc 2018-12-17 00:00:00.000 innovation PQM 整体步骤： 第1步： 第2步：过滤已经处理过的数据 第3步：获取版本编号 查询脚本（通过产品信息获得版本编号） 123456789101112131415select a.a_number,ROW_NUMBER () OVER ( ORDER BY a.BeProduct,a.BeProductName,b.ProjectStartDateTime ) AS row_number,b.ID,b.ProjectStartDateTime,a.BeProduct,a.BeProductName from(select ROW_NUMBER () OVER ( ORDER BY BeProduct,BeProductName ) AS a_number,BeProduct,BeProductName from ISBG_Project GROUP BY BeProduct,BeProductName) ajoin ISBG_Project b on b.BeProduct=a.BeProduct and b.BeProductName=a.BeProductName 第4步：按项目ID排序左侧数据 第5步：按项目ID排序右侧收据 第6步：多播右侧版本编号数据，以便二次使用 第7步：合并连接数据获取当前版本编号 第8步：计算上一版本编号 第9步：按序号排序左侧数据 第10步：按序号排序右侧侧数据 第11步：合并连接数据获取上一版本编号 第12步：更新记录]]></content>
+    <content type="text"><![CDATA[生成产品维度数据 刷新 Project_Detail 表的上一个版本的项目ID &nbsp; 生成产品维度数据1. 思路 数据库：业务库、BI库 涉及的表：业务库（ISBG_Project）、BI库（PRODUCT_AEGIS 、Project_Detail） 将 ISBG_Project表 中的 BeProduct、BeProductName 两个字段查询出来得到结果集，然后刷新维度表的数据，有就略过，没有就新增 刷新 Project_Detail 的 产品信息 查询脚本 12345678910111213SELECT a.BeProduct, a.BeProductNameFROM ISBG_Project aWHERE a.BeProduct IS NOT NULLAND a.BeProductName IS NOT NULLAND a.BeProduct != ''AND a.BeProductName != ''GROUP BY a.BeProduct, a.BeProductName 查询结果 12345BeProduct BeProductName IPD Hisales...中间件云-开发 中间件云终端设计&amp;验证&amp;软件开发过程管理 CMC 刷新 Project_Detail 表的上一个版本的项目ID1. 思路 数据库：业务库、BI库 涉及的表：业务库（ISBG_Project）、BI库（Project_Detail） 通过脚本查询得到所有版本信息，按项目开始时间排序并增加行号，当前项目的行号减一即为前一个项目， 将得到的 ProjectID 刷新到 Project_Detail表 的 PreviousVersionProjectID 查询脚本 123456789101112131415161718192021SELECT ROW_NUMBER () OVER ( ORDER BY a.ProjectStartDateTime ) AS row_number, a.id, a.ProjectStartDateTime, a.BeProduct, a.BeProductNameFROM ISBG_Project aJOIN ( SELECT ip.BeProduct, ip.BeProductName FROM ISBG_Project ip WHERE id = '3a88df6c-83be-4903-a923-f2c80abcf3be') b ON a.BeProduct = b.BeProductAND a.BeProductName = b.BeProductName 查询结果 1234RowNumber id ProjectStartDateTime BeProduct BeProductName1 290a08b8-241a-486b-90a0-7d57e9ce32ab 2018-10-24 00:00:00.000 Innovation PQM2 3a88df6c-83be-4903-a923-f2c80abcf3be 2018-11-19 00:00:00.000 innovation PQM3 d375e63a-a952-48c0-84a6-3666ef9630fc 2018-12-17 00:00:00.000 innovation PQM 整体步骤： 第1步： 第2步：过滤已经处理过的数据 第3步：获取版本编号 查询脚本（通过产品信息获得版本编号） 123456789101112131415select a.a_number,ROW_NUMBER () OVER ( ORDER BY a.BeProduct,a.BeProductName,b.ProjectStartDateTime ) AS row_number,b.ID,b.ProjectStartDateTime,a.BeProduct,a.BeProductName from(select ROW_NUMBER () OVER ( ORDER BY BeProduct,BeProductName ) AS a_number,BeProduct,BeProductName from ISBG_Project GROUP BY BeProduct,BeProductName) ajoin ISBG_Project b on b.BeProduct=a.BeProduct and b.BeProductName=a.BeProductName 第4步：按项目ID排序左侧数据 第5步：按项目ID排序右侧收据 第6步：多播右侧版本编号数据，以便二次使用 第7步：合并连接数据获取当前版本编号 第8步：计算上一版本编号 第9步：按序号排序左侧数据 第10步：按序号排序右侧侧数据 第11步：合并连接数据获取上一版本编号 第12步：更新记录 准备新需求的测试数据写入三张表 HR_IMPORT_Member(读写，员工基本数据，BSM和技术方向)， HR_IMPORT_WorkStatus(读写,考勤、请假、调休数据表)； HR_IMPORT_LOG(读写，操作日志) 方案 交付人员基础数据表：人资程序将BSM数据同步到这个表，如果工号以存在就覆盖数据，否则新增数据。 交付人员在岗、请假、调休数据表：每月考勤、请假、调休数据锁定后，凌晨5点，人资程序将数据新增到这个表。所有字段都不允许为空，且是0~255之间（byte类型）。产能系统每月自动清空5个月前的数据。 处理日志表：每次从人资系统导入数据到产能数据库后都需要在此表中插入日志。如果导入的是基本数据，ImportType写入1，DataStartDate和DataEndDate填写导入数据当日的日期，日期不要带有时间信息。如果导入的是在岗状态数据，ImportType写入2，DataStartDate写入本批次数据最早的日期，DataEndDate写入本批次数据最后的日期。 思路 先从项目表中取4个未结项和4个已结项的项目，其中两个项目属于同一个产品的不同版本； 通过项目ID查找人力地图表，得到交付人员的员工号； 根据员工号，生成BSM和技术方向的模拟数据，写入交付人员基础数据表，同时写入处理日志表 通过BI库的日期维度表得到工作日记录（暂时模拟某段时间的数据，如2019年1月~2月） 模拟考勤数据，工作日合计8小时， 将模拟数据写入考勤、请假、调休数据表，同时写入处理日志表]]></content>
       <categories>
         <category>Database</category>
       </categories>
@@ -231,9 +255,9 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
-        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
