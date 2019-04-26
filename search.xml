@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[ETL 小技巧]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(750, 250); //生成750-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString());]]></content>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString());]]></content>
       <categories>
         <category>Database</category>
       </categories>
