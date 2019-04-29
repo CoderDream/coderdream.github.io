@@ -3,12 +3,24 @@
   <entry>
     <title><![CDATA[ETL 小技巧]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString());]]></content>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
       <categories>
         <category>Database</category>
       </categories>
       <tags>
         <tag>ETL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ETL 作业]]></title>
+    <url>%2F2019%2F04%2F26%2FETL_Job%2F</url>
+    <content type="text"><![CDATA[作业 &nbsp; 创建作业 新建作业 作业详情 作业步骤 作业步骤属性 作业计划 计划详情 作业开始步骤菜单 开始执行作业 作业执行中 作业执行完成 查看作业历史记录菜单 作业日志列表]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>ETL</tag>
+        <tag>Job</tag>
       </tags>
   </entry>
   <entry>
