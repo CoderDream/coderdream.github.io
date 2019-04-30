@@ -12,17 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ETL 小技巧]]></title>
-    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
-      <categories>
-        <category>Database</category>
-      </categories>
-      <tags>
-        <tag>ETL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[ETL 作业]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Job%2F</url>
     <content type="text"><![CDATA[作业 &nbsp; 创建作业 新建作业 作业详情 作业步骤 作业步骤属性 作业计划 计划详情 作业开始步骤菜单 开始执行作业 作业执行中 作业执行完成 查看作业历史记录菜单 作业日志列表]]></content>
@@ -32,6 +21,17 @@
       <tags>
         <tag>ETL</tag>
         <tag>Job</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ETL 小技巧]]></title>
+    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>ETL</tag>
       </tags>
   </entry>
   <entry>
@@ -358,10 +358,10 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
-        <tag>Hexo</tag>
         <tag>IDEA</tag>
         <tag>Maven</tag>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
         <tag>SpringMVC</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
@@ -371,7 +371,7 @@
   <entry>
     <title><![CDATA[iOS]]></title>
     <url>%2F2019%2F01%2F09%2FiOS%2F</url>
-    <content type="text"><![CDATA[&nbsp; SwiftSwift Swift编程思想（一） —— 函数式编程简介（一） iOS-卡顿监测-FPS监测(附详细代码及原理讲解) 从 Swift 的面向协议编程说开去 Swift 【基于 Swift 面向协议编程】 深入理解Swift 面向协议编程 iOS 开发 iOS-OC、Swift 混编之桥接文件 iOS 发送HTTP请求报错 Updated to iOS 12.1/Xcode 10.1 and getting a flood of “Signal strength query returned error Hide strange unwanted Xcode logs Swift 3 杂谈 iOS操作系统– App启动流程分析与优化 使用Xcode10 Instruments检测内存泄露 iOS面试进阶篇(五) iOS面试进阶篇(八)-高级面试题 移动iOS架构起航 真机调试包,解决xcode跑不了高版本iOS系统问题，及Deployment Target不显示高版本系统的问题 图片处理 Swift —UIImageView的使用(使用app内置图片和网络图片) 布局 iOS笔记UI–使用storyboard添加约束 iOS 9 Auto Layout界面自动布局系列6-自适应布局 数据库 Swift FMDB的使用 FMDB 在Swift4.0中使用 FMDB的使用（Swift） Swift(FMDB的简单使用) 官方文档 Swift使用FMDB操作SQLite UITableView Swift（二十一）UITableView 新手教程之使用Xib自定义UITableViewCell Exception Swift 异常捕获try catch的使用 iOS - UnitTests 单元测试 SwiftMock LeanStorageDemo-iOS LeanCloud从入门到放弃 Swift4–解析json文件 Swift4–使用URLSession进行网络请求 使用swift给objc项目做单元测试 iOS单元测试和UI测试 &nbsp; 游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） SpriteKit框架详细解析（一） —— 基本概览（一） SpriteKit框架详细解析（二） —— 一个简单的动画实例（一） SpriteKit框架详细解析（三） —— 创建一个简单的2D游戏（一） SpriteKit框架详细解析（四） —— 创建一个简单的2D游戏（二） SpriteKit框架详细解析（五） —— 基于SpriteKit的游戏编程的三角函数（一） SpriteKit框架详细解析（六） —— 基于SpriteKit的游戏编程的三角函数（二） 教你用 SpriteKit 做一个自己的”割绳子“游戏（Swift 3） SpriteKit框架之最全动作介绍 没有之一 SpriteKit实现经典英雄打怪小游戏 Spritekit 小游戏- 熊猫快跑之运气与实力并存 SpriteKit学习笔记(子节点随父节点移动) SpriteKit框架之鸿蒙初辟 (iOS)SpriteKit 制作简易手游虚拟摇杆(UIKit通用) Double零组件系列 SpriteKit Tutorial for Beginners (翻译)用 Swift 创建有 AI(人工智能) 的 Tic Tac Toe 游戏 (原文)用 Swift 以及 AI 创建你自己的 iOS 游戏 巧用 ARKit 和 SpriteKit 从零开始做 AR 游戏 Building an AR game with ARKit and SpriteKit 通过 SpriteKit 内置工具粒子发射器实现酷炫的可定制装载动画 SpriteKit学习笔记（一） SpriteKit学习笔记（二） SpriteKit 苹果官方文档翻译（Swift）：1 iOS SpriteKit 小游戏开发实例 - Flappy Bird Swift SpriteKit写一个简单的打飞碟小游戏（一） Swift SpriteKit写一个简单的打飞碟小游戏（二） Swift SpriteKit写一个简单的打飞碟小游戏（三） SceneKit 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） LeanCloud 数据存储开发指南 · Swift Alamofire Alamofire Tutorial: Getting Started Alamofire 教程：入门指南 Alamofire的使用教程 Alamofire的使用教程-项目地址 超简单 Alamofire4.1 的详细使用步骤 Alamofire 的使用 Alamofire网络库基础教程：使用 Alamofire 轻松实现 Swift 网络请求 Alamofire网络库进阶教程 Swift基础之使用Alamofire库进行网络请求和断点下载 AI 对于 iOS 开发，人工智能意味着什么？ 写给大家看的机器学习书 iOS机器学习初探 iOS-调戏CoreML-这是花瓶？ iOS中的人工智能（Core ML） iOS中的机器学习 普通程序员如何转向AI方向 我花了四个晚上，拿到了吴恩达Deeplearning.ai深度学习课程证书 &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 解决最新版 Cocoapods repo安装慢更新慢的问题 iPhone has denied the launch request 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 CocoaPods使用小结 敏捷开发与动态更新在支付宝 App 内的实践 LLDB 知多少 &nbsp; 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档 iOS 客户端微信扫码登录 iOS App冷启动治理：来自美团外卖的实践 开发者眼中 iOS 11 都更新了什么？ 王巍博客，值得研读 Swift - 获取当前时间的时间戳（时间戳与时间互相转换） Swift4中对于日期时间的处理（Date、DateComponents、Calendar、DateFormatter、Locale）(超详细) 开源和开放设计 - Make Icons Witch Sketch 最近被苹果拒绝的条款和解决方法 我的 WWDC 2019 Scholarship &amp; 来一次完整的使用 Playground（二） 一个优质的项目应该具有什么特点 Sketch Sketch APP UI 10天特训 - 1 Sketch APP UI 10天特训 - 2 Sketch APP UI 10天特训 - 3 Sketch APP UI 10天特训 - 4 Sketch APP UI 10天特训 - 5 Sketch Tutorial - 从零开始学Sketch 第一课 Sketch Tutorial - 从零开始学Sketch 第二课 Sketch Tutorial - 从零开始学Sketch 第三课 Sketch Tutorial - 从零开始学Sketch 第四课 Sketch Tutorial - 从零开始学Sketch 第五课 Sketch Tutorial - 从零开始学Sketch 第六课 Sketch入门（一）安装及了解基本功能 Sketch入门（二）练习APP登录界面设计 Sketch入门（三）如何切图 Sketch技巧（一）常用快捷键 Sketch技巧（二）自定义快捷键 Sketch技巧（三）八个高效的快捷方式 Sketch技巧（四）Sketch高效实用的插件 &nbsp;]]></content>
+    <content type="text"><![CDATA[&nbsp; SwiftSwift Swift编程思想（一） —— 函数式编程简介（一） iOS-卡顿监测-FPS监测(附详细代码及原理讲解) 从 Swift 的面向协议编程说开去 Swift 【基于 Swift 面向协议编程】 深入理解Swift 面向协议编程 iOS 开发 iOS-OC、Swift 混编之桥接文件 iOS 发送HTTP请求报错 Updated to iOS 12.1/Xcode 10.1 and getting a flood of “Signal strength query returned error Hide strange unwanted Xcode logs Swift 3 杂谈 iOS操作系统– App启动流程分析与优化 使用Xcode10 Instruments检测内存泄露 iOS面试进阶篇(五) iOS面试进阶篇(八)-高级面试题 移动iOS架构起航 真机调试包,解决xcode跑不了高版本iOS系统问题，及Deployment Target不显示高版本系统的问题 图片处理 Swift —UIImageView的使用(使用app内置图片和网络图片) 布局 iOS笔记UI–使用storyboard添加约束 iOS 9 Auto Layout界面自动布局系列6-自适应布局 数据库 Swift FMDB的使用 FMDB 在Swift4.0中使用 FMDB的使用（Swift） Swift(FMDB的简单使用) 官方文档 Swift使用FMDB操作SQLite UITableView Swift（二十一）UITableView 新手教程之使用Xib自定义UITableViewCell iOS AutoLayout进阶(五)UITableViewCell自动高度 Exception Swift 异常捕获try catch的使用 iOS - UnitTests 单元测试 SwiftMock LeanStorageDemo-iOS LeanCloud从入门到放弃 Swift4–解析json文件 Swift4–使用URLSession进行网络请求 使用swift给objc项目做单元测试 iOS单元测试和UI测试 &nbsp; 游戏相关SpriteKit 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 1) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 2) 如何在 Swift 3 中用 SpriteKit 框架编写游戏 (Part 3) 暑假花了十九天做的 PFollow SpriteKit（概述） SpriteKit框架详细解析（一） —— 基本概览（一） SpriteKit框架详细解析（二） —— 一个简单的动画实例（一） SpriteKit框架详细解析（三） —— 创建一个简单的2D游戏（一） SpriteKit框架详细解析（四） —— 创建一个简单的2D游戏（二） SpriteKit框架详细解析（五） —— 基于SpriteKit的游戏编程的三角函数（一） SpriteKit框架详细解析（六） —— 基于SpriteKit的游戏编程的三角函数（二） 教你用 SpriteKit 做一个自己的”割绳子“游戏（Swift 3） SpriteKit框架之最全动作介绍 没有之一 SpriteKit实现经典英雄打怪小游戏 Spritekit 小游戏- 熊猫快跑之运气与实力并存 SpriteKit学习笔记(子节点随父节点移动) SpriteKit框架之鸿蒙初辟 (iOS)SpriteKit 制作简易手游虚拟摇杆(UIKit通用) Double零组件系列 SpriteKit Tutorial for Beginners (翻译)用 Swift 创建有 AI(人工智能) 的 Tic Tac Toe 游戏 (原文)用 Swift 以及 AI 创建你自己的 iOS 游戏 巧用 ARKit 和 SpriteKit 从零开始做 AR 游戏 Building an AR game with ARKit and SpriteKit 通过 SpriteKit 内置工具粒子发射器实现酷炫的可定制装载动画 SpriteKit学习笔记（一） SpriteKit学习笔记（二） SpriteKit 苹果官方文档翻译（Swift）：1 iOS SpriteKit 小游戏开发实例 - Flappy Bird Swift SpriteKit写一个简单的打飞碟小游戏（一） Swift SpriteKit写一个简单的打飞碟小游戏（二） Swift SpriteKit写一个简单的打飞碟小游戏（三） SceneKit 1. SceneKit框架详细解析（一） —— 基本概览（一） 2. SceneKit框架详细解析（二） —— 基于SceneKit的简单游戏示例的实现（一） 3. SceneKit框架详细解析（三） —— 基于SceneKit的简单游戏示例的实现（二） 4. SceneKit框架详细解析（四） —— 基于SceneKit的简单游戏示例的实现（三） 5. SceneKit框架详细解析（五） —— 基于SceneKit的简单游戏示例的实现（四） 6. SceneKit框架详细解析（六） —— 基于SceneKit的简单游戏示例的实现（五） 7. SceneKit框架详细解析（七） —— 基于SceneKit的简单游戏示例的实现（六） LeanCloud 数据存储开发指南 · Swift Alamofire Alamofire Tutorial: Getting Started Alamofire 教程：入门指南 Alamofire的使用教程 Alamofire的使用教程-项目地址 超简单 Alamofire4.1 的详细使用步骤 Alamofire 的使用 Alamofire网络库基础教程：使用 Alamofire 轻松实现 Swift 网络请求 Alamofire网络库进阶教程 Swift基础之使用Alamofire库进行网络请求和断点下载 AI 对于 iOS 开发，人工智能意味着什么？ 写给大家看的机器学习书 iOS机器学习初探 iOS-调戏CoreML-这是花瓶？ iOS中的人工智能（Core ML） iOS中的机器学习 普通程序员如何转向AI方向 我花了四个晚上，拿到了吴恩达Deeplearning.ai深度学习课程证书 &nbsp; macOS设置 macOS 设置文件默认打开方式 Mac系统如何编辑hosts文件 WebStorm2018.3 中文汉化最新破解激活版 Mac/Win NodeJS入门–环境搭建 IntelliJ IDEA 解决最新版 Cocoapods repo安装慢更新慢的问题 iPhone has denied the launch request 其他 使用Hbuilder将自己app发布到App Store（一） libstdc++适配Xcode10与iOS12 iOS根据图片url获取尺寸 《看书总结》 关于Xcode10的那些事 iOS 类似微博或朋友圈的信息流 Swift基础语法 用 SpriteKit 和 Swift3 创建交互式儿童读物 2D Apple Games by Tutorials Source Code-Swift4 iOS开发问与答系列 iOS动画专栏 raywenderlich Game专栏 CocoaPods使用小结 敏捷开发与动态更新在支付宝 App 内的实践 LLDB 知多少 &nbsp; 开发其他 iOS使用fastlane自动化打包 如何阅读苹果开发文档 iOS 客户端微信扫码登录 iOS App冷启动治理：来自美团外卖的实践 开发者眼中 iOS 11 都更新了什么？ 王巍博客，值得研读 Swift - 获取当前时间的时间戳（时间戳与时间互相转换） Swift4中对于日期时间的处理（Date、DateComponents、Calendar、DateFormatter、Locale）(超详细) 开源和开放设计 - Make Icons Witch Sketch 最近被苹果拒绝的条款和解决方法 我的 WWDC 2019 Scholarship &amp; 来一次完整的使用 Playground（二） 一个优质的项目应该具有什么特点 Sketch Sketch APP UI 10天特训 - 1 Sketch APP UI 10天特训 - 2 Sketch APP UI 10天特训 - 3 Sketch APP UI 10天特训 - 4 Sketch APP UI 10天特训 - 5 Sketch Tutorial - 从零开始学Sketch 第一课 Sketch Tutorial - 从零开始学Sketch 第二课 Sketch Tutorial - 从零开始学Sketch 第三课 Sketch Tutorial - 从零开始学Sketch 第四课 Sketch Tutorial - 从零开始学Sketch 第五课 Sketch Tutorial - 从零开始学Sketch 第六课 Sketch入门（一）安装及了解基本功能 Sketch入门（二）练习APP登录界面设计 Sketch入门（三）如何切图 Sketch技巧（一）常用快捷键 Sketch技巧（二）自定义快捷键 Sketch技巧（三）八个高效的快捷方式 Sketch技巧（四）Sketch高效实用的插件 &nbsp;]]></content>
       <categories>
         <category>iOS</category>
       </categories>
