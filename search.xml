@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Sudoku]]></title>
+    <url>%2F2019%2F05%2F24%2FiOS_Game%2F</url>
+    <content type="text"><![CDATA[sudoku UnitySudoku ZZSudoku]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>sudoku</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SpriteKit]]></title>
     <url>%2F2019%2F05%2F24%2FSpriteKit%2F</url>
     <content type="text"><![CDATA[SpriteKit之轻量级瓦片地图生成工具SDmapNode详解 SpriteKit框架之浅谈瓦片地图简介以及TML地图文件的创建使用 SpriteKit框架之浅谈节点碰撞的实现 SpriteKit框架之SKPhysicsBody的移动和连接 SpriteKit框架之关于物理引擎属性的那点事 SpriteKit框架之浅谈物理引擎 (2016.08.30 19:22) SpriteKit中SKSpriteNode拖动的简单实现(2016.08.26 20:29) SpriteKit框架之最全动作介绍 没有之一(2016.08.26 20:27) Apple Sprite Kit]]></content>
