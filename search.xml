@@ -631,12 +631,13 @@
   <entry>
     <title><![CDATA[2017年第42周]]></title>
     <url>%2F2017%2F10%2F16%2F2017Week42%2F</url>
-    <content type="text"><![CDATA[2017年第42周（2017/10/16~2017/10/22）JavaScript判断是否为整数类型方式ES6提供了Number.isInteger Number.isInteger(3) // true Number.isInteger(3.1) // false Number.isInteger(&apos;&apos;) // false Number.isInteger(&apos;3&apos;) // false Number.isInteger(true) // false Number.isInteger([]) // false 目前，最新的Firefox和Chrome已经支持。 MyBatis where配置EmpMapper.xml配置 &lt;select id=&quot;getEmpByWhere&quot; resultType=&quot;Emp&quot; parameterType=&quot;Emp&quot;&gt; select * from emp &lt;where&gt; &lt;if test=&quot;job != null and job != &apos;&apos;&quot;&gt; and job = #{job} &lt;/if&gt; &lt;if test=&quot;deptno != null&quot;&gt; and deptno = #{deptno} &lt;/if&gt; &lt;/where&gt; &lt;/select&gt;]]></content>
+    <content type="text"><![CDATA[2017年第42周（2017/10/16~2017/10/22）JavaScript判断是否为整数类型方式ES6提供了Number.isInteger123456Number.isInteger(3) // trueNumber.isInteger(3.1) // falseNumber.isInteger('') // falseNumber.isInteger('3') // falseNumber.isInteger(true) // falseNumber.isInteger([]) // false 目前，最新的Firefox和Chrome已经支持。 MyBatis where配置EmpMapper.xml配置1234567891011&lt;select id="getEmpByWhere" resultType="Emp" parameterType="Emp"&gt; select * from emp &lt;where&gt; &lt;if test="job != null and job != ''"&gt; and job = #&#123;job&#125; &lt;/if&gt; &lt;if test="deptno != null"&gt; and deptno = #&#123;deptno&#125; &lt;/if&gt; &lt;/where&gt;&lt;/select&gt;]]></content>
       <categories>
         <category>周报</category>
       </categories>
       <tags>
-        <tag>SQL Server</tag>
+        <tag>JavaScript</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
