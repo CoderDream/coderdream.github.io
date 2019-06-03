@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[2019年第22周]]></title>
     <url>%2F2019%2F05%2F27%2F2019Week22%2F</url>
-    <content type="text"><![CDATA[2019年第22周（2019/05/27~2019/05/31） 用 dir 查看一个目录下所有文件和文件夹的大小 使用tree命令导出windows的文件夹/文件的目录树 eclipse启动项目报错：java.lang.ClassNotFoundException: ContextLoaderListener 运用Maven将web项目部署到jetty（IDEA 环境） 如何将maven项目发布到jetty中（eclipse 环境） TODO UIButton: Padding Between Image and Text Done 1.UIKit框架（一） —— UIKit动力学和移动效果（一） 2.UIKit框架（二） —— UIKit动力学和移动效果（二） UIKit动力学和移动效果笔记 &nbsp; 1dir /a /s &gt;&gt; 002.txt]]></content>
+    <content type="text"><![CDATA[2019年第22周（2019/05/27~2019/05/31） 用 dir 查看一个目录下所有文件和文件夹的大小 使用tree命令导出windows的文件夹/文件的目录树 eclipse启动项目报错：java.lang.ClassNotFoundException: ContextLoaderListener 运用Maven将web项目部署到jetty（IDEA 环境） 如何将maven项目发布到jetty中（eclipse 环境） Sublime Text3 配置 NodeJs 环境 Sublime Text3 最新版3207 安装及破解 解决 Sublime Text3 packagecontrol.io 无法访问的问题 TODO UIButton: Padding Between Image and Text SpriteKit中SKSpriteNode拖动的简单实现 iOS 常用布局方式之Frame iOS UIButton根据内容自动布局 SpriteKit框架之浅谈物理引擎 SpriteKit之浅谈AnchorPoint(锚点)的使用 Done 1.UIKit框架（一） —— UIKit动力学和移动效果（一） 2.UIKit框架（二） —— UIKit动力学和移动效果（二） UIKit动力学和移动效果笔记 &nbsp; 1dir /a /s &gt;&gt; 002.txt Sublime Text3 配置 NodeJs 环境 笔记 找到nodejs的安装目录 12CoderDreamdeiMac:~ coderdream$ which node/usr/local/bin/node Nodejs.sublime-settings 修改结果 123456789101112131415&#123; // save before running commands &quot;save_first&quot;: true, // if present, use this command instead of plain &quot;node&quot; // e.g. &quot;/usr/bin/node&quot; or &quot;C:\bin\node.exe&quot; &quot;node_command&quot;: &quot;/usr/local/bin/node&quot;, // false, // Same for NPM command &quot;npm_command&quot;: &quot;/usr/local/bin/npm&quot;, // false, // as &apos;NODE_PATH&apos; environment variable for node runtime &quot;node_path&quot;: false, &quot;expert_mode&quot;: false, &quot;output_to_new_tab&quot;: false&#125; Nodejs.sublime-build 修改encoding 为 utf8 和 osx （路径与实际一致即可，参考上面的路径） 12345678910111213141516171819&#123; &quot;cmd&quot;: [&quot;node&quot;, &quot;$file&quot;], &quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;, &quot;selector&quot;: &quot;source.js&quot;, &quot;shell&quot;: true, &quot;encoding&quot;: &quot;utf8&quot;,//&quot;cp1252&quot;, &quot;windows&quot;: &#123; &quot;shell_cmd&quot;: &quot;taskkill /F /IM node.exe &amp; node $file&quot; &#125;, &quot;linux&quot;: &#123; &quot;shell_cmd&quot;: &quot;killall node; /usr/bin/env node $file&quot; &#125;, &quot;osx&quot;: &#123; &quot;shell_cmd&quot;: &quot;killall node; /usr/local/bin/env node $file&quot; &#125;&#125;]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -82,6 +82,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ETL 小技巧]]></title>
+    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>ETL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ETL 作业]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Job%2F</url>
     <content type="text"><![CDATA[作业 &nbsp; 创建作业 新建作业 作业详情 作业步骤 作业步骤属性 作业计划 计划详情 作业开始步骤菜单 开始执行作业 作业执行中 作业执行完成 查看作业历史记录菜单 作业日志列表]]></content>
@@ -91,17 +102,6 @@
       <tags>
         <tag>ETL</tag>
         <tag>Job</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ETL 小技巧]]></title>
-    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
-      <categories>
-        <category>Database</category>
-      </categories>
-      <tags>
-        <tag>ETL</tag>
       </tags>
   </entry>
   <entry>
@@ -503,8 +503,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
         <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
@@ -518,8 +518,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
         <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
