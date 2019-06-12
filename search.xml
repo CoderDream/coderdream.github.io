@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[2019年第24周]]></title>
     <url>%2F2019%2F06%2F10%2F2019Week24%2F</url>
-    <content type="text"><![CDATA[2019年第24周（2019/06/10~2019/06/16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 &nbsp; Windows 系统下搭建私有 npm 仓储服务器 Sinopia 安装 Python 安装 NodeJs 安装 Sinopia 1npm install -g sinopia 打开端口4873端口 Windows 防火墙 -&gt; 高级设置 -&gt; 入站规则 -&gt; 新建规则 -&gt; 端口 -&gt; TCP、本地特定端口：4873 配置 Sinopia 打开C:\Users\Administrator\AppData\Roaming\sinopia\config.yaml文件, (请将Administrator替换为你的windows用户名) 在文件末尾增加以下代码, 保存并退出 12# listen ip and portlisten: 0.0.0.0:8004 新增用户 1npm adduser --registry http://10.100.254.163:4873 访问并登录（用户名/密码：pdrc/pdrc)]]></content>
+    <content type="text"><![CDATA[2019年第24周（2019/06/10~2019/06/16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 &nbsp; Windows 系统下搭建私有 npm 仓储服务器 Sinopia 安装 Python 安装 NodeJs 安装 Sinopia 1npm install -g sinopia 打开端口4873端口 Windows 防火墙 -&gt; 高级设置 -&gt; 入站规则 -&gt; 新建规则 -&gt; 端口 -&gt; TCP、本地特定端口：4873 配置 Sinopia 打开C:\Users\Administrator\AppData\Roaming\sinopia\config.yaml文件, (请将Administrator替换为你的windows用户名) 在文件末尾增加以下代码, 保存并退出 12# listen ip and portlisten: 0.0.0.0:4873 新增用户 1npm adduser --registry http://10.100.254.163:4873 访问并登录（用户名/密码：pdrc/pdrc)]]></content>
       <categories>
         <category>周报</category>
       </categories>
