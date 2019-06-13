@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[2019年第24周]]></title>
     <url>%2F2019%2F06%2F10%2F2019Week24%2F</url>
-    <content type="text"><![CDATA[2019年第24周（2019/06/10~2019/06/16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 &nbsp; Windows 系统下搭建私有 npm 仓储服务器 Sinopia 安装 Python 安装 NodeJs 安装 Sinopia 1npm install -g sinopia 打开端口4873端口 Windows 防火墙 -&gt; 高级设置 -&gt; 入站规则 -&gt; 新建规则 -&gt; 端口 -&gt; TCP、本地特定端口：4873 配置 Sinopia 打开C:\Users\Administrator\AppData\Roaming\sinopia\config.yaml文件, (请将Administrator替换为你的windows用户名) 在文件末尾增加以下代码, 保存并退出 12# listen ip and portlisten: 0.0.0.0:4873 新增用户（输入用户名、密码和邮箱地址） 1npm adduser --registry http://10.100.254.163:4873 访问并登录（用户名/密码：pdrc/pdrc)]]></content>
+    <content type="text"><![CDATA[2019年第24周（2019/06/10~2019/06/16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 nssm 在Windows上部署服务 &nbsp; Windows 系统下搭建私有 npm 仓储服务器 Sinopia 安装 Python 安装 NodeJs 安装 Sinopia 1npm install -g sinopia 打开端口4873端口 Windows 防火墙 -&gt; 高级设置 -&gt; 入站规则 -&gt; 新建规则 -&gt; 端口 -&gt; TCP、本地特定端口：4873 配置 Sinopia 打开C:\Users\Administrator\AppData\Roaming\sinopia\config.yaml文件, (请将Administrator替换为你的windows用户名) 在文件末尾增加以下代码, 保存并退出 12# listen ip and portlisten: 0.0.0.0:4873 新增用户（输入用户名、密码和邮箱地址） 1npm adduser --registry http://10.100.254.163:4873 访问并登录（用户名/密码：pdrc/pdrc) 使用 nssm 将 Sinopia 作为 Windows 服务开机启动 下载NSSM download 根据自己的平台，将32/64位nssm.exe文件解压至任意文件夹。 cmd定位至nssm.exe所在目录。 输入 nssm install {服务名称}，即注册服务的名称。注册服务弹出如下NSSM界面。 Path: C:\Users\Administrator\AppData\Roaming\npm\sinopia.cmd 配置界面，然后点击【Install service】创建服务： 启动服务之前先修改配置，用于支持 IP 地址访问打开 C:\Windows\System32\config\systemprofile\AppData\Roaming\sinopia\config.yaml 文件，在文件末尾增加以下代码, 保存并退出 12345678910111213 # listen ip and port listen: 0.0.0.0:4873 8. 启动服务：![](2019Week24\05.jpg)9. 启动成功后，任务管理器中有 node.exe 的进程： ![](2019Week24\06.jpg)10. 本机访问 http://10.100.254.163:487311. 新增用户（输入用户名、密码和邮箱地址） npm adduser –registry http://10.100.254.163:4873` 创建用户成功后，其他机器就可以通过IP地址访问并登录了。]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -107,6 +107,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ETL 小技巧]]></title>
+    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>ETL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ETL 作业]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Job%2F</url>
     <content type="text"><![CDATA[作业 &nbsp; 创建作业 新建作业 作业详情 作业步骤 作业步骤属性 作业计划 计划详情 作业开始步骤菜单 开始执行作业 作业执行中 作业执行完成 查看作业历史记录菜单 作业日志列表]]></content>
@@ -116,17 +127,6 @@
       <tags>
         <tag>ETL</tag>
         <tag>Job</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ETL 小技巧]]></title>
-    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
-      <categories>
-        <category>Database</category>
-      </categories>
-      <tags>
-        <tag>ETL</tag>
       </tags>
   </entry>
   <entry>
@@ -552,8 +552,8 @@
   </entry>
   <entry>
     <title><![CDATA[2018年第50周]]></title>
-    <url>%2F2018%2F12%2F10%2F2018Week23%2F</url>
-    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16）SQL Server查询数据的所有表名和行数查询查询所有表名 123SELECT name FROM sysobjects WHERE xtype = 'u';SELECT * FROM sys.tables; 查询数据库中所有的表名及行数 123456789101112SELECT a.name, b. ROWSFROM sysobjects AS aINNER JOIN sysindexes AS b ON a.id = b.idWHERE (a.type = 'u')AND (b.indid IN(0, 1))ORDER BY a.name, b. ROWS DESC; 查询所有的标明及空间占用量\行数 1234567891011121314SELECT object_name(id) tablename, 8 * reserved / 1024 reserved, rtrim(8 * dpages) + 'kb' used, 8 * (reserved - dpages) / 1024 unused, 8 * dpages / 1024 - ROWS / 1024 * minlen / 1024 free, ROWS --,*FROM sysindexesWHERE indid = 1ORDER BY tablename, reserved DESC SQL Server新增和删除约束 删除约束1234567IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_PDRC_Organization_PDRC_Organization]') AND parent_object_id = OBJECT_ID(N'[dbo].[PDRC_Organization]'))ALTER TABLE [dbo].[PDRC_Organization] DROP CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GOALTER TABLE [dbo].[PDRC_Organization] WITH CHECK ADD CONSTRAINT [FK_PDRC_Organization_PDRC_Organization] FOREIGN KEY([LeadeID])REFERENCES [dbo].[PDRC_Organization] ([ID])GO 新增约束12ALTER TABLE [dbo].[PDRC_Organization] CHECK CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GO]]></content>
+    <url>%2F2018%2F12%2F10%2F2018Week50%2F</url>
+    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16） 直接将Excel或CSV文件导入新数据库中作为表 打开“SQL Server Management Studio” 新建数据库 选择数据库，点击右键，依次选择【任务】-》【导入数据】 在“选择数据源“面板的数据源选项选择【平面文件源】 点击【浏览】按钮，选择需要导入的Excel或CSV文件 在【常规】面板勾选【在第一个数据行中显示列名称】，这样第一行数据会作为表的列名 在【高级】面板中设置正确的数据类型【DataType】，如带2位小数的数值要选择【数值[DT_NUMERIC]】,同时将DataScale（精度）设置为2 【下一步】选择目标数据库，直至完成后，点击【关闭】按钮 CASE WHEN 用法 123456789101112131415161718SELECT a.TM工号, a.交付人员, a.[标准产能(BSM)], a.生效日期, a.技术平台, CASE WHEN b.[交付人员] IS NULL THEN 0 ELSE 1 END AS bwid, CASE WHEN c.交付人员 IS NULL THEN 0 ELSE 1 END AS cwidFROM dbo.Staff01 AS a LEFT OUTER JOIN dbo.Staff02 AS b ON b.交付人员 = a.交付人员 LEFT OUTER JOIN dbo.Staff03 AS c ON c.交付人员 = a.交付人员; 运行结果如下 12345TM工号 交付人员 BSM 技术平台 bwid cwidB-27154 B-14853 0.80 测试 0 0B-27154 B-15985 1.68 Java 0 0B-27154 B-16514 1.08 Java 0 0B-27154 B-20897 1.12 Java 0 0 将上面的查询语句作为一个视图selall（Select All） 下面的脚本分别得到Staff02和Staff03的数据： 12select COUNT(*) from selall where bwid = 1;select COUNT(*) from selall where cwid = 1; 获取3张表的记录行数 1234/****** Script for SelectTopNRows command from SSMS ******/SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage1];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage2];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage3]; 查看tm的情况 1234567891011SELECT d.workid, c.tm, d.tmFROM PDRC_StaffManage1 d LEFT OUTER JOIN( SELECT a.workid AS workid, b.tm FROM PDRC_StaffManage1 a JOIN PDRC_StaffManage2 b ON a.workid = b.workid) AS c ON d.workid = c.workid; 结果：tm1为空则去tm2、tm1和tm2不相等则取tm2 123456789workid tm1 tm2B-21276 B-28309 B-28309B-43229 NULL B-24644B-34169 B-30987 B-28023B-49033 NULL B-40354B-26561 NULL B-35656B-43037 B-22935 B-16981B-14297 B-27189 B-28023B-48901 B-22940 B-28023 正确结果：1461条数据 1234567891011SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台]FROM selallWHERE cwid = 0 AND bwid = 0UNIONSELECT *FROM Staff02; 检查Staff02和Staff03是否存在相同交付人员的数据 1select * from dbo.Staff02 a join Staff03 b on b.交付人员 =a.交付人员 现在数据库中TM不存在的交付人员列表（17） 12345678910111213141516171819202122232425262728293031323334SELECT *FROM( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02) iWHERE i.[交付人员] NOT IN( SELECT f.[交付人员] FROM ( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02 ) f JOIN dbo.RC g ON g.TM工号 = f.TM工号); Staff01中所有不存在TM的交付人员列表（414） 1234567SELECT *FROM Staff01 aWHERE a.TM工号 NOT IN( SELECT b.TM工号 FROM RC b); Staff01中所有不存在TM列表（7） 1select distinct(a.TM工号) from Staff01 a where a.TM工号 not in (select b.TM工号 from RC b);]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -563,8 +563,8 @@
   </entry>
   <entry>
     <title><![CDATA[2018年第50周]]></title>
-    <url>%2F2018%2F12%2F10%2F2018Week50%2F</url>
-    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16） 直接将Excel或CSV文件导入新数据库中作为表 打开“SQL Server Management Studio” 新建数据库 选择数据库，点击右键，依次选择【任务】-》【导入数据】 在“选择数据源“面板的数据源选项选择【平面文件源】 点击【浏览】按钮，选择需要导入的Excel或CSV文件 在【常规】面板勾选【在第一个数据行中显示列名称】，这样第一行数据会作为表的列名 在【高级】面板中设置正确的数据类型【DataType】，如带2位小数的数值要选择【数值[DT_NUMERIC]】,同时将DataScale（精度）设置为2 【下一步】选择目标数据库，直至完成后，点击【关闭】按钮 CASE WHEN 用法 123456789101112131415161718SELECT a.TM工号, a.交付人员, a.[标准产能(BSM)], a.生效日期, a.技术平台, CASE WHEN b.[交付人员] IS NULL THEN 0 ELSE 1 END AS bwid, CASE WHEN c.交付人员 IS NULL THEN 0 ELSE 1 END AS cwidFROM dbo.Staff01 AS a LEFT OUTER JOIN dbo.Staff02 AS b ON b.交付人员 = a.交付人员 LEFT OUTER JOIN dbo.Staff03 AS c ON c.交付人员 = a.交付人员; 运行结果如下 12345TM工号 交付人员 BSM 技术平台 bwid cwidB-27154 B-14853 0.80 测试 0 0B-27154 B-15985 1.68 Java 0 0B-27154 B-16514 1.08 Java 0 0B-27154 B-20897 1.12 Java 0 0 将上面的查询语句作为一个视图selall（Select All） 下面的脚本分别得到Staff02和Staff03的数据： 12select COUNT(*) from selall where bwid = 1;select COUNT(*) from selall where cwid = 1; 获取3张表的记录行数 1234/****** Script for SelectTopNRows command from SSMS ******/SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage1];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage2];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage3]; 查看tm的情况 1234567891011SELECT d.workid, c.tm, d.tmFROM PDRC_StaffManage1 d LEFT OUTER JOIN( SELECT a.workid AS workid, b.tm FROM PDRC_StaffManage1 a JOIN PDRC_StaffManage2 b ON a.workid = b.workid) AS c ON d.workid = c.workid; 结果：tm1为空则去tm2、tm1和tm2不相等则取tm2 123456789workid tm1 tm2B-21276 B-28309 B-28309B-43229 NULL B-24644B-34169 B-30987 B-28023B-49033 NULL B-40354B-26561 NULL B-35656B-43037 B-22935 B-16981B-14297 B-27189 B-28023B-48901 B-22940 B-28023 正确结果：1461条数据 1234567891011SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台]FROM selallWHERE cwid = 0 AND bwid = 0UNIONSELECT *FROM Staff02; 检查Staff02和Staff03是否存在相同交付人员的数据 1select * from dbo.Staff02 a join Staff03 b on b.交付人员 =a.交付人员 现在数据库中TM不存在的交付人员列表（17） 12345678910111213141516171819202122232425262728293031323334SELECT *FROM( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02) iWHERE i.[交付人员] NOT IN( SELECT f.[交付人员] FROM ( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02 ) f JOIN dbo.RC g ON g.TM工号 = f.TM工号); Staff01中所有不存在TM的交付人员列表（414） 1234567SELECT *FROM Staff01 aWHERE a.TM工号 NOT IN( SELECT b.TM工号 FROM RC b); Staff01中所有不存在TM列表（7） 1select distinct(a.TM工号) from Staff01 a where a.TM工号 not in (select b.TM工号 from RC b);]]></content>
+    <url>%2F2018%2F12%2F10%2F2018Week23%2F</url>
+    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16）SQL Server查询数据的所有表名和行数查询查询所有表名 123SELECT name FROM sysobjects WHERE xtype = 'u';SELECT * FROM sys.tables; 查询数据库中所有的表名及行数 123456789101112SELECT a.name, b. ROWSFROM sysobjects AS aINNER JOIN sysindexes AS b ON a.id = b.idWHERE (a.type = 'u')AND (b.indid IN(0, 1))ORDER BY a.name, b. ROWS DESC; 查询所有的标明及空间占用量\行数 1234567891011121314SELECT object_name(id) tablename, 8 * reserved / 1024 reserved, rtrim(8 * dpages) + 'kb' used, 8 * (reserved - dpages) / 1024 unused, 8 * dpages / 1024 - ROWS / 1024 * minlen / 1024 free, ROWS --,*FROM sysindexesWHERE indid = 1ORDER BY tablename, reserved DESC SQL Server新增和删除约束 删除约束1234567IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_PDRC_Organization_PDRC_Organization]') AND parent_object_id = OBJECT_ID(N'[dbo].[PDRC_Organization]'))ALTER TABLE [dbo].[PDRC_Organization] DROP CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GOALTER TABLE [dbo].[PDRC_Organization] WITH CHECK ADD CONSTRAINT [FK_PDRC_Organization_PDRC_Organization] FOREIGN KEY([LeadeID])REFERENCES [dbo].[PDRC_Organization] ([ID])GO 新增约束12ALTER TABLE [dbo].[PDRC_Organization] CHECK CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GO]]></content>
       <categories>
         <category>周报</category>
       </categories>
