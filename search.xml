@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[2019年第26周]]></title>
     <url>%2F2019%2F06%2F26%2F2019Week26%2F</url>
-    <content type="text"><![CDATA[2019年第26周（2019/06/24~2019/06/30） iOS App间文件共享 System-Declared Uniform Type Identifiers iOS App让自己的应用在其他应用中打开列表中显示 &nbsp;]]></content>
+    <content type="text"><![CDATA[2019年第26周（2019/06/24~2019/06/30） iOS App间文件共享 System-Declared Uniform Type Identifiers iOS App让自己的应用在其他应用中打开列表中显示 IOS 打开预览pdf、ppt、excel、word、tet、rtf、csv格式的文件，微信文件分享 iOS文件夹共享Files 让自己开发的iOS App通过iTunes共享文件到Document目录 iOS实现App之间文件分享方法 【翻译】WWDC 2019 ：优秀的开发习惯 22 个 iOS 开发热门开源项目 Swift Combine 入门导读 新晋网红SwiftUI——淘宝带你初体验 Demo Swift Excel Xlsx Reader Writer 无侵入埋点 WWDC - SwiftUI - 初恋般的感觉 &nbsp;]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -129,6 +129,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ETL 小技巧]]></title>
+    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
+    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>ETL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ETL 作业]]></title>
     <url>%2F2019%2F04%2F26%2FETL_Job%2F</url>
     <content type="text"><![CDATA[作业 &nbsp; 创建作业 新建作业 作业详情 作业步骤 作业步骤属性 作业计划 计划详情 作业开始步骤菜单 开始执行作业 作业执行中 作业执行完成 查看作业历史记录菜单 作业日志列表]]></content>
@@ -138,17 +149,6 @@
       <tags>
         <tag>ETL</tag>
         <tag>Job</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ETL 小技巧]]></title>
-    <url>%2F2019%2F04%2F26%2FETL_Tips%2F</url>
-    <content type="text"><![CDATA[生成随机数 弹窗 &nbsp; 生成随机数123Random random = new Random();int n = random.Next(75, 250); //生成75-250之间的随机数decimal ran = (decimal) n / 100; 弹窗123using System.Windows.Forms;MessageBox.Show(ran.ToString()); 日期相关 日期计算 12345678910DateTime dt = DateTime.Now;//Dts.Variables[&quot;CurrentDate&quot;].Value = dt;//DateTime //dt = new DateTime(2019, 12, 15);//string dtString = dt.ToString();//MessageBox.Show(dtString);DateTime lastFinancialDate = new DateTime(dt.Year, dt.Month, 1);//lastFinancialDate = lastFinancialDate.AddMonths(-1);DateTime dataStartDate = lastFinancialDate.AddMonths(-1); // new DateTime(dt.Year, dt.Month, 1);DateTime dataEndDate = lastFinancialDate.AddDays(-1); 获取日期字符串 1string queryDateTime = DateTime.Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;); // fff]]></content>
-      <categories>
-        <category>Database</category>
-      </categories>
-      <tags>
-        <tag>ETL</tag>
       </tags>
   </entry>
   <entry>
@@ -477,9 +477,9 @@
       <tags>
         <tag>SpringMVC</tag>
         <tag>Maven</tag>
+        <tag>IDEA</tag>
         <tag>GitHub</tag>
         <tag>Hexo</tag>
-        <tag>IDEA</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
         <tag>gitignore</tag>
@@ -550,8 +550,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
         <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
@@ -565,8 +565,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>TeamViewer</tag>
+        <tag>GitHub</tag>
         <tag>Activiti6</tag>
         <tag>Spring-Boot</tag>
         <tag>小游戏</tag>
@@ -711,9 +711,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2017年第38周]]></title>
-    <url>%2F2017%2F09%2F18%2F2017Week38%2F</url>
-    <content type="text"><![CDATA[2017年第38周（2017/09/18~2017/09/24）TextNG.xml配置实例 demo1 12345678910&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&lt;suite thread-count="3" name="Suite" parallel="tests"&gt; &lt;test name="Regression 1" preserve-order="true"&gt; &lt;!-- &lt;suite name="Suite1" verbose="1" &gt; &lt;test name="Regression1" &gt; --&gt; &lt;packages&gt; &lt;package name="com.billjc.controller" /&gt; &lt;/packages&gt; &lt;/test&gt;&lt;/ demo2 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&lt;!-- &lt;suite name="Preserve order test runs"&gt; --&gt;&lt;suite thread-count="3" name="Suite" parallel="tests"&gt; &lt;test name="Regression 1" preserve-order="true"&gt; &lt;classes&gt; &lt;class name="com.billjc.controller.ProfileControllerTest"&gt; &lt;methods&gt; &lt;include name="testMyProfile" /&gt; &lt;include name="testProfileUpdate" /&gt; &lt;include name="testProfileSave" /&gt; &lt;include name="testPmEvaluateUpdate" /&gt; &lt;include name="testPmEvaluateSave" /&gt; &lt;include name="testTmEvaluateUpdate" /&gt; &lt;include name="testTmEvaluateSave" /&gt; &lt;include name="testSkillUpdate" /&gt; &lt;include name="testSkillSave" /&gt; &lt;include name="testSkillDelete" /&gt; &lt;include name="testDomainUpdate" /&gt; &lt;include name="testDomainSave" /&gt; &lt;include name="testDomainDelete" /&gt; &lt;include name="testMyProjectList" /&gt; &lt;include name="testProfileQuery" /&gt; &lt;include name="testQueryProfileListBySkill" /&gt; &lt;include name="testQueryProfileListByDomain" /&gt; &lt;include name="testQueryProfileListByWorkPlace" /&gt; &lt;/methods&gt; &lt;/class&gt; &lt;class name="com.billjc.controller.TaskControllerTest"&gt; &lt;methods&gt; &lt;include name="testTaskCreate" /&gt; &lt;include name="testTaskSave" /&gt; &lt;include name="testTaskUpdate" /&gt; &lt;include name="testTaskItemCreateAndSave" /&gt; &lt;include name="testTaskItemSkillCreateAndSave" /&gt; &lt;include name="testTaskItemDomainCreateAndSave" /&gt; &lt;include name="testTaskItemDomainCreateAndSaveAndDelete" /&gt; &lt;include name="testMyTask" /&gt; &lt;include name="testTask" /&gt; &lt;include name="testTaskItem" /&gt; &lt;include name="testTaskQuery" /&gt; &lt;include name="testQueryTaskListBySkill" /&gt; &lt;include name="testQueryTaskListByDomain" /&gt; &lt;include name="testQueryTaskListByWorkPlace" /&gt; &lt;/methods&gt; &lt;/class&gt; &lt;/classes&gt; &lt;/test&gt;&lt;/suite&gt; Java获取本机MAC地址、IP地址源代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384package com.coderdream.util;import java.net.Inet4Address;import java.net.InetAddress;import java.net.NetworkInterface;import java.util.Enumeration;import org.slf4j.Logger;import org.slf4j.LoggerFactory;/** * @className: SystemTool * @description: 与系统相关的一些常用工具方法. 目前实现的有：获取MAC地址、IP地址、主机名 */public class SystemTool &#123; private static Logger logger = LoggerFactory.getLogger(SystemTool.class); public static void main(String[] args) throws Exception &#123; logger.debug("\tMacAddress:\t" + getMacAddress()); logger.debug("IpAddress:\t" + getIpAddress()); &#125; // 获取mac地址 public static String getMacAddress() &#123; try &#123; Enumeration&lt;NetworkInterface&gt; allNetInterfaces = NetworkInterface .getNetworkInterfaces(); byte[] mac = null; while (allNetInterfaces.hasMoreElements()) &#123; NetworkInterface netInterface = (NetworkInterface) allNetInterfaces .nextElement(); if (netInterface.isLoopback() || netInterface.isVirtual() || !netInterface.isUp()) &#123; continue; &#125; else &#123; mac = netInterface.getHardwareAddress(); if (mac != null) &#123; StringBuilder sb = new StringBuilder(); for (int i = 0; i &lt; mac.length; i++) &#123; sb.append(String.format("%02X%s", mac[i], (i &lt; mac.length - 1) ? "-" : "")); &#125; if (sb.length() &gt; 0) &#123; return sb.toString(); &#125; &#125; &#125; &#125; &#125; catch (Exception e) &#123; logger.error("MAC地址获取失败", e); &#125; return ""; &#125; // 获取ip地址 public static String getIpAddress() &#123; try &#123; Enumeration&lt;NetworkInterface&gt; allNetInterfaces = NetworkInterface .getNetworkInterfaces(); InetAddress ip = null; while (allNetInterfaces.hasMoreElements()) &#123; NetworkInterface netInterface = (NetworkInterface) allNetInterfaces .nextElement(); if (netInterface.isLoopback() || netInterface.isVirtual() || !netInterface.isUp()) &#123; continue; &#125; else &#123; Enumeration&lt;InetAddress&gt; addresses = netInterface .getInetAddresses(); while (addresses.hasMoreElements()) &#123; ip = addresses.nextElement(); if (ip != null &amp;&amp; ip instanceof Inet4Address) &#123; return ip.getHostAddress(); &#125; &#125; &#125; &#125; &#125; catch (Exception e) &#123; logger.error("IP地址获取失败", e); &#125; return ""; &#125;&#125; 运行结果：12MacAddress: 78-45-C4-15-6B-5AIpAddress: 10.50.20.123]]></content>
+    <title><![CDATA[2017年第39周]]></title>
+    <url>%2F2017%2F09%2F18%2F2017Week39%2F</url>
+    <content type="text"><![CDATA[2017年第39周（2017/09/25~2017/09/24）Tomcat管理页面403 Access Denied的解决方法安装tomcat，配置好tomcat环境变量以后，访问manager app页面，出现403 Access Denied错误，解决的方法如下：首先在conf/tomcat-users.xml文件里面，在前面添加如下代码：12&lt;role rolename=&quot;manager-gui&quot;/&gt; &lt;user password=&quot;admin&quot; roles=&quot;manager-gui&quot; username=&quot;tomcat&quot;/&gt; 然后重启tomcat，重新访问manager app页面，如果此时仍然出现403 Access Denied错误，那么就是访问的ip地受到了限制，我们打开/webapps/manager/META-INF/目录下context.xml文件，不是conf/目录下的context.xml文件，一定不要搞错了 我们将里面的内容注释掉或者修改为12&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|\d+\.\d+\.\d+\.\d+&quot; /&gt; 保存，然后重启tomcat，重新访问manager app页面，OK，问题得到解决。 如果没有生效，浏览器清空缓存。 MyBatis通过@调用Java类的静态代码和常量123456789101112&lt;select id=&quot;getByParaCode&quot; resultType=&quot;Sysconfig&quot;&gt; SELECT &lt;include refid=&quot;columnList&quot;/&gt; FROM C_SYS_PARA a WHERE a.PARA_CODE = #&#123;paraCode&#125; and a.APPLICATION_CODE = &apos;$&#123;@common.config.Global@getSysCode()&#125;&apos; &lt;/select&gt; &lt;select id=&quot;getByParaName&quot; resultType=&quot;Sysconfig&quot;&gt; SELECT &lt;include refid=&quot;columnList&quot;/&gt; FROM C_SYS_PARA a WHERE a.PARA_NAME = #&#123;paraName&#125; and a.APPLICATION_CODE = &apos;$&#123;@ommon.config.Global@getSysCode()&#125;&apos; &lt;/select&gt; 通过@来调用常量和静态方法 Tomcat 配置shared目录${catalina.home}/conf/catalina.properties文件使用来配置tomcat内置classloadder的load范围，通过修改此文件设置参数来实现shared文件夹中的jar加载。 tomcat中lib目录下新建share文件夹，放入所需要的jar包；修改配置文件catalina.properties中的“shared.loader=”属性，参数为1$&#123;catalina.base&#125;/lib/share,$&#123;catalina.base&#125;/lib/share/*.jar,$&#123;catalina.home&#125;/lib/share,$&#123;catalina.home&#125;/lib/share/*.jar Maven打war包不包含jar12345678&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;version&gt;3.1.0&lt;/version&gt; &lt;configuration&gt; &lt;packagingExcludes&gt;WEB-INF/lib/*.jar&lt;/packagingExcludes&gt; &lt;/configuration&gt;&lt;/plugin&gt; 查看sqlserver被锁的表以及如何解锁查看被锁表：1234SELECT request_session_id spid, OBJECT_NAME(resource_associated_entity_id) tableNameFROM sys.dm_tran_locksWHERE resource_type = 'OBJECT'; spid 锁表进程 tableName 被锁表名 解锁：12345DECLARE @spid INT;SET @spid = 236; --锁表进程DECLARE @sql VARCHAR(1000);SET @sql = 'kill '+CAST(@spid AS VARCHAR);EXEC (@sql);]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -723,9 +723,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2017年第39周]]></title>
-    <url>%2F2017%2F09%2F18%2F2017Week39%2F</url>
-    <content type="text"><![CDATA[2017年第39周（2017/09/25~2017/09/24）Tomcat管理页面403 Access Denied的解决方法安装tomcat，配置好tomcat环境变量以后，访问manager app页面，出现403 Access Denied错误，解决的方法如下：首先在conf/tomcat-users.xml文件里面，在前面添加如下代码：12&lt;role rolename=&quot;manager-gui&quot;/&gt; &lt;user password=&quot;admin&quot; roles=&quot;manager-gui&quot; username=&quot;tomcat&quot;/&gt; 然后重启tomcat，重新访问manager app页面，如果此时仍然出现403 Access Denied错误，那么就是访问的ip地受到了限制，我们打开/webapps/manager/META-INF/目录下context.xml文件，不是conf/目录下的context.xml文件，一定不要搞错了 我们将里面的内容注释掉或者修改为12&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|\d+\.\d+\.\d+\.\d+&quot; /&gt; 保存，然后重启tomcat，重新访问manager app页面，OK，问题得到解决。 如果没有生效，浏览器清空缓存。 MyBatis通过@调用Java类的静态代码和常量123456789101112&lt;select id=&quot;getByParaCode&quot; resultType=&quot;Sysconfig&quot;&gt; SELECT &lt;include refid=&quot;columnList&quot;/&gt; FROM C_SYS_PARA a WHERE a.PARA_CODE = #&#123;paraCode&#125; and a.APPLICATION_CODE = &apos;$&#123;@common.config.Global@getSysCode()&#125;&apos; &lt;/select&gt; &lt;select id=&quot;getByParaName&quot; resultType=&quot;Sysconfig&quot;&gt; SELECT &lt;include refid=&quot;columnList&quot;/&gt; FROM C_SYS_PARA a WHERE a.PARA_NAME = #&#123;paraName&#125; and a.APPLICATION_CODE = &apos;$&#123;@ommon.config.Global@getSysCode()&#125;&apos; &lt;/select&gt; 通过@来调用常量和静态方法 Tomcat 配置shared目录${catalina.home}/conf/catalina.properties文件使用来配置tomcat内置classloadder的load范围，通过修改此文件设置参数来实现shared文件夹中的jar加载。 tomcat中lib目录下新建share文件夹，放入所需要的jar包；修改配置文件catalina.properties中的“shared.loader=”属性，参数为1$&#123;catalina.base&#125;/lib/share,$&#123;catalina.base&#125;/lib/share/*.jar,$&#123;catalina.home&#125;/lib/share,$&#123;catalina.home&#125;/lib/share/*.jar Maven打war包不包含jar12345678&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;version&gt;3.1.0&lt;/version&gt; &lt;configuration&gt; &lt;packagingExcludes&gt;WEB-INF/lib/*.jar&lt;/packagingExcludes&gt; &lt;/configuration&gt;&lt;/plugin&gt; 查看sqlserver被锁的表以及如何解锁查看被锁表：1234SELECT request_session_id spid, OBJECT_NAME(resource_associated_entity_id) tableNameFROM sys.dm_tran_locksWHERE resource_type = 'OBJECT'; spid 锁表进程 tableName 被锁表名 解锁：12345DECLARE @spid INT;SET @spid = 236; --锁表进程DECLARE @sql VARCHAR(1000);SET @sql = 'kill '+CAST(@spid AS VARCHAR);EXEC (@sql);]]></content>
+    <title><![CDATA[2017年第38周]]></title>
+    <url>%2F2017%2F09%2F18%2F2017Week38%2F</url>
+    <content type="text"><![CDATA[2017年第38周（2017/09/18~2017/09/24）TextNG.xml配置实例 demo1 12345678910&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&lt;suite thread-count="3" name="Suite" parallel="tests"&gt; &lt;test name="Regression 1" preserve-order="true"&gt; &lt;!-- &lt;suite name="Suite1" verbose="1" &gt; &lt;test name="Regression1" &gt; --&gt; &lt;packages&gt; &lt;package name="com.billjc.controller" /&gt; &lt;/packages&gt; &lt;/test&gt;&lt;/ demo2 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&lt;!-- &lt;suite name="Preserve order test runs"&gt; --&gt;&lt;suite thread-count="3" name="Suite" parallel="tests"&gt; &lt;test name="Regression 1" preserve-order="true"&gt; &lt;classes&gt; &lt;class name="com.billjc.controller.ProfileControllerTest"&gt; &lt;methods&gt; &lt;include name="testMyProfile" /&gt; &lt;include name="testProfileUpdate" /&gt; &lt;include name="testProfileSave" /&gt; &lt;include name="testPmEvaluateUpdate" /&gt; &lt;include name="testPmEvaluateSave" /&gt; &lt;include name="testTmEvaluateUpdate" /&gt; &lt;include name="testTmEvaluateSave" /&gt; &lt;include name="testSkillUpdate" /&gt; &lt;include name="testSkillSave" /&gt; &lt;include name="testSkillDelete" /&gt; &lt;include name="testDomainUpdate" /&gt; &lt;include name="testDomainSave" /&gt; &lt;include name="testDomainDelete" /&gt; &lt;include name="testMyProjectList" /&gt; &lt;include name="testProfileQuery" /&gt; &lt;include name="testQueryProfileListBySkill" /&gt; &lt;include name="testQueryProfileListByDomain" /&gt; &lt;include name="testQueryProfileListByWorkPlace" /&gt; &lt;/methods&gt; &lt;/class&gt; &lt;class name="com.billjc.controller.TaskControllerTest"&gt; &lt;methods&gt; &lt;include name="testTaskCreate" /&gt; &lt;include name="testTaskSave" /&gt; &lt;include name="testTaskUpdate" /&gt; &lt;include name="testTaskItemCreateAndSave" /&gt; &lt;include name="testTaskItemSkillCreateAndSave" /&gt; &lt;include name="testTaskItemDomainCreateAndSave" /&gt; &lt;include name="testTaskItemDomainCreateAndSaveAndDelete" /&gt; &lt;include name="testMyTask" /&gt; &lt;include name="testTask" /&gt; &lt;include name="testTaskItem" /&gt; &lt;include name="testTaskQuery" /&gt; &lt;include name="testQueryTaskListBySkill" /&gt; &lt;include name="testQueryTaskListByDomain" /&gt; &lt;include name="testQueryTaskListByWorkPlace" /&gt; &lt;/methods&gt; &lt;/class&gt; &lt;/classes&gt; &lt;/test&gt;&lt;/suite&gt; Java获取本机MAC地址、IP地址源代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384package com.coderdream.util;import java.net.Inet4Address;import java.net.InetAddress;import java.net.NetworkInterface;import java.util.Enumeration;import org.slf4j.Logger;import org.slf4j.LoggerFactory;/** * @className: SystemTool * @description: 与系统相关的一些常用工具方法. 目前实现的有：获取MAC地址、IP地址、主机名 */public class SystemTool &#123; private static Logger logger = LoggerFactory.getLogger(SystemTool.class); public static void main(String[] args) throws Exception &#123; logger.debug("\tMacAddress:\t" + getMacAddress()); logger.debug("IpAddress:\t" + getIpAddress()); &#125; // 获取mac地址 public static String getMacAddress() &#123; try &#123; Enumeration&lt;NetworkInterface&gt; allNetInterfaces = NetworkInterface .getNetworkInterfaces(); byte[] mac = null; while (allNetInterfaces.hasMoreElements()) &#123; NetworkInterface netInterface = (NetworkInterface) allNetInterfaces .nextElement(); if (netInterface.isLoopback() || netInterface.isVirtual() || !netInterface.isUp()) &#123; continue; &#125; else &#123; mac = netInterface.getHardwareAddress(); if (mac != null) &#123; StringBuilder sb = new StringBuilder(); for (int i = 0; i &lt; mac.length; i++) &#123; sb.append(String.format("%02X%s", mac[i], (i &lt; mac.length - 1) ? "-" : "")); &#125; if (sb.length() &gt; 0) &#123; return sb.toString(); &#125; &#125; &#125; &#125; &#125; catch (Exception e) &#123; logger.error("MAC地址获取失败", e); &#125; return ""; &#125; // 获取ip地址 public static String getIpAddress() &#123; try &#123; Enumeration&lt;NetworkInterface&gt; allNetInterfaces = NetworkInterface .getNetworkInterfaces(); InetAddress ip = null; while (allNetInterfaces.hasMoreElements()) &#123; NetworkInterface netInterface = (NetworkInterface) allNetInterfaces .nextElement(); if (netInterface.isLoopback() || netInterface.isVirtual() || !netInterface.isUp()) &#123; continue; &#125; else &#123; Enumeration&lt;InetAddress&gt; addresses = netInterface .getInetAddresses(); while (addresses.hasMoreElements()) &#123; ip = addresses.nextElement(); if (ip != null &amp;&amp; ip instanceof Inet4Address) &#123; return ip.getHostAddress(); &#125; &#125; &#125; &#125; &#125; catch (Exception e) &#123; logger.error("IP地址获取失败", e); &#125; return ""; &#125;&#125; 运行结果：12MacAddress: 78-45-C4-15-6B-5AIpAddress: 10.50.20.123]]></content>
       <categories>
         <category>周报</category>
       </categories>
