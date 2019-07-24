@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Photoshop]]></title>
+    <url>%2F2019%2F07%2F24%2FPhotoshop%2F</url>
+    <content type="text"><![CDATA[抠图 裁剪 复制（轻移） &nbsp; 任何图片都要先去掉图层锁定再进行操作 抠图 选择【魔棒工具】（Shift+W） 点击需要删除的区域，然后按Delete键 裁剪 选择【移动工具】（Shift+V） 在有内容的图像左侧标尺区域点击向右拖动，生成垂直参考线； 在有内容的图像顶部标尺区域点击向下拖动，生成水平参考线； 选择【矩形选框工具】（Shift+M），选择需要的区域 菜单【图像】-》【裁剪】 复制（轻移） 选择【矩形选框工具】（Shift+M），选择需要的区域 选择【移动工具】（Shift+V） 按住【Alt】键，然后按向上或下箭头，垂直粘贴矩形区域； 按住【Alt】键，然后按向左或右箭头，水平粘贴矩形区域；]]></content>
+      <categories>
+        <category>Photoshop</category>
+      </categories>
+      <tags>
+        <tag>Photoshop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019年第30周]]></title>
+    <url>%2F2019%2F07%2F22%2F2019Week30%2F</url>
+    <content type="text"><![CDATA[2019年第30周（2019/07/22~2019/07/28） iOS使用 cocoapods 安装libwebp 错误Error installing libwebp Swift3.0之代码裁剪图片（只显示部分图片 Swift 4.2 自定义相机 iOS端支持WebP格式图片的显示及NSData、UIImage转换 Swift UIImage加载远程图片和圆角矩形 21个免费音效素材库 &nbsp;]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>webp</tag>
+        <tag>libwebp</tag>
+        <tag>UIImage</tag>
+        <tag>素材</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年第29周]]></title>
     <url>%2F2019%2F07%2F17%2F2019Week29%2F</url>
     <content type="text"><![CDATA[2019年第29周（2019/07/15~2019/07/21） sequelize-auto orm 自动生成models 使用sequelize-auto生成sequelize的Models sequelize-auto user not recognized when in cmd(mssql用户名认证失败) sequelize定义实体对象 默认自动将名加S变复数 PDF到EPUB转换器 sigil-epub制作 iOS-Core-Animation-Advanced-Techniques（一） iOS-Core-Animation-Advanced-Techniques（二） iOS-Core-Animation-Advanced-Techniques（三） iOS-Core-Animation-Advanced-Techniques(七) iOS 添加自定义的字体 Fonts provided by application PT-Plugin-Plus Cocoa利用TexturePacker创建的纹理图集实现角色的帧动画 Swift - 使用atlas图集实现动画效果（SpriteKit游戏开发） 一步一步图文介绍SpriteKit使用TexturePacker导出的纹理集Altas (一)宇宙大战Space Battle – 新建场景SCENE、精灵节点、PARTICLE粒子及背景音乐 (二)宇宙大战Space Battle – SpriteKit 无限循环背景Endless、SpriteKit物理碰撞、CoreMotion加速计 (三)宇宙大战Space Battle – 场景SCENE切换、UserDefaults统计分数、Particle粒子效果 ifiero-不错的学习SpriteKit的网站 emanueleferonato-不错的学习HTML5游戏源码网站 SpriteKit+Swift学习笔记 balloonCat Win7下更改iTunes备份路径最便捷的方法(亲测win10同样适用) iOS逆向工程——获取app素材图片 iOS如何提取APP中的素材 如何提取iOS App素材 如何导出 iOS App 的 .ipa 文件？ 用Apple Configurator 2提取ipa文件 MAC 命令行拷贝文件夹 WebP 极限压缩及ios实现 iOS支持webp格式图片 iOS 展示WebP图片（通过SDWebImage实现对.webp格式图片的支持） iOS端支持WebP格式图片的显示及NSData、UIImage转换 Swift3播放webp SDWebImageWebPCoder SDWebImage webp格式图片在iOS中的使用-YYWebImage 1cp -R /Users/coderdream/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Assets/TemporaryItems/MobileApps . &nbsp;]]></content>
