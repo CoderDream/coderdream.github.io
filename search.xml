@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PowerDesigner 反向工程 - SQL Server 2008]]></title>
+    <url>%2F2019%2F08%2F08%2FPowerDesigner%2F</url>
+    <content type="text"><![CDATA[PowerDesigner 反向工程 - SQL Server 2008 &nbsp; 反向工程 依次选择菜单：【File】-&gt;【Reverse Engineer】-&gt;【Database…】 【DBMS】选择【Miscrosoft SQL Server 2008】，然后点击【确定】按钮： 在【Connect to Data Source】面板中，【Data Source】选择【ODBC machine data source:】，然后点击【Configure…】按钮： 在【Configure Data Connections】面板中，选择第一个面板【ODBC Machine Data Sources】，然后点击【Add Data Source】按钮： 在弹出的【创建新数据源】面板中，选择【系统数据源(只用于当前机器)】： 接下来，选择【SQL Server】 最后，点击【完成】按钮： 在弹出的【创建到 SQL Server 的新数据源】面板中，依次输入【名称】和【服务器IP地址】： 接下来，选择【使用用户输入登录ID和密码的 SQL Server 验证】，同时输入【登录用户名】和【密码】： 接下来，不做任何修改，点击【下一步】： 最后，点击【完成】按钮，数据源创建完成： 接下来，在【ODBC Microsoft SQL Server 安装】面板中，点击【测试数据源】按钮： 测试结果：【测试成功】： 数据源创建完毕： 下拉选框中可以看到刚才创建的数据源【pdrcdb】： 选择下拉选框中的数据源，然后输入密码，点击【Connect】按钮： 回到反向工程数据源选择页面，点击【确认】按钮： 在弹出的【Database Reverse Engineering】页面中，默认会选择所有的数据库【All Databases】，同时默认勾选了【Table】选项： 选择【BJC_PDRC】数据库： 按需要选择【视图】，最后点击【OK】按钮，开始反向工程： 最终的反向工程结果：]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>SQL Server</tag>
+        <tag>PowerDesigner</tag>
+        <tag>Reverse Engineer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019年第31周]]></title>
+    <url>%2F2019%2F07%2F30%2F2019Week31%2F</url>
+    <content type="text"><![CDATA[2019年第31周（2019/07/29~2019/08/04） PotPlayer 字幕在线翻译插件 - 百度平台 &nbsp;]]></content>
+      <categories>
+        <category>周报</category>
+      </categories>
+      <tags>
+        <tag>PotPlayer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Photoshop]]></title>
     <url>%2F2019%2F07%2F24%2FPhotoshop%2F</url>
     <content type="text"><![CDATA[抠图 裁剪 复制（轻移） &nbsp; 任何图片都要先去掉图层锁定再进行操作 抠图 选择【魔棒工具】（Shift+W） 点击需要删除的区域，然后按Delete键 裁剪 选择【移动工具】（Shift+V） 在有内容的图像左侧标尺区域点击向右拖动，生成垂直参考线； 在有内容的图像顶部标尺区域点击向下拖动，生成水平参考线； 选择【矩形选框工具】（Shift+M），选择需要的区域 菜单【图像】-》【裁剪】 复制（轻移） 选择【矩形选框工具】（Shift+M），选择需要的区域 选择【移动工具】（Shift+V） 按住【Alt】键，然后按向上或下箭头，垂直粘贴矩形区域； 按住【Alt】键，然后按向左或右箭头，水平粘贴矩形区域；]]></content>
@@ -14,7 +38,7 @@
   <entry>
     <title><![CDATA[2019年第30周]]></title>
     <url>%2F2019%2F07%2F22%2F2019Week30%2F</url>
-    <content type="text"><![CDATA[2019年第30周（2019/07/22~2019/07/28） iOS使用 cocoapods 安装libwebp 错误Error installing libwebp Swift3.0之代码裁剪图片（只显示部分图片 Swift 4.2 自定义相机 iOS端支持WebP格式图片的显示及NSData、UIImage转换 Swift UIImage加载远程图片和圆角矩形 21个免费音效素材库 &nbsp;]]></content>
+    <content type="text"><![CDATA[2019年第30周（2019/07/22~2019/07/28） iOS使用 cocoapods 安装libwebp 错误Error installing libwebp Swift3.0之代码裁剪图片（只显示部分图片 Swift 4.2 自定义相机 iOS端支持WebP格式图片的显示及NSData、UIImage转换 Swift UIImage加载远程图片和圆角矩形 21个免费音效素材库 AddBorder(图片批量添加指定颜色边框工具) 最新绿色免费版 &nbsp;]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -23,6 +47,8 @@
         <tag>libwebp</tag>
         <tag>UIImage</tag>
         <tag>素材</tag>
+        <tag>Software</tag>
+        <tag>Green</tag>
       </tags>
   </entry>
   <entry>
@@ -114,8 +140,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>dir</tag>
         <tag>WebStorm</tag>
+        <tag>dir</tag>
       </tags>
   </entry>
   <entry>
@@ -137,8 +163,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>Tree</tag>
         <tag>dir</tag>
+        <tag>Tree</tag>
       </tags>
   </entry>
   <entry>
@@ -646,8 +672,8 @@
   </entry>
   <entry>
     <title><![CDATA[2018年第50周]]></title>
-    <url>%2F2018%2F12%2F10%2F2018Week23%2F</url>
-    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16）SQL Server查询数据的所有表名和行数查询查询所有表名 123SELECT name FROM sysobjects WHERE xtype = 'u';SELECT * FROM sys.tables; 查询数据库中所有的表名及行数 123456789101112SELECT a.name, b. ROWSFROM sysobjects AS aINNER JOIN sysindexes AS b ON a.id = b.idWHERE (a.type = 'u')AND (b.indid IN(0, 1))ORDER BY a.name, b. ROWS DESC; 查询所有的标明及空间占用量\行数 1234567891011121314SELECT object_name(id) tablename, 8 * reserved / 1024 reserved, rtrim(8 * dpages) + 'kb' used, 8 * (reserved - dpages) / 1024 unused, 8 * dpages / 1024 - ROWS / 1024 * minlen / 1024 free, ROWS --,*FROM sysindexesWHERE indid = 1ORDER BY tablename, reserved DESC SQL Server新增和删除约束 删除约束1234567IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_PDRC_Organization_PDRC_Organization]') AND parent_object_id = OBJECT_ID(N'[dbo].[PDRC_Organization]'))ALTER TABLE [dbo].[PDRC_Organization] DROP CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GOALTER TABLE [dbo].[PDRC_Organization] WITH CHECK ADD CONSTRAINT [FK_PDRC_Organization_PDRC_Organization] FOREIGN KEY([LeadeID])REFERENCES [dbo].[PDRC_Organization] ([ID])GO 新增约束12ALTER TABLE [dbo].[PDRC_Organization] CHECK CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GO]]></content>
+    <url>%2F2018%2F12%2F10%2F2018Week50%2F</url>
+    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16） 直接将Excel或CSV文件导入新数据库中作为表 打开“SQL Server Management Studio” 新建数据库 选择数据库，点击右键，依次选择【任务】-》【导入数据】 在“选择数据源“面板的数据源选项选择【平面文件源】 点击【浏览】按钮，选择需要导入的Excel或CSV文件 在【常规】面板勾选【在第一个数据行中显示列名称】，这样第一行数据会作为表的列名 在【高级】面板中设置正确的数据类型【DataType】，如带2位小数的数值要选择【数值[DT_NUMERIC]】,同时将DataScale（精度）设置为2 【下一步】选择目标数据库，直至完成后，点击【关闭】按钮 CASE WHEN 用法 123456789101112131415161718SELECT a.TM工号, a.交付人员, a.[标准产能(BSM)], a.生效日期, a.技术平台, CASE WHEN b.[交付人员] IS NULL THEN 0 ELSE 1 END AS bwid, CASE WHEN c.交付人员 IS NULL THEN 0 ELSE 1 END AS cwidFROM dbo.Staff01 AS a LEFT OUTER JOIN dbo.Staff02 AS b ON b.交付人员 = a.交付人员 LEFT OUTER JOIN dbo.Staff03 AS c ON c.交付人员 = a.交付人员; 运行结果如下 12345TM工号 交付人员 BSM 技术平台 bwid cwidB-27154 B-14853 0.80 测试 0 0B-27154 B-15985 1.68 Java 0 0B-27154 B-16514 1.08 Java 0 0B-27154 B-20897 1.12 Java 0 0 将上面的查询语句作为一个视图selall（Select All） 下面的脚本分别得到Staff02和Staff03的数据： 12select COUNT(*) from selall where bwid = 1;select COUNT(*) from selall where cwid = 1; 获取3张表的记录行数 1234/****** Script for SelectTopNRows command from SSMS ******/SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage1];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage2];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage3]; 查看tm的情况 1234567891011SELECT d.workid, c.tm, d.tmFROM PDRC_StaffManage1 d LEFT OUTER JOIN( SELECT a.workid AS workid, b.tm FROM PDRC_StaffManage1 a JOIN PDRC_StaffManage2 b ON a.workid = b.workid) AS c ON d.workid = c.workid; 结果：tm1为空则去tm2、tm1和tm2不相等则取tm2 123456789workid tm1 tm2B-21276 B-28309 B-28309B-43229 NULL B-24644B-34169 B-30987 B-28023B-49033 NULL B-40354B-26561 NULL B-35656B-43037 B-22935 B-16981B-14297 B-27189 B-28023B-48901 B-22940 B-28023 正确结果：1461条数据 1234567891011SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台]FROM selallWHERE cwid = 0 AND bwid = 0UNIONSELECT *FROM Staff02; 检查Staff02和Staff03是否存在相同交付人员的数据 1select * from dbo.Staff02 a join Staff03 b on b.交付人员 =a.交付人员 现在数据库中TM不存在的交付人员列表（17） 12345678910111213141516171819202122232425262728293031323334SELECT *FROM( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02) iWHERE i.[交付人员] NOT IN( SELECT f.[交付人员] FROM ( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02 ) f JOIN dbo.RC g ON g.TM工号 = f.TM工号); Staff01中所有不存在TM的交付人员列表（414） 1234567SELECT *FROM Staff01 aWHERE a.TM工号 NOT IN( SELECT b.TM工号 FROM RC b); Staff01中所有不存在TM列表（7） 1select distinct(a.TM工号) from Staff01 a where a.TM工号 not in (select b.TM工号 from RC b);]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -657,8 +683,8 @@
   </entry>
   <entry>
     <title><![CDATA[2018年第50周]]></title>
-    <url>%2F2018%2F12%2F10%2F2018Week50%2F</url>
-    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16） 直接将Excel或CSV文件导入新数据库中作为表 打开“SQL Server Management Studio” 新建数据库 选择数据库，点击右键，依次选择【任务】-》【导入数据】 在“选择数据源“面板的数据源选项选择【平面文件源】 点击【浏览】按钮，选择需要导入的Excel或CSV文件 在【常规】面板勾选【在第一个数据行中显示列名称】，这样第一行数据会作为表的列名 在【高级】面板中设置正确的数据类型【DataType】，如带2位小数的数值要选择【数值[DT_NUMERIC]】,同时将DataScale（精度）设置为2 【下一步】选择目标数据库，直至完成后，点击【关闭】按钮 CASE WHEN 用法 123456789101112131415161718SELECT a.TM工号, a.交付人员, a.[标准产能(BSM)], a.生效日期, a.技术平台, CASE WHEN b.[交付人员] IS NULL THEN 0 ELSE 1 END AS bwid, CASE WHEN c.交付人员 IS NULL THEN 0 ELSE 1 END AS cwidFROM dbo.Staff01 AS a LEFT OUTER JOIN dbo.Staff02 AS b ON b.交付人员 = a.交付人员 LEFT OUTER JOIN dbo.Staff03 AS c ON c.交付人员 = a.交付人员; 运行结果如下 12345TM工号 交付人员 BSM 技术平台 bwid cwidB-27154 B-14853 0.80 测试 0 0B-27154 B-15985 1.68 Java 0 0B-27154 B-16514 1.08 Java 0 0B-27154 B-20897 1.12 Java 0 0 将上面的查询语句作为一个视图selall（Select All） 下面的脚本分别得到Staff02和Staff03的数据： 12select COUNT(*) from selall where bwid = 1;select COUNT(*) from selall where cwid = 1; 获取3张表的记录行数 1234/****** Script for SelectTopNRows command from SSMS ******/SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage1];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage2];SELECT COUNT(*) FROM [BJC_PDRC].[dbo].[PDRC_StaffManage3]; 查看tm的情况 1234567891011SELECT d.workid, c.tm, d.tmFROM PDRC_StaffManage1 d LEFT OUTER JOIN( SELECT a.workid AS workid, b.tm FROM PDRC_StaffManage1 a JOIN PDRC_StaffManage2 b ON a.workid = b.workid) AS c ON d.workid = c.workid; 结果：tm1为空则去tm2、tm1和tm2不相等则取tm2 123456789workid tm1 tm2B-21276 B-28309 B-28309B-43229 NULL B-24644B-34169 B-30987 B-28023B-49033 NULL B-40354B-26561 NULL B-35656B-43037 B-22935 B-16981B-14297 B-27189 B-28023B-48901 B-22940 B-28023 正确结果：1461条数据 1234567891011SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台]FROM selallWHERE cwid = 0 AND bwid = 0UNIONSELECT *FROM Staff02; 检查Staff02和Staff03是否存在相同交付人员的数据 1select * from dbo.Staff02 a join Staff03 b on b.交付人员 =a.交付人员 现在数据库中TM不存在的交付人员列表（17） 12345678910111213141516171819202122232425262728293031323334SELECT *FROM( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02) iWHERE i.[交付人员] NOT IN( SELECT f.[交付人员] FROM ( SELECT [TM工号], [交付人员], [标准产能(BSM)], [生效日期], [技术平台] FROM selall WHERE cwid = 0 AND bwid = 0 UNION SELECT * FROM Staff02 ) f JOIN dbo.RC g ON g.TM工号 = f.TM工号); Staff01中所有不存在TM的交付人员列表（414） 1234567SELECT *FROM Staff01 aWHERE a.TM工号 NOT IN( SELECT b.TM工号 FROM RC b); Staff01中所有不存在TM列表（7） 1select distinct(a.TM工号) from Staff01 a where a.TM工号 not in (select b.TM工号 from RC b);]]></content>
+    <url>%2F2018%2F12%2F10%2F2018Week23%2F</url>
+    <content type="text"><![CDATA[2018年第50周（2018/12/10~2018/12/16）SQL Server查询数据的所有表名和行数查询查询所有表名 123SELECT name FROM sysobjects WHERE xtype = 'u';SELECT * FROM sys.tables; 查询数据库中所有的表名及行数 123456789101112SELECT a.name, b. ROWSFROM sysobjects AS aINNER JOIN sysindexes AS b ON a.id = b.idWHERE (a.type = 'u')AND (b.indid IN(0, 1))ORDER BY a.name, b. ROWS DESC; 查询所有的标明及空间占用量\行数 1234567891011121314SELECT object_name(id) tablename, 8 * reserved / 1024 reserved, rtrim(8 * dpages) + 'kb' used, 8 * (reserved - dpages) / 1024 unused, 8 * dpages / 1024 - ROWS / 1024 * minlen / 1024 free, ROWS --,*FROM sysindexesWHERE indid = 1ORDER BY tablename, reserved DESC SQL Server新增和删除约束 删除约束1234567IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_PDRC_Organization_PDRC_Organization]') AND parent_object_id = OBJECT_ID(N'[dbo].[PDRC_Organization]'))ALTER TABLE [dbo].[PDRC_Organization] DROP CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GOALTER TABLE [dbo].[PDRC_Organization] WITH CHECK ADD CONSTRAINT [FK_PDRC_Organization_PDRC_Organization] FOREIGN KEY([LeadeID])REFERENCES [dbo].[PDRC_Organization] ([ID])GO 新增约束12ALTER TABLE [dbo].[PDRC_Organization] CHECK CONSTRAINT [FK_PDRC_Organization_PDRC_Organization]GO]]></content>
       <categories>
         <category>周报</category>
       </categories>
@@ -861,8 +887,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>jQuery</tag>
         <tag>Java</tag>
+        <tag>jQuery</tag>
         <tag>eclipse</tag>
       </tags>
   </entry>
