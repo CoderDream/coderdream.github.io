@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Docker 相关文档]]></title>
+    <url>%2F2019%2F08%2F29%2FDocker%2F</url>
+    <content type="text"><![CDATA[Docker 相关文档 centos7.3环境下的docker安装 切换docker国内镜像源]]></content>
+      <tags>
+        <tag>Docker</tag>
+        <tag>CentOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年第34周]]></title>
     <url>%2F2019%2F08%2F19%2F2019Week34%2F</url>
     <content type="text"><![CDATA[2019年第34周（2019/08/19~2019/08/25） node模块之xlsx使用 vue（一）使用vue-cli搭建项目 vue + iview项目构建 vue + iview 项目实践总结 【完】 Vue+ElementUI从零开始搭建自己的网站（一、环境搭建） Vue+ElementUI从零开始搭建自己的网站（二、导航组件） Vue+ElementUI从零开始搭建自己的网站（三、组件间的通信） SQL SERVER 2008分页 教育类游戏前景好 美国已超越中国成为最大购买国 Nodejs MSSQL详细解读 &nbsp;]]></content>
@@ -172,8 +181,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>WebStorm</tag>
         <tag>dir</tag>
+        <tag>WebStorm</tag>
       </tags>
   </entry>
   <entry>
@@ -195,8 +204,8 @@
         <category>周报</category>
       </categories>
       <tags>
-        <tag>dir</tag>
         <tag>Tree</tag>
+        <tag>dir</tag>
       </tags>
   </entry>
   <entry>
@@ -607,8 +616,8 @@
         <tag>SpringMVC</tag>
         <tag>Maven</tag>
         <tag>GitHub</tag>
-        <tag>IDEA</tag>
         <tag>Hexo</tag>
+        <tag>IDEA</tag>
         <tag>Mybatis</tag>
         <tag>WinPE</tag>
         <tag>gitignore</tag>
