@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="文章目录 基本思路与目标 所需软硬件 准备工作 实践操作 操作前必读 下边以8GU盘分为两个分区为例   补充说明 参考文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装PE到多分区U盘图文教程">
+<meta property="og:url" content="http://coderdream.github.io/2019/01/21/WinPE/index.html">
+<meta property="og:site_name" content="梦幻代码工作室">
+<meta property="og:description" content="文章目录 基本思路与目标 所需软硬件 准备工作 实践操作 操作前必读 下边以8GU盘分为两个分区为例   补充说明 参考文档">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image001.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image002.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image003.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image004.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image005.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image006.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image007.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image008.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image009.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image010.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image011.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image012.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image013.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image014.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image015.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image016.png">
+<meta property="og:image" content="http://coderdream.github.io/2019/01/21/WinPE/image017.png">
+<meta property="article:published_time" content="2019-01-21T00:36:09.000Z">
+<meta property="article:modified_time" content="2024-01-30T01:35:50.132Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="WinPE">
+<meta property="article:tag" content="UltraISO">
+<meta property="article:tag" content="DiskGenius">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://coderdream.github.io/2019/01/21/WinPE/image001.png">
+  
+  
+  
+  <title>安装PE到多分区U盘图文教程 - 梦幻代码工作室</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="安装PE到多分区U盘图文教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2019-01-21 08:36" pubdate>
+          2019年1月21日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">安装PE到多分区U盘图文教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ul>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E4%B8%8E%E7%9B%AE%E6%A0%87">基本思路与目标</a></li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E6%89%80%E9%9C%80%E8%BD%AF%E7%A1%AC%E4%BB%B6">所需软硬件</a></li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E5%AE%9E%E8%B7%B5%E6%93%8D%E4%BD%9C">实践操作</a><ul>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E6%93%8D%E4%BD%9C%E5%89%8D%E5%BF%85%E8%AF%BB">操作前必读</a></li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E4%B8%8B%E8%BE%B9%E4%BB%A58GU%E7%9B%98%E5%88%86%E4%B8%BA%E4%B8%A4%E4%B8%AA%E5%88%86%E5%8C%BA%E4%B8%BA%E4%BE%8B">下边以8GU盘分为两个分区为例</a></li>
+</ul>
+</li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E">补充说明</a></li>
+<li><a href="https://coderdream.github.io/2019/01/21/WinPE/#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3">参考文档</a><br><escape><span id="more"></span></escape></li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="基本思路与目标"><a href="#基本思路与目标" class="headerlink" title="基本思路与目标"></a>基本思路与目标</h2><ol>
+<li>实际上这是网上已有的内容，这里做个知识普及，不是新东西。也有很多U盘PE制作工具，请绕过，条条大路通罗马，这里只说这一条道。</li>
+<li>U盘做成两个或更多的分区（建议分两个分区），其中一个分区专门用来放启动PE所需的文件，其他分区可以格成NTFS格式或exFAT格式（建议后者），方便存放大容量（超个4G）的单个文件，如，目前WIN10官方的ISO文件有5G之多。</li>
+</ol>
+<p>&nbsp;</p>
+<h2 id="所需软硬件"><a href="#所需软硬件" class="headerlink" title="所需软硬件"></a>所需软硬件</h2><ol>
+<li>软件工具：UltraISO、DiskGenius</li>
+<li>PE的ISO文件：WinPE_X64_2in1_20170812. ISO，以及相应的PMF文件，PMF文件你也可以自己制作，教程中有说到。</li>
+<li>U盘：8G或更大，小U盘分区意义不大。呵呵，实际上8G都偏小，我是用来演示的，将就说一下8G可以。<br>上述软件工具与PEISO文件下载地址：<a target="_blank" rel="noopener" href="http://pan/">http://pan</a>. baidu. com&#x2F;s&#x2F;1i4BH4Cd密码：9t0z</li>
+</ol>
+<p>&nbsp;</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>切记，备份你的U盘数据到电脑硬盘上，因为制作过程中将格式化U盘。<br>&nbsp;</p>
+<h2 id="实践操作"><a href="#实践操作" class="headerlink" title="实践操作"></a>实践操作</h2><h3 id="操作前必读"><a href="#操作前必读" class="headerlink" title="操作前必读"></a>操作前必读</h3><ul>
+<li>A. 如果你的U盘已经有多个分区（事先要下载相应的PMF文件），请确认最后一个分区的容量是否合适，要大于PMF文件容量，然后从第14个步骤开始。</li>
+<li>B. 如果你事先已有了PMF文件，但U盘没有多分区，从第9个步骤开始操作。</li>
+<li>C. 其他情况从第1个步骤开始。</li>
+</ul>
+<h3 id="下边以8GU盘分为两个分区为例"><a href="#下边以8GU盘分为两个分区为例" class="headerlink" title="下边以8GU盘分为两个分区为例"></a>下边以8GU盘分为两个分区为例</h3><ol>
+<li><p>写入硬盘映像。重复强调一下，要事先备份U盘数据。<br>  安装UltraISO，也可以是免安装的单文件版本。U盘接入电脑。使用UltraISO打开WinPE_X64_2in1_20170812. ISO，如下图（图1）操作。</p>
+  <img src="/2019/01/21/WinPE/image001.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>选择写入方式（图2）。有些老式机子不支持HDD+V2模式，所以一般HDD+模式即可。选择好之后，点“写入”。</p>
+  <img src="/2019/01/21/WinPE/image002.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>以下是正式写入U盘的进程图（图3）：</p>
+  <img src="/2019/01/21/WinPE/image003.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>刻录成功，返回（图4），关闭UltraISO。此时U盘是可启动的PE盘，但是还是单一分区。</p>
+  <img src="/2019/01/21/WinPE/image004.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>运行DiskGenius。右键点击DiskGenius界面中的U盘（图5），将U盘分区备份成镜像文件（pmf为后缀名的文件）。</p>
+  <img src="/2019/01/21/WinPE/image005.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>选择备份到什么路径（图6），并指定备份的文件名，如：WinPE_X64_2in1_20170812. pmf</p>
+  <img src="/2019/01/21/WinPE/image006.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>下图（图7）为备份过程。</p>
+  <img src="/2019/01/21/WinPE/image007.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>成功备份的结果（图8）  </p>
+  <img src="/2019/01/21/WinPE/image008.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>删除U盘分区（图9）。这个U盘还是一个分区，不是初衷。</p>
+  <img src="/2019/01/21/WinPE/image009.png" srcset="/img/loading.gif" lazyload class="">
+<p>  U盘PE数据的已经备份了，就是WinPE_X64_2in1_20170812. pmf，不怕删除U盘分区。这为下面U盘分成两个分区做好准备工作。</p>
+</li>
+<li><p>U盘分区（图10）。用来做PE启动的分区要放在最后一个分区，这里以两个分区为例，第二分区是最后一个分区，是用来PE启动的。第一分区是普通分区，可以大一些，比如，8G的U盘，第一个分区给出6G容量（图10），余下的1. 2G作为PE启动的分区。如果你有32G的U盘，你可以将PE启动的分区做成4G也可以，主要还是看你的需要。<br>第一个分区用来存放各类文件的，NTFS格式或exFAT格式较好（建议后者），看示意图。</p>
+<img src="/2019/01/21/WinPE/image010.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>确定PE启动分区（图11）。作为PE启动分区（以1. 2G为例），必须是主磁盘分区，FAT32格式。</p>
+<img src="/2019/01/21/WinPE/image011.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>激活PE启动分区（图12）。</p>
+<img src="/2019/01/21/WinPE/image012.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>保存分区表与格式化分区（图13）。点击“保存更改”即可。</p>
+<img src="/2019/01/21/WinPE/image013.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>将镜像文件还原到PE启动分区（图14）。右键点1. 2G的那个分区，点菜单“从镜像文件还原分区”。</p>
+<img src="/2019/01/21/WinPE/image014.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>进行分区还原。选择事先备份的pmf文件，点“开始”进行还原。此时只是还原1. 2G的那个分区，6G的分区不去动它。</p>
+<img src="/2019/01/21/WinPE/image015.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>还原成功的示意图（图16）。图中G分区是U盘的第一个分区，NTFS格式，H分区是PE启动分区，FAT32格式。</p>
+<img src="/2019/01/21/WinPE/image016.png" srcset="/img/loading.gif" lazyload class="">
+</li>
+<li><p>在Windows的文件资源管理器中看到的U盘分区的示意图（图17）。</p>
+  <img src="/2019/01/21/WinPE/image017.png" srcset="/img/loading.gif" lazyload class=""></li>
+</ol>
+<p>&nbsp;</p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ol>
+<li>启动分区PE如何更新？在<strong>版本号15063的WIN10</strong>或PE中是可以看到U盘的多个分区，包括启动分区FAT32。一般来说，就是同名替换WIM文件，外置程序按同样路径替换。结构复杂的PE，制作者有提供PMF文件（单一分区方式）最方便，如果没有，自己找个旧U盘制作个PMF文件（单一分区方式），将这个PMF文件恢复到大U盘的FAT32分区。</li>
+<li>启动分区专门用来置放系统安装源文件也是同样的道理。这种系统安装方式类似以前的光盘启动安装。</li>
+</ol>
+<p>&nbsp;</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ol>
+<li>[制作自己的PMF文件](<a target="_blank" rel="noopener" href="http://bbs/">http://bbs</a>. pcbeta. com&#x2F;viewthread-1753994-1-1. html)</li>
+<li>[原文](<a target="_blank" rel="noopener" href="http://bbs/">http://bbs</a>. pcbeta. com&#x2F;viewthread-1753915-1-1. html)</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Windows/" class="category-chain-item">Windows</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/WinPE/" class="print-no-link">#WinPE</a>
+      
+        <a href="/tags/UltraISO/" class="print-no-link">#UltraISO</a>
+      
+        <a href="/tags/DiskGenius/" class="print-no-link">#DiskGenius</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>安装PE到多分区U盘图文教程</div>
+      <div>http://coderdream.github.io/2019/01/21/WinPE/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2019年1月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/01/21/2019Week04/" title="2019年第4周">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2019年第4周</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/01/19/NodeJS/" title="NodeJS 相关">
+                        <span class="hidden-mobile">NodeJS 相关</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
