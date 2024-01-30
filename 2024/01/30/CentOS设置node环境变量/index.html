@@ -16,27 +16,21 @@
   <meta name="author" content="CoderDream">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1、持续集成及Jenkins介绍软件开发生命周期 软件开发生命周期又叫做SDLC（Software Development Life Cycle），它是集合了计划、开发、测试和部署过程的集合。如下图所示 ：   需求分析  这是生命周期的第一阶段，根据项目需求，团队执行一个可行性计划的分析。项目需求可能是公司内部或者客户提出的。这阶段主要是对信息的收集，也有可能是对现有项目的改善和重新做一个新的项">
+    <meta name="description" content="1.查询是否有node 123echo $PATH     &#x2F;&#x2F;查看是否有&#x2F;usr&#x2F;local&#x2F;bin。ls -l &#x2F;usr&#x2F;local&#x2F;bin | grep node     &#x2F;&#x2F;看看node是否确实存在。ls -l &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node            &#x2F;&#x2F;同上  2.进入管理员权限 1su root &#x2F; sudo su  3.profile文件更改 123&#x2F;&#x2F;如果p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1、持续集成及Jenkins介绍">
-<meta property="og:url" content="http://coderdream.github.io/2024/01/29/1%E3%80%81%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%8AJenkins%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="CentOS设置node环境变量">
+<meta property="og:url" content="http://coderdream.github.io/2024/01/30/CentOS%E8%AE%BE%E7%BD%AEnode%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/index.html">
 <meta property="og:site_name" content="CoderDream Studio">
-<meta property="og:description" content="1、持续集成及Jenkins介绍软件开发生命周期 软件开发生命周期又叫做SDLC（Software Development Life Cycle），它是集合了计划、开发、测试和部署过程的集合。如下图所示 ：   需求分析  这是生命周期的第一阶段，根据项目需求，团队执行一个可行性计划的分析。项目需求可能是公司内部或者客户提出的。这阶段主要是对信息的收集，也有可能是对现有项目的改善和重新做一个新的项">
+<meta property="og:description" content="1.查询是否有node 123echo $PATH     &#x2F;&#x2F;查看是否有&#x2F;usr&#x2F;local&#x2F;bin。ls -l &#x2F;usr&#x2F;local&#x2F;bin | grep node     &#x2F;&#x2F;看看node是否确实存在。ls -l &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node            &#x2F;&#x2F;同上  2.进入管理员权限 1su root &#x2F; sudo su  3.profile文件更改 123&#x2F;&#x2F;如果p">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://coderdream.github.io/images/pasted-1706590229965.png">
-<meta property="og:image" content="http://coderdream.github.io/images/pasted-1706596581852.png">
-<meta property="og:image" content="http://coderdream.github.io/images/pasted-1706596609959.png">
-<meta property="og:image" content="http://coderdream.github.io/images/pasted-1706596633827.png">
-<meta property="og:image" content="http://coderdream.github.io/images/pasted-1706596661856.png">
-<meta property="article:published_time" content="2024-01-29T20:49:45.000Z">
-<meta property="article:modified_time" content="2024-01-30T06:59:02.924Z">
+<meta property="article:published_time" content="2024-01-30T00:02:52.000Z">
+<meta property="article:modified_time" content="2024-01-30T08:09:16.032Z">
 <meta property="article:author" content="CoderDream">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://coderdream.github.io/images/pasted-1706590229965.png">
   
   
   
-  <title>1、持续集成及Jenkins介绍 - CoderDream Studio</title>
+  <title>CentOS设置node环境变量 - CoderDream Studio</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="1、持续集成及Jenkins介绍"></span>
+            <span id="subtitle" data-typed-text="CentOS设置node环境变量"></span>
           
         </div>
 
@@ -213,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-30 04:49" pubdate>
-          2024年1月30日 凌晨
+        <time datetime="2024-01-30 08:02" pubdate>
+          2024年1月30日 早上
         </time>
       </span>
     
@@ -225,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          98 字
         
       </span>
     
@@ -236,7 +230,7 @@
         
         
         
-          21 分钟
+          1 分钟
         
       </span>
     
@@ -273,134 +267,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">1、持续集成及Jenkins介绍</h1>
+            <h1 id="seo-header">CentOS设置node环境变量</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="1、持续集成及Jenkins介绍"><a href="#1、持续集成及Jenkins介绍" class="headerlink" title="1、持续集成及Jenkins介绍"></a>1<strong>、持续集成及</strong>Jenkins<strong>介绍</strong></h2><p>软件开发生命周期</p>
-<p>软件开发生命周期又叫做<strong>SDLC</strong>（Software Development Life Cycle），它是集合了计划、开发、测试和部署过程的集合。如下图所示 ：</p>
-<p><img src="/images/pasted-1706590229965.png" srcset="/img/loading.gif" lazyload alt="upload successful"></p>
-<ul>
-<li>需求分析</li>
-</ul>
-<p>这是生命周期的第一阶段，根据项目需求，团队执行一个可行性计划的分析。项目需求可能是公司内部或者客户提出的。这阶段主要是对信息的收集，也有可能是对现有项目的改善和重新做一个新的项目。还要分析项目的预算多长，可以从哪方面受益及布局，这也是项目创建的目标。</p>
-<ul>
-<li>设计</li>
-</ul>
-<p>第二阶段就是设计阶段，系统架构和满意状态（就是要做成什么样子，有什么功能），和创建一个项目计划。计划可以使用图表，布局设计或者文者的方式呈现。</p>
-<ul>
-<li>实现</li>
-</ul>
-<p>第三阶段就是实现阶段，项目经理创建和分配工作给开者，开发者根据任务和在设计阶段定义的目标进行开发代码。依据项目的大小和复杂程度，可以需要数月或更长时间才能完成。</p>
-<ul>
-<li>测试</li>
-</ul>
-<p>测试人员进行代码测试 ，包括功能测试、代码测试、压力测试等。</p>
-<ul>
-<li>进化</li>
-</ul>
-<p>最后进阶段就是对产品不断的进化改进和维护阶段，根据用户的使用情况，可能需要对某功能进行修改，bug修复，功能增加等。</p>
-<h3 id="软件开发瀑布模型"><a href="#软件开发瀑布模型" class="headerlink" title="软件开发瀑布模型"></a>软件开发瀑布模型</h3><p>瀑布模型是最著名和最常使用的软件开发模型。瀑布模型就是一系列的软件开发过程。它是由制造业繁衍出来的。一个高度化的结构流程在一个方向上流动，有点像生产线一样。在瀑布模型创建之初，没有其它开发的模型，有很多东西全靠开发人员去猜测，去开发。这样的模型仅适用于那些简单的软件开 发， 但是已经不适合现在的开发了。</p>
-<p>下图对软件开发模型的一个阐述。</p>
-<p><img src="/images/pasted-1706596581852.png" srcset="/img/loading.gif" lazyload alt="upload successful"></p>
-<table>
-<thead>
-<tr>
-<th>优势</th>
-<th>劣势</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>简单易用和理解</td>
-<td>各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量。</td>
-</tr>
-<tr>
-<td>当前一阶段完成后，您只需要去关注后续阶段。</td>
-<td>由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发风险。</td>
-</tr>
-<tr>
-<td>为项目提供了按阶段划分的检查节点</td>
-<td>瀑布模型的突出缺点是不适应用户需求的变化。</td>
-</tr>
-</tbody></table>
-<h3 id="软件的敏捷开发"><a href="#软件的敏捷开发" class="headerlink" title="软件的敏捷开发"></a>软件的敏捷开发</h3><h4 id="什么是敏捷开发？"><a href="#什么是敏捷开发？" class="headerlink" title="什么是敏捷开发？"></a>什么是敏捷开发？</h4><p>敏捷开发（Agile Development） 的核心是迭代开发（Iterative Development） 与 增量开发</p>
-<p>（Incremental Development） 。</p>
-<ul>
-<li><strong>何为迭代开发？</strong></li>
-</ul>
-<p>对于大型软件项目，传统的开发方式是采用一个大周期（比如一年）进行开发，整个过程就是一次”大开发”；迭代开发的方式则不一样，它将开发过程拆分成多个小周期，即一次”大开发”变成多次”小开发”，每次小开发都是同样的流程，所以看上去就好像重复在做同样的步骤。</p>
-<p>举例来说，SpaceX 公司想造一个大推力火箭，将人类送到火星。但是，它不是一开始就造大火箭，而是先造一个最简陋的小火箭 Falcon 1。结果，第一次发射就爆炸了，直到第四次发射，才成功进入轨道。然后，开发了中型火箭 Falcon 9，九年中发射了70次。最后，才开发 Falcon 重型火箭。如果 SpaceX 不采用迭代开发，它可能直到现在还无法上天。</p>
-<ul>
-<li><strong>何为增量开发？</strong></li>
-</ul>
-<p>软件的每个版本，都会新增一个用户可以感知的完整功能。也就是说，按照新增功能来划分迭代。</p>
-<p>举例来说，房产公司开发一个10栋楼的小区。如果采用增量开发的模式，该公司第一个迭代就是交付一号楼，第二个迭代交付二号楼 每个迭代都是完成一栋完整的楼。而不是第一个迭代挖好10栋楼的地基，第二个迭代建好每栋楼的骨架，第三个迭代架设屋顶……</p>
-<h4 id="敏捷开发如何迭代？"><a href="#敏捷开发如何迭代？" class="headerlink" title="敏捷开发如何迭代？"></a>敏捷开发如何迭代？</h4><p>虽然敏捷开发将软件开发分成多个迭代，但是也要求，每次迭代都是一个完整的软件开发周期，必须按照软件工程的方法论，进行正规的流程管理。</p>
-<p><img src="/images/pasted-1706596609959.png" srcset="/img/loading.gif" lazyload alt="upload successful"></p>
-<h4 id="敏捷开发有什么好处？"><a href="#敏捷开发有什么好处？" class="headerlink" title="敏捷开发有什么好处？"></a>敏捷开发有什么好处？</h4><ul>
-<li><strong>早期交付</strong></li>
-</ul>
-<p>敏捷开发的第一个好处，就是早期交付，从而大大降低成本。 还是以上一节的房产公司为例，如果按照传统的”瀑布开发模式”，先挖10栋楼的地基、再盖骨架、然后架设屋顶，每个阶段都等到前一个阶段完成后开始，可能需要两年才能一次性交付10栋楼。也就是说，如果不考虑预售，该项目必须等到两年后才能回款。 敏捷开发是六个月后交付一号楼，后面每两个月交付一栋楼。因此，半年就能回款10%，后面每个月都会有现金流，资金压力就大大减轻了。</p>
-<ul>
-<li><strong>降低风险</strong></li>
-</ul>
-<p>敏捷开发的第二个好处是，及时了解市场需求，降低产品不适用的风险。 请想一想，哪一种情况损失比较小：10栋楼都造好以后，才发现卖不出去，还是造好第一栋楼，就发现卖不出去，从而改进或停建后面9栋楼？</p>
-<h3 id="什么是持续集成"><a href="#什么是持续集成" class="headerlink" title="什么是持续集成"></a>什么是持续集成</h3><p>持续集成（ Continuous integration ， 简称 CI ）指的是，频繁地（一天多次）将代码集成到主干。</p>
-<p>持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。</p>
-<p>通过持续集成， 团队可以快速的从一个功能到另一个功能，简而言之，敏捷软件开发很大一部分都要归功于持续集成。</p>
-<ul>
-<li><strong>持续集成的流程</strong></li>
-</ul>
-<p><img src="/images/pasted-1706596633827.png" srcset="/img/loading.gif" lazyload alt="upload successful"></p>
-<p>根据持续集成的设计，代码从提交到生产，整个过程有以下几步。</p>
-<ul>
-<li>提交</li>
-</ul>
-<p>流程的第一步，是开发者向代码仓库提交代码。所有后面的步骤都始于本地代码的一次提交（commit）。</p>
-<ul>
-<li>测试（第一轮）</li>
-</ul>
-<p>代码仓库对commit操作配置了钩子（hook），只要提交代码或者合并进主干，就会跑自动化测试。</p>
-<ul>
-<li>构建</li>
-</ul>
-<p>通过第一轮测试，代码就可以合并进主干，就算可以交付了。</p>
-<p>交付后，就先进行构建（build），再进入第二轮测试。所谓构建，指的是将源码转换为可以运行的实际代码，比如安装依赖，配置各种资源（样式表、JS脚本、图片）等等。</p>
-<ul>
-<li>测试（第二轮）</li>
-</ul>
-<p>构建完成，就要进行第二轮测试。如果第一轮已经涵盖了所有测试内容，第二轮可以省略，当然，这时构建步骤也要移到第一轮测试前面。</p>
-<ul>
-<li>部署</li>
-</ul>
-<p>过了第二轮测试，当前代码就是一个可以直接部署的版本（artifact）。将这个版本的所有文件打包（tar ﬁlename.tar * ）存档，发到生产服务器。</p>
-<ul>
-<li>回滚</li>
-</ul>
-<p>一旦当前版本发生问题，就要回滚到上一个版本的构建结果。最简单的做法就是修改一下符号链接，指向上一个版本的目录。</p>
-<h3 id="持续集成的组成要素"><a href="#持续集成的组成要素" class="headerlink" title="持续集成的组成要素"></a>持续集成的组成要素</h3><ul>
-<li>一个自动构建过程， 从检出代码、 编译构建、 运行测试、 结果记录、 测试统计等都是自动完成的， 无需人工干预。</li>
-<li>一个代码存储库，即需要版本控制软件来保障代码的可维护性，同时作为构建过程的素材库，一般使用SVN或Git。</li>
-<li>一个持续集成服务器， Jenkins 就是一个配置简单和使用方便的持续集成服务器。</li>
-</ul>
-<p><img src="/images/pasted-1706596661856.png" srcset="/img/loading.gif" lazyload alt="upload successful"></p>
-<p>持续集成的好处</p>
-<p>1、降低风险，由于持续集成不断去构建，编译和测试，可以很早期发现问题，所以修复的代价就少；</p>
-<p>2、对系统健康持续检查，减少发布风险带来的问题；</p>
-<p>3、减少重复性工作；</p>
-<p>4、持续部署，提供可部署单元包；</p>
-<p>5、持续交付可供使用的版本；</p>
-<p>6、增强团队信心；</p>
-<h3 id="Jenkins介绍"><a href="#Jenkins介绍" class="headerlink" title="Jenkins介绍"></a>Jenkins<strong>介绍</strong></h3><p>Jenkins 是一款流行的开源持续集成（Continuous Integration）工具，广泛用于项目开发，具有自动化构建、测试和部署等功能。官网： <a target="_blank" rel="noopener" href="http://jenkins-ci.org/">http://jenkins-ci.org/</a>。</p>
-<p>Jenkins的特征：</p>
-<ul>
-<li>开源的Java语言开发持续集成工具，支持持续集成，持续部署。</li>
-<li>易于安装部署配置：可通过yum安装,或下载war包以及通过docker容器等快速实现安装部署，可方便web界面配置管理。</li>
-<li>消息通知及测试报告：集成RSS&#x2F;E-mail通过RSS发布构建结果或当构建完成时通过e-mail通知，生成JUnit&#x2F;TestNG测试报告。</li>
-<li>分布式构建：支持Jenkins能够让多台计算机一起构建&#x2F;测试。</li>
-<li>文件识别：Jenkins能够跟踪哪次构建生成哪些jar，哪次构建使用哪个版本的jar等。</li>
-<li>丰富的插件支持：支持扩展插件，你可以开发适合自己团队使用的工具，如git，svn，maven，docker等。</li>
+                <ul>
+<li><p>1.查询是否有node</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-keyword">echo</span> $PATH     <span class="hljs-string">//</span>查看是否有<span class="hljs-string">/usr/local/bin</span>。<br><span class="hljs-keyword">ls</span> -l <span class="hljs-string">/usr/local/bin</span> | grep node     <span class="hljs-string">//</span>看看node是否确实存在。<br><span class="hljs-keyword">ls</span> -l <span class="hljs-string">/usr/local/bin/node</span>            <span class="hljs-string">//</span>同上<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>2.进入管理员权限</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">su</span> root / sudo <span class="hljs-keyword">su</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>3.profile文件更改</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vim">//如果<span class="hljs-keyword">profile</span>文件不存在<br>touch  /etc/<span class="hljs-keyword">profile</span><br><span class="hljs-keyword">vi</span> /etc/<span class="hljs-keyword">profile</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后输入下列代码,并保存</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-attribute">NODE_HOME</span>=<span class="hljs-string">&quot;/usr/local&quot;</span><br><span class="hljs-built_in">export</span> NODE_HOME<br><span class="hljs-attribute">CLASS_PATH</span>=<span class="hljs-string">&quot;<span class="hljs-variable">$NODE_HOME</span>&quot;</span><br><span class="hljs-attribute">PATH</span>=<span class="hljs-string">&quot;.<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$NODE_HOME</span>/bin/&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>4.profile激活</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile<br></code></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -419,8 +307,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>1、持续集成及Jenkins介绍</div>
-      <div>http://coderdream.github.io/2024/01/29/1、持续集成及Jenkins介绍/</div>
+      <div>CentOS设置node环境变量</div>
+      <div>http://coderdream.github.io/2024/01/30/CentOS设置node环境变量/</div>
     </div>
     <div class="license-meta">
       
@@ -464,9 +352,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/30/CentOS%E8%AE%BE%E7%BD%AEnode%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="CentOS设置node环境变量">
+                      <a href="/2024/01/30/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91%E9%95%9C%E5%83%8F%E6%BA%90%E5%8A%A0%E9%80%9Fnpm/" title="使用腾讯云镜像源加速npm">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CentOS设置node环境变量</span>
+                        <span class="hidden-mobile">使用腾讯云镜像源加速npm</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -474,8 +362,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/29/%E9%83%A8%E7%BD%B2%20Hexo%20%E5%88%B0%20GitHub%20Pages/" title="部署 Hexo 到 GitHub Pages">
-                        <span class="hidden-mobile">部署 Hexo 到 GitHub Pages</span>
+                      <a href="/2024/01/29/1%E3%80%81%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%8AJenkins%E4%BB%8B%E7%BB%8D/" title="1、持续集成及Jenkins介绍">
+                        <span class="hidden-mobile">1、持续集成及Jenkins介绍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
