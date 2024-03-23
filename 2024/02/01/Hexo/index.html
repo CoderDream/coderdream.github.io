@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          166 字
+          345 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -296,6 +296,25 @@
 <li>hexo new draft “draft title” #新建草稿，保存在博客中但不显示</li>
 <li>hexo new page “page title”</li>
 </ul>
+<h3 id="aplayer本地音频"><a href="#aplayer本地音频" class="headerlink" title="aplayer本地音频"></a>aplayer本地音频</h3><p>效果：</p>
+<img src="/2024/02/01/Hexo/6vm09rbsz6.png" srcset="/img/loading.gif" lazyload class="" title="img">
+
+<ol>
+<li><p>博客中如果要插入本地音频，需要先安装hexo-tag-aplayer，在你的cmd输入</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install <span class="hljs-comment">--save hexo-tag-aplayer</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>然后确保你的hexo的配置文件_config.yml里</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<p>打开这个可以让你new新的文章时生成同名文件夹，当然如果你要使用别的路径，可以忽略这步。</p>
+</li>
+<li><p>把音频文件放到同名文件夹里，然后在文章插入以下语句</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&#123;<span class="hljs-meta">%</span> aplayer <span class="hljs-string">&quot;No_Time_for_Caution&quot;</span> <span class="hljs-string">&quot;Hans_Zimmer&quot;</span> <span class="hljs-string">&quot;No_Time_for_Caution-Hans_Zimmer-24026258.mp3&quot;</span> <span class="hljs-string">&quot;https://img4.kuwo.cn/star/albumcover/300/50/69/4184500136.jpg&quot;</span> <span class="hljs-meta">%</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>第三个引号是文件名，是本地的，图片也可以是本地的</p>
+<p>其他详细参数参考<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/grzhan/hexo-tag-aplayer%23usage&source=article&objectId=2199563">https://github.com/grzhan/hexo-tag-aplayer#usage</a></p>
+</li>
+</ol>
 
                 
               </div>
