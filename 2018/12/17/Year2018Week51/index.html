@@ -1,0 +1,991 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2018年第51周（2018&#x2F;12&#x2F;17~2018&#x2F;12&#x2F;23） [dyld&#96;__abort_with_payload: With no error message](https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;42027601&#x2F;dyld-abort-with-payload-with-no-error-message)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018年第51周">
+<meta property="og:url" content="http://coderdream.github.io/2018/12/17/Year2018Week51/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="2018年第51周（2018&#x2F;12&#x2F;17~2018&#x2F;12&#x2F;23） [dyld&#96;__abort_with_payload: With no error message](https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;42027601&#x2F;dyld-abort-with-payload-with-no-error-message)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-12-17T01:57:35.000Z">
+<meta property="article:modified_time" content="2024-01-29T11:15:52.307Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="TeamViewer">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Activiti6">
+<meta property="article:tag" content="Spring-Boot">
+<meta property="article:tag" content="小游戏">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>2018年第51周 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="2018年第51周"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2018-12-17 09:57" pubdate>
+          2018年12月17日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          25 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2018年第51周</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="2018年第51周（2018-12-17-2018-12-23）"><a href="#2018年第51周（2018-12-17-2018-12-23）" class="headerlink" title="2018年第51周（2018&#x2F;12&#x2F;17~2018&#x2F;12&#x2F;23）"></a>2018年第51周（2018&#x2F;12&#x2F;17~2018&#x2F;12&#x2F;23）</h2><ol>
+<li>[dyld&#96;__abort_with_payload: With no error message](<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42027601/dyld-abort-with-payload-with-no-error-message">https://stackoverflow.com/questions/42027601/dyld-abort-with-payload-with-no-error-message</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xitu/gold-miner/blob/master/ios.md">所有 iOS 译文</a></li>
+<li><a href="https://coderdream.github.io/DNS_NGINX#20185101">CentOS7下安装 DNS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/moxiaoan/p/5683743.html">CentOS7使用firewalld打开关闭防火墙与端口</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/starksoft/p/9292794.html">CentOS 7 安装Nginx 并配置自动启动</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jimisun/p/8057156.html">Linux安装nginx</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangfei0904306/article/details/70561971">CentOS自动安装nginx(shell脚本方式)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chenqingwh/node-micirservice-platform/blob/master/docs/dns_setupandconfig.md">CentOS7 DNS服务器安装与配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chenqingwh/node-micirservice-platform/blob/master/docs/nginx_setupandconfig.md">CentOS7 Nginx安装与配置</a></li>
+</ol>
+<h2 id="2018年第50周（2018-12-10-2018-12-16）"><a href="#2018年第50周（2018-12-10-2018-12-16）" class="headerlink" title="2018年第50周（2018&#x2F;12&#x2F;10~2018&#x2F;12&#x2F;16）"></a>2018年第50周（2018&#x2F;12&#x2F;10~2018&#x2F;12&#x2F;16）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://httpbin.org/">免费网络请求测试</a></li>
+<li><a href="https://coderdream.github.io/201850">RC交付人员导入笔记</a></li>
+<li><a href="https://coderdream.github.io/iOS">iOS相关文档</a></li>
+</ol>
+<h2 id="2018年第47周（2018-11-19-2018-11-25）"><a href="#2018年第47周（2018-11-19-2018-11-25）" class="headerlink" title="2018年第47周（2018&#x2F;11&#x2F;19~2018&#x2F;11&#x2F;25）"></a>2018年第47周（2018&#x2F;11&#x2F;19~2018&#x2F;11&#x2F;25）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/oriency755/article/details/8255733">BI SSIS应用系列之发送邮件</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ljhdo/p/4844119.html">SSIS 发送邮件(HTML格式)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/izhaofu/p/4730263.html">C#使用 System.Net.Mail发送邮件功能</a></li>
+<li><a href="https://coderdream.github.io/tools/MicroKMS_v18.10.06.rar">KMS在线激活Windows和Office之MicroKMS 神龙版</a></li>
+</ol>
+<h2 id="2018年第46周（2018-11-12-2018-11-18）"><a href="#2018年第46周（2018-11-12-2018-11-18）" class="headerlink" title="2018年第46周（2018&#x2F;11&#x2F;12~2018&#x2F;11&#x2F;18）"></a>2018年第46周（2018&#x2F;11&#x2F;12~2018&#x2F;11&#x2F;18）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.jb51.net/article/100382.htm">Swift中 ！和 ？的区别及使用</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_4ddc30040102wdjz.html">全网首发联想小新V3000装黑苹果UEFI+GPT+ CLOVER引导+双系统+双硬盘</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.netsarang.com/download/down_form.html?code=622">Xshell 6 Download</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.netsarang.com/download/down_form.html?code=623">Xftp 6 Download</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhouyalei/p/6390979.html">CentOS7系统下 docker 环境搭建</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhouyalei/p/6400951.html">制作docker-jdk7-zookeeper镜像(非集群版)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhouyalei/p/6411614.html">CentOS7系统下搭建docker本地镜像仓库</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1613797-1-1.html">免AHCI补丁</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1753051&highlight=ACHI">老古董电脑P35主板+ICH9, 没有ACHI选项怎么破?</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1499277-1-1.html">主板BIOS下无AHCI设置，装OS X 10.9.2成功，分享有效补丁</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1788946-1-1.html">几乎完美8700k&#x2F;8600k + z370 HD3 + 英伟达显卡+10.13.5的EFI分享</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1773155-1-1.html">黑苹果工具箱，福音来了，随便挑随便选！！！</a></li>
+<li><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/a378c960ee45e2b3282830b0.html">Windows 7下硬盘安装黑苹果Mac OS X图文教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Mr-Owl/p/5580479.html">Windows环境下使用Clover四叶草引导双硬盘安装OSX 10.11.5原版镜像</a></li>
+<li><a href="">黑苹果安装从0开始—-clover优盘引导改硬盘引导篇</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1169005-1-1.html">在 win7 &#x2F; win8 下安装苹果系统 (懒人版)</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1740837-1-1.html">重大更新Clover_v2.4k_r4757安装界面改版 支持10.14 Mojave</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1762375-1-1.html">配置是I5-7600K+技嘉Z270X-UD3+GTX 1050+简单利用Clover四叶草安装U盘安装黑苹果</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1665056-1-1.html">Dell optiplex 390 安装 El Capitan</a></li>
+<li><a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/viewthread-1420871-1-1.html">关于dell optiplex 390安装黑苹果的解决方案</a></li>
+<li><a href="https://coderdream.github.io/Hackintosh">Hackintosh</a></li>
+</ol>
+<h2 id="2018年第45周（2018-11-05-2018-11-11）"><a href="#2018年第45周（2018-11-05-2018-11-11）" class="headerlink" title="2018年第45周（2018&#x2F;11&#x2F;05~2018&#x2F;11&#x2F;11）"></a>2018年第45周（2018&#x2F;11&#x2F;05~2018&#x2F;11&#x2F;11）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b4389e7346d2">iOS9 不能正常使用 Http 的解决方法</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/yzwdli/p/5337881.html">计算数据库中各个表的数据量和每行记录所占用空间</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/articlelist_1436983063_12_1.html"></a></li>
+</ol>
+<h2 id="2018年第44周（2018-10-29-2018-11-04）"><a href="#2018年第44周（2018-10-29-2018-11-04）" class="headerlink" title="2018年第44周（2018&#x2F;10&#x2F;29~2018&#x2F;11&#x2F;04）"></a>2018年第44周（2018&#x2F;10&#x2F;29~2018&#x2F;11&#x2F;04）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/fb48e8bee0f8446e622e1416.html">2018最新谷歌账号注册方法，注册Gmail有效方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/andyxia/article/details/50684133">为VMWare中的Mac OS X 10.11硬盘扩容</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2">AdventureWorks2008R2数据库</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/blogernice/articles/9857154.html">Swift 编程入门</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008-r2/ms169917(v%3dsql.105">SSIS 教程：创建简单的 ETL 包 https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008-r2/ms169917(v%3dsql.105)  </a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21230857">PDF文档时如何实现全屏模式下的双页观看</a></li>
+</ol>
+<h2 id="2018年第43周（2018-10-22-2018-10-28）"><a href="#2018年第43周（2018-10-22-2018-10-28）" class="headerlink" title="2018年第43周（2018&#x2F;10&#x2F;22~2018&#x2F;10&#x2F;28）"></a>2018年第43周（2018&#x2F;10&#x2F;22~2018&#x2F;10&#x2F;28）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014351782/article/details/49794491">XCode常用快捷键的使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://yantuz.cn/373.html">Chrome同步助手 借助插件实现国内环境同步浏览器数据</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/guoxiangyue/p/9598961.html">解决新版chrome无法手动拖动安装插件 提示“无法从该网站添加应用，扩展程序和用户脚本”</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/supermarx/p/7762828.html">关于Google下插件SwitchyOmega用法</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/24099364/no-such-module-cocoa-in-swift-playground">No such module ‘Cocoa’ in Swift Playground</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/uxyheaven/article/details/50818107">用OCLint给iOS代码做静态分析 - TODO</a></li>
+<li><a href="https://coderdream.github.io/201843#20184301">SQLServer 数据库查看各表的记录数</a></li>
+<li><a href="https://coderdream.github.io/201843#20184302">SQLServer 查询所有表名和表结构</a></li>
+<li><a href="https://coderdream.github.io/201843#20184303">SQLServer 数据库拷贝</a></li>
+<li><a href="https://coderdream.github.io/201843#20184304">Notepad++及实用插件安装</a></li>
+</ol>
+<h2 id="2018年第42周（2018-10-15-2018-10-21）"><a href="#2018年第42周（2018-10-15-2018-10-21）" class="headerlink" title="2018年第42周（2018&#x2F;10&#x2F;15~2018&#x2F;10&#x2F;21）"></a>2018年第42周（2018&#x2F;10&#x2F;15~2018&#x2F;10&#x2F;21）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cui-cui/p/8507435.html">WebStorm mac下如何安装WebStorm + 破解</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007735211">Nodejs进阶：如何玩转子进程（child_process）（TODO）</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/api/child_process.html#child_process_spawning_bat_and_cmd_files_on_windows">child_process - 子进程 - 官方教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/jiuluguoshidai/article/details/51583684">解决虚拟机中安装的mac os系统无法识别ios设备的问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sodino/article/details/51275638">【Node.js】’readline’ 逐行读取、写入文件内容</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yipu/archive/2013/03/14/2958977.html">Xcode：Home键光标移动到行首和End键光标移动到行尾</a></li>
+</ol>
+<h2 id="2018年第41周（2018-10-08-2018-10-14）"><a href="#2018年第41周（2018-10-08-2018-10-14）" class="headerlink" title="2018年第41周（2018&#x2F;10&#x2F;08~2018&#x2F;10&#x2F;14）"></a>2018年第41周（2018&#x2F;10&#x2F;08~2018&#x2F;10&#x2F;14）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/dongmelon/article/details/78686344">nodejs – 执行bat脚本</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8ef89220545f">第一次编写bat脚本</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/chenyufeng1991/article/details/60474644">nodejs读取文件时相对路径的正确写法(使用fs模块)</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zsensei/article/details/79094714">Node.js 中 __dirname 和 .&#x2F; 的区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuyaqi1993/article/details/78723797">Node.js调用cmd输出中文乱码</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/JessicaIsEvolving/p/9471188.html">NodeJs测试框架Mocha的安装与使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/whybxy/p/7645578.html">ES6 Promise 用法讲解</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hustskyking/p/promise.html">细嗅Promise</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43299649/article/details/82881567">VMware15安装MAC（MAC OS 10.13）(OS X 10.14)原版可升级最新可解锁macOS Unlocker3.0（OS X 10.13）</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/galaxy_yyg/article/details/82891044">VMWare15 安装 Mac OS 系统</a></li>
+</ol>
+<h2 id="2018年第39周（2018-09-24-2018-09-30）"><a href="#2018年第39周（2018-09-24-2018-09-30）" class="headerlink" title="2018年第39周（2018&#x2F;09&#x2F;24~2018&#x2F;09&#x2F;30）"></a>2018年第39周（2018&#x2F;09&#x2F;24~2018&#x2F;09&#x2F;30）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gudujianxiao/category/350476.html">SSIS学习系列文章</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wljqds/p/cookie_session_node.html">Cookie和Session在Node.JS中的实践（一）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wljqds/p/session.html">Cookie和Session在Node.JS中的实践（二）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jianxuanbing/p/9158830.html">npm install “Unexpected end of JSON input while parsing near”问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4721ddd27027">如何为 Markdown 文件自动生成目录</a></li>
+</ol>
+<h2 id="2018年第38周（2018-09-17-2018-09-23）"><a href="#2018年第38周（2018-09-17-2018-09-23）" class="headerlink" title="2018年第38周（2018&#x2F;09&#x2F;17~2018&#x2F;09&#x2F;23）"></a>2018年第38周（2018&#x2F;09&#x2F;17~2018&#x2F;09&#x2F;23）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.jetbrains.com/webstorm/2016/05/getting-started-with-electron-in-webstorm/">Getting started with Electron in WebStorm</a> </li>
+<li><a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/electron/2.0.9/">taobao electron mirrors</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/changhuzhao/article/details/78684967?tdsourcetag=s_pctim_aiomsg">electron 完整项目构建过程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/date-format-lite">NodeJS日期格式化</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011127019/article/details/52134699">NodeJs forEach循环</a></li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/topic/52e8e78a953654bb712654cb">《nodejs开发指南》for与forEach之间的差别</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set">JavaScript 标准库 Set</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/random-int">NodeJS 随机数</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/compare-dates">日期比较</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/q3585914/article/details/78470649">node.js-ORM数据库框架sequelize使用总结 超时查询、缓存查询、多表关联查询(TODO)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhangpengnike/p/6122588.html">SQLServer 日期函数大全</a></li>
+</ol>
+<h2 id="2018年第37周（2018-09-10-2018-09-16）"><a href="#2018年第37周（2018-09-10-2018-09-16）" class="headerlink" title="2018年第37周（2018&#x2F;09&#x2F;10~2018&#x2F;09&#x2F;16）"></a>2018年第37周（2018&#x2F;09&#x2F;10~2018&#x2F;09&#x2F;16）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008501410">Seneca ：NodeJS 微服务框架入门指南</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.imooc.com/article/19162">mongoDB 学习笔记纯干货</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2f54b90efe15">Mongoose增查改删学习笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/594a1b73e54a">Mongoose教程翻译</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/hustzw07/article/details/73468970">测试框架Mocha</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tugenhua0707/p/8419534.html">学习测试框架Mocha</a></li>
+</ol>
+<h2 id="2018年第36周（2018-09-03-2018-09-09）"><a href="#2018年第36周（2018-09-03-2018-09-09）" class="headerlink" title="2018年第36周（2018&#x2F;09&#x2F;03~2018&#x2F;09&#x2F;09）"></a>2018年第36周（2018&#x2F;09&#x2F;03~2018&#x2F;09&#x2F;09）</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://blog.fens.me/series-nodejs/">从零开始nodejs系列文章</a> </li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangyuan19880606/article/category/6246826">深入浅出Node.js系列</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chyingp/nodejs-learning-guide/blob/master/index.md">Nodejs学习笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chris-oil/p/5625437.html">Nodejs基础中间件Connect</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yjfengwen/p/3827217.html">nodejs之日志管理</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.fens.me/nodejs-oauth-passport/">Passport现实社交网络OAuth登陆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lenmom/p/9193183.html">CentOS 7 创建桌面快捷方式</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Leeniux/article/details/80828074">CentOS7(GNOME)设置桌面图标大小缩放</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Run_the_youth/article/details/51587077">CentOS7将应用快捷方式加到桌面</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/article/0014631488240837e3633d3d180476cb684ba7c10fda6f6000">使用Travis进行持续集成(Java)</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000011218410">Travis CI 系列：自动化部署博客(php)</a></li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/topic/558df089ebf9c92d17e73358">Nodejs开源项目里怎么样写测试、CI和代码测试覆盖率</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.zybuluo.com/XiangZhou/note/208532">Express 4.x API</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cramonDE/gulp-book">Gulp 入门指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/debimeng/article/details/74296152?utm_source=itdadao&utm_medium=referral">CentOS 7.2重启网络报错 Failed to start LSB: Bring up&#x2F;down—liux报错</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lingbo229/article/details/79019658">Centos7 安装PhantomJS</a></li>
+</ol>
+<h2 id="2018年第35周（2018-08-27-2018-09-02）"><a href="#2018年第35周（2018-08-27-2018-09-02）" class="headerlink" title="2018年第35周（2018&#x2F;08&#x2F;27~2018&#x2F;09&#x2F;02）"></a>2018年第35周（2018&#x2F;08&#x2F;27~2018&#x2F;09&#x2F;02）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzuokun/article/details/70799976">CentOS7 安装 mongodb</a> </li>
+<li><a target="_blank" rel="noopener" href="http://www.mamicode.com/info-detail-2371195.html">CentOS 7上安装 MongoDB数据库 4.0.0最新版</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/configuration-options/">mongoDB Configuration File Options</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhouzhiwengang/article/details/51446582">centos Mongodb 基础使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jb51.net/article/48217.htm">MongoDB常用操作命令大全</a></li>
+<li><a href="https://coderdream.github.io/201835#20183501">CentOS 7上安装 MongoDB数据库 4.1.1最新版</a> </li>
+<li><a href="https://coderdream.github.io/201835#20183502">CentOS查看和修改PATH环境变量的方法</a> </li>
+<li><a href="https://coderdream.github.io/201835#20183503">CentOS下手动安装gcc最佳实践</a> </li>
+<li><a href="https://coderdream.github.io/201835#20183504">CentOS下手动安装nodejs最佳实践</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hongdada/p/6671065.html">CentOS7.2 安装Chrome</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ywlaker/p/6113927.html">单点登录原理与简单实现</a> </li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/topic/55f6e69904556da7553d20dd">单点登录的三种实现方式</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24708791/article/details/78535565">单点登录之CAS原理和实现</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wxj-106/p/8097880.html">SSO单点登录三种情况的实现方式详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yexiaochai/p/4422460.html">认识单点登录(nodejs)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lucio110/p/8192792.html">Sourcetree跳过注册的方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CoderDream/struts-examples/tree/master/crud">Struts2最佳实践之crud（Maven版）</a></li>
+<li><a target="_blank" rel="noopener" href="http://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html">How To Create A Struts 2 Web Application(官网)</a></li>
+</ol>
+<h2 id="2018年第34周（2018-08-20-2018-08-26）"><a href="#2018年第34周（2018-08-20-2018-08-26）" class="headerlink" title="2018年第34周（2018&#x2F;08&#x2F;20~2018&#x2F;08&#x2F;26）"></a>2018年第34周（2018&#x2F;08&#x2F;20~2018&#x2F;08&#x2F;26）</h2><ol>
+<li><a href="https://coderdream.github.io/201834#20183401">nrm – NPM registry 管理工具</a> </li>
+<li><a href="https://coderdream.github.io/201834#20183402">怎么样给linux文件添加可执行权限</a></li>
+<li><a href="https://coderdream.github.io/201834#20183403">CentOS7下安装google chrome浏览器</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.linuxidc.com/Linux/2017-04/142897.htm">vmware linux虚拟机与本地物理机共享文件夹</a></li>
+</ol>
+<h2 id="2018年第33周（2018-08-13-2018-08-19）"><a href="#2018年第33周（2018-08-13-2018-08-19）" class="headerlink" title="2018年第33周（2018&#x2F;08&#x2F;13~2018&#x2F;08&#x2F;19）"></a>2018年第33周（2018&#x2F;08&#x2F;13~2018&#x2F;08&#x2F;19）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/mate_ge/article/details/78841351">centos6.5+postgresql10环境搭建</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/think8848/p/5877076.html">CentOS7下安装并简单设置PostgreSQL笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/renzhicai/p/7773080.html">CentOS下Redis的安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/aimu/p/7047671.html">Redis可视化工具Redis Desktop Manager使用</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.runoob.com/redis/redis-tutorial.html">Redis 教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/topic/4fb1c1fd1975fe1e1310490b">在Node.js中使用TCP套接字编程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangxin09/article/details/12844975">学习 NodeJS 第八天：Socket 通讯</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xyfcode/zspeed">Node游戏服务器源代码（TCP通讯，mongodb，文件读写，数据加密，子父进程通讯）开心连三国</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lupengfei1009/article/details/50832996">MongoDB+MongoVUE安装及入门</a></li>
+</ol>
+<h2 id="2018年第32周（2018-08-06-2018-08-12）"><a href="#2018年第32周（2018-08-06-2018-08-12）" class="headerlink" title="2018年第32周（2018&#x2F;08&#x2F;06~2018&#x2F;08&#x2F;12）"></a>2018年第32周（2018&#x2F;08&#x2F;06~2018&#x2F;08&#x2F;12）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/dkbnull/article/details/61414350">使用WebStorm&#x2F;IDEA上传本地项目到GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/limark/p/5200239.html">代码审查工具 StyleCop 的探索</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mxh1099/p/5332133.html">js之规范代码写法</a><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">for</span>(var key in obj)&#123;<br>	<span class="hljs-built_in">if</span>(!obj.hasOwnProperty(key)) continue;<br></code></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cc_fys/article/details/78281085">WebStorm 打开Node.js的代码提示功能</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.oschina.net/question/2855414_2189024">用webstorm写jQuery代码提示有警告怎么处理？警告代码如下。麻烦大神指教</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_30809315/article/details/78548152">JQuery警告：Duplicated jQuery selector【divs &#x3D; $( “div” );】</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shuaijie/articles/5033309.html">代码审查工具StyleCop之一：介绍和使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/gwblue/article/details/25003031">StyleCop学习笔记——自定义规则</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chen110xi/p/5534994.html">StyleCop学习笔记——默认的规则</a></li>
+<li><a href="https://coderdream.github.io/201831#20183102">VMWare怎样隐藏到托盘</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012102104/article/details/78950290">MarkDown支持高亮的语言</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.bootcss.com/p/layoutit/">自定义表单–样例</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wlmnzf/article/details/50678115">自定义表单（完）–（html5版本）</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/vkqiang/article/details/69371764">开源 java CMS - FreeCMS2.6 自定义表单</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/webreport/archive/2009/09/02/1558731.html">web工作流管理系统开发之一 工作流概念</a></li>
+<li><a href="https://coderdream.github.io/command-ls">ls命令</a></li>
+<li><a href="https://coderdream.github.io/command-find">find命令</a></li>
+</ol>
+<h2 id="2018年第31周（2018-07-30-2018-08-05）"><a href="#2018年第31周（2018-07-30-2018-08-05）" class="headerlink" title="2018年第31周（2018&#x2F;07&#x2F;30~2018&#x2F;08&#x2F;05）"></a>2018年第31周（2018&#x2F;07&#x2F;30~2018&#x2F;08&#x2F;05）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.howtoing.com/how-to-install-vagrant-on-centos-7">如何在CentOS 7上安装Vagrant</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html">Vagrant入门</a></li>
+<li><a target="_blank" rel="noopener" href="https://c4ys.com/archives/1230">Vagrant box国内镜像及本地安装教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/xiaofeiaiai/article/details/55048812">CentOS7.2部署FTP</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/pmlpml/article/details/53925542">用 vagrant 快速部署 docker 虚拟机集群</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/I-will-be-different/p/4353597.html">Docker个人学习总结</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/52fhy/p/5638571.html">Docker学习笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html">Vagrant入门</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011415782/article/details/78501799">CentOS7 ab压力测试安装与解释</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/markdown">Markdown 编辑器语法指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012187452/article/details/73478028">Node.js学习之网络爬虫（使用cheerio抓取网页数据）</a></li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/topic/5203a71844e76d216a727d2e">通读cheerio API</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/mingjiatang/archive/2017/12/13/8034953.html">NodeJS爬虫入门</a></li>
+</ol>
+<h2 id="2018年第30周（2018-07-23-2018-07-29）"><a href="#2018年第30周（2018-07-23-2018-07-29）" class="headerlink" title="2018年第30周（2018&#x2F;07&#x2F;23~2018&#x2F;07&#x2F;29）"></a>2018年第30周（2018&#x2F;07&#x2F;23~2018&#x2F;07&#x2F;29）</h2><ol>
+<li><a href="https://coderdream.github.io/docker-cookbook#20180727">Docker 经典实例</a></li>
+<li><a href="https://coderdream.github.io/centos-sinopia#20180727">CentOS 7 安装Sinopia</a></li>
+</ol>
+<h2 id="2018年第28周（2018-07-09-2018-07-15）"><a href="#2018年第28周（2018-07-09-2018-07-15）" class="headerlink" title="2018年第28周（2018&#x2F;07&#x2F;09~2018&#x2F;07&#x2F;15）"></a>2018年第28周（2018&#x2F;07&#x2F;09~2018&#x2F;07&#x2F;15）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/youyoui/p/8337147.html">Git 忽略提交 .gitignore</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.mamicode.com/info-detail-1833843.html">selenium 3.0 键盘事件 +强制结束chromedriver进程代码</a></li>
+</ol>
+<h2 id="2018年第23周（2018-06-04-2018-06-10）"><a href="#2018年第23周（2018-06-04-2018-06-10）" class="headerlink" title="2018年第23周（2018&#x2F;06&#x2F;04~2018&#x2F;06&#x2F;10）"></a>2018年第23周（2018&#x2F;06&#x2F;04~2018&#x2F;06&#x2F;10）</h2><ol>
+<li><a href="https://coderdream.github.io/201823#20182301">SQL Server查询数据的所有表名和行数</a></li>
+<li><a href="https://coderdream.github.io/201823#20182302">SQL Server新增和删除约束</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/whhgarsky/article/details/70164180">用Enterprise Architect从源码自动生成类图（附图+工具）</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010156063/article/details/76199459">Enterprise Architect 数据库逆向工程（导入已经存在的数据表结构）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/blfshiye/p/4747252.html">UML造型——使用EA时序图工具的开发实践和经验</a></li>
+</ol>
+<h2 id="2017年第47周（2017-11-13-2017-11-19）"><a href="#2017年第47周（2017-11-13-2017-11-19）" class="headerlink" title="2017年第47周（2017&#x2F;11&#x2F;13~2017&#x2F;11&#x2F;19）"></a>2017年第47周（2017&#x2F;11&#x2F;13~2017&#x2F;11&#x2F;19）</h2><ol>
+<li><a href="https://coderdream.github.io/201747#20174701">人力看板（高级查询）</a></li>
+<li><a href="https://coderdream.github.io/201747#20174702">任务看板（高级查询）</a></li>
+<li><a href="https://coderdream.github.io/201747#20174703">JavaScript获取当前根目录</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fish-li/archive/2011/06/06/2073626.html">看懂SqlServer查询计划</a></li>
+<li><a target="_blank" rel="noopener" href="http://files.cnblogs.com/files/fish-li/MyNorthwind.7z">看懂SqlServer查询计划-数据库文件</a></li>
+</ol>
+<h2 id="2017年第46周（2017-11-13-2017-11-19）"><a href="#2017年第46周（2017-11-13-2017-11-19）" class="headerlink" title="2017年第46周（2017&#x2F;11&#x2F;13~2017&#x2F;11&#x2F;19）"></a>2017年第46周（2017&#x2F;11&#x2F;13~2017&#x2F;11&#x2F;19）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/landeanfen/p/5035608.html">JS组件系列——Form表单验证神器： BootstrapValidator</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/v-weiwang/p/4834672.html">基于jquery，bootstrap数据验证插件bootstrapValidator 教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nele/p/5493414.html">bootstrapValidator.js 做表单验证</a></li>
+<li><a href="https://coderdream.github.io/201746#20174601">SpringMVC访问不到默认页的问题</a></li>
+<li><a href="https://coderdream.github.io/201746#20174602">将外部jar打入本地maven仓库</a></li>
+<li><a href="https://coderdream.github.io/201746#20174603">maven项目使用mybatis-generator自动生成代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gjkbendan/p/6497040.html">spring aop 实现用户操作日志记录功能(转）【本地实现为SystemLogAspect】</a></li>
+</ol>
+<h2 id="2017年第45周（2017-11-06-2017-11-12）"><a href="#2017年第45周（2017-11-06-2017-11-12）" class="headerlink" title="2017年第45周（2017&#x2F;11&#x2F;06~2017&#x2F;11&#x2F;12）"></a>2017年第45周（2017&#x2F;11&#x2F;06~2017&#x2F;11&#x2F;12）</h2><ol>
+<li><a href="https://coderdream.github.io/weui/01_button">weui实例-button</a></li>
+<li><a href="https://coderdream.github.io/weui/02_form">weui实例-form</a></li>
+<li><a href="https://coderdream.github.io/jquery_weui/index">jquery-weui实例</a></li>
+</ol>
+<h2 id="2017年第44周（2017-10-30-2017-11-05）"><a href="#2017年第44周（2017-10-30-2017-11-05）" class="headerlink" title="2017年第44周（2017&#x2F;10&#x2F;30~2017&#x2F;11&#x2F;05）"></a>2017年第44周（2017&#x2F;10&#x2F;30~2017&#x2F;11&#x2F;05）</h2><ol>
+<li><a href="https://coderdream.github.io/weui/index">weui实例</a></li>
+</ol>
+<h2 id="2017年第43周（2017-10-23-2017-10-29）"><a href="#2017年第43周（2017-10-23-2017-10-29）" class="headerlink" title="2017年第43周（2017&#x2F;10&#x2F;23~2017&#x2F;10&#x2F;29）"></a>2017年第43周（2017&#x2F;10&#x2F;23~2017&#x2F;10&#x2F;29）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/Yam-cn/pyalgotrade-cn">Pyalgotrade-cn</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21624000?refer=crossin">用 Python 实现你的量化交易策略</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/junbujianwpl/article/details/52038688">用 Python 写了个简单的股票量化交易框架</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/dhcn/p/7121435.html">python做量化交易干货分享</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/jike080401/article/details/50510609">Python编程的例子—-股票数据接口</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/chaosimple/p/4153083.html">【原】十分钟搞定pandas</a></li>
+<li><a target="_blank" rel="noopener" href="http://30daydo.com/article/11">30天学会量化交易模型 Day01</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/yagamil/article/details/51440285">发现使用python＋tushare做量化交易 其实不是很难</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/40210709">编程小白如何结合量化实例学习python量化建模？</a></li>
+<li><a target="_blank" rel="noopener" href="http://python.jobbole.com/87733/">用Python浅析股票数据</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/pangjiuzala/article/details/50410728"> 一个用Python编写的股票数据（沪深）爬虫和选股策略测试框架</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/djun100/article/details/25748419">Sina股票实时数据接口</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/ustbhacker/article/details/8365756">腾迅股票数据接口 http&#x2F;javascript</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Emptyset110/dHydra">dHydra 主要针对多数据源多策略实时计算的量化分析开发框架。提供新浪Level2等数据获取</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/luluping/archive/2010/11/15/1877817.html">实时股票数据接口</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/wyfighting/p/7497985.html">自学python之爬虫3股票数据爬虫</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/CongZhang/p/5274486.html">Python3.5 queue模块详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/felixglow/Stock">终端实时获取股票价格(GitHub)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/garydai/stock">雪球股票讨论度与价格走势的关系</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22145919">如何下载股票历史数据？</a></li>
+</ol>
+<h2 id="2017年第42周（2017-10-16-2017-10-22）"><a href="#2017年第42周（2017-10-16-2017-10-22）" class="headerlink" title="2017年第42周（2017&#x2F;10&#x2F;16~2017&#x2F;10&#x2F;22）"></a>2017年第42周（2017&#x2F;10&#x2F;16~2017&#x2F;10&#x2F;22）</h2><ol>
+<li><a href="https://coderdream.github.io/201742#20174201">JavaScript判断是否为整数类型方式</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/Bonker/p/3584707.html">python+Eclipse+pydev环境搭建</a></li>
+<li><a target="_blank" rel="noopener" href="http://tushare.org/">现成的股票数据抓取工具啦，而且是免费、开源， ：TuShare</a></li>
+</ol>
+<h2 id="2017年第41周（2017-10-09-2017-10-15）"><a href="#2017年第41周（2017-10-09-2017-10-15）" class="headerlink" title="2017年第41周（2017&#x2F;10&#x2F;09~2017&#x2F;10&#x2F;15）"></a>2017年第41周（2017&#x2F;10&#x2F;09~2017&#x2F;10&#x2F;15）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/kripken/sql.js">sql.js-SQLite compiled to javascript</a></li>
+<li><a href="https://coderdream.github.io/201741#20174101">JS操作SQLite</a></li>
+</ol>
+<h2 id="2017年第40周（2017-10-02-2017-10-08）"><a href="#2017年第40周（2017-10-02-2017-10-08）" class="headerlink" title="2017年第40周（2017&#x2F;10&#x2F;02~2017&#x2F;10&#x2F;08）"></a>2017年第40周（2017&#x2F;10&#x2F;02~2017&#x2F;10&#x2F;08）</h2><ol>
+<li><a href="https://coderdream.github.io/art/basic">artTemplate-basic</a></li>
+<li><a href="https://coderdream.github.io/art/include">artTemplate-include</a></li>
+<li><a href="https://coderdream.github.io/art/compile">artTemplate-compile</a></li>
+<li><a href="https://coderdream.github.io/art/compile-error">artTemplate-compile-error</a></li>
+<li><a href="https://coderdream.github.io/art/filter">artTemplate-filter</a></li>
+<li><a href="https://coderdream.github.io/art/no-escape">artTemplate-no-escape</a></li>
+<li><a href="https://coderdream.github.io/art/print">artTemplate-print</a></li>
+<li><a href="https://coderdream.github.io/art/runtime-error">artTemplate-runtime-error</a></li>
+<li><a href="https://coderdream.github.io/chart/excavator">挖掘机运营状况</a></li>
+</ol>
+<h2 id="2017年第39周（2017-9-25-2017-10-1）"><a href="#2017年第39周（2017-9-25-2017-10-1）" class="headerlink" title="2017年第39周（2017&#x2F;9&#x2F;25~2017&#x2F;10&#x2F;1）"></a>2017年第39周（2017&#x2F;9&#x2F;25~2017&#x2F;10&#x2F;1）</h2><ol>
+<li><a href="https://coderdream.github.io/201739#20173901">Tomcat管理页面403 Access Denied的解决方法</a></li>
+<li><a href="https://coderdream.github.io/201739#20173902">MyBatis通过@调用Java类的静态代码和常量</a></li>
+<li><a href="https://coderdream.github.io/201739#20173903">Tomcat 配置shared目录</a></li>
+<li><a href="https://coderdream.github.io/201739#20173904">Maven打war包不包含jar</a></li>
+<li><a href="https://coderdream.github.io/autotest/Chapter05">第五章 测试用例规划及TestNG的使用</a></li>
+<li><a href="https://coderdream.github.io/201739#20173905">查看sqlserver被锁的表以及如何解锁</a></li>
+</ol>
+<h2 id="2017年第38周（2017-9-18-2017-9-24）"><a href="#2017年第38周（2017-9-18-2017-9-24）" class="headerlink" title="2017年第38周（2017&#x2F;9&#x2F;18~2017&#x2F;9&#x2F;24）"></a>2017年第38周（2017&#x2F;9&#x2F;18~2017&#x2F;9&#x2F;24）</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/Ming8006/p/5811425.html">测试覆盖率工具：EclEmma</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/choosewang/articles/3079983.html">TestNG.XML初级指南</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/tobecrazy/p/4579414.html">testng 教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/tobecrazy/p/4582173.html">testng教程之testng.xml的配置和使用，以及参数传递</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/lykangjia/article/details/56485295">TestNG详解-深度好文</a></li>
+<li><a href="https://coderdream.github.io/201738#20173801">TextNG.xml配置实例</a></li>
+<li><a href="https://coderdream.github.io/201738#20173802">Java获取本机MAC地址、IP地址</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/tanzhangwen/article/details/18733557">WebDriver中页面滚动(scrolling)</a></li>
+<li><a href="https://coderdream.github.io/chart/sample_0101">Chart Samples – Bar Chart</a></li>
+<li><a href="https://coderdream.github.io/chart/sample_0102">Chart Samples – Bar Chart 2</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/chenxiaodan_danny/article/details/53509393">JQuery $.each与$().each区别， for in 与 for of 区别</a></li>
+</ol>
+<h2 id="2017年第37周（2017-9-11-2017-9-17）"><a href="#2017年第37周（2017-9-11-2017-9-17）" class="headerlink" title="2017年第37周（2017&#x2F;9&#x2F;11~2017&#x2F;9&#x2F;17）"></a>2017年第37周（2017&#x2F;9&#x2F;11~2017&#x2F;9&#x2F;17）</h2><ol>
+<li><a href="https://coderdream.github.io/201737#20173701">jQuery中radio Button根据值选中</a></li>
+<li><a href="https://coderdream.github.io/201737#20173702">jQuery 下拉选单默认选中与单击事件</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/Ming8006/p/5811425.html">测试覆盖率工具：EclEmma</a></li>
+</ol>
+<h2 id="2017年第36周（2017-9-4-2017-9-10）"><a href="#2017年第36周（2017-9-4-2017-9-10）" class="headerlink" title="2017年第36周（2017&#x2F;9&#x2F;4~2017&#x2F;9&#x2F;10）"></a>2017年第36周（2017&#x2F;9&#x2F;4~2017&#x2F;9&#x2F;10）</h2><ol>
+<li><a href="https://coderdream.github.io/201736#20173601">getJSON获取数据</a></li>
+<li><a href="https://coderdream.github.io/201736#20173602">jQuery ajax读取本地json文件</a></li>
+</ol>
+<h2 id="2017年第34周（2017-8-21-2017-8-27）"><a href="#2017年第34周（2017-8-21-2017-8-27）" class="headerlink" title="2017年第34周（2017&#x2F;8&#x2F;21~2017&#x2F;8&#x2F;27）"></a>2017年第34周（2017&#x2F;8&#x2F;21~2017&#x2F;8&#x2F;27）</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/dadiyang/article/details/52352632">Java发送包含网络和本地图片的HTML邮件</a></li>
+<li><a href="https://coderdream.github.io/201734#20173401">查找项目经理超过x人的员工</a></li>
+<li><a href="https://coderdream.github.io/201734#20173402">统计项目经理的项目个数</a></li>
+<li><a href="https://coderdream.github.io/201734#20173403">项目经理手下存在项目经理超过X人的员工且该项目经理归属项目超过Y个</a></li>
+<li><a href="https://coderdream.github.io/201734#20173404">遍历Map</a></li>
+<li><a href="https://coderdream.github.io/201734#20173405">永久修改Jenkins启动端口的一种解决方法</a></li>
+</ol>
+<h2 id="2017年第33周（2017-8-14-2017-8-20）"><a href="#2017年第33周（2017-8-14-2017-8-20）" class="headerlink" title="2017年第33周（2017&#x2F;8&#x2F;14~2017&#x2F;8&#x2F;20）"></a>2017年第33周（2017&#x2F;8&#x2F;14~2017&#x2F;8&#x2F;20）</h2><ol>
+<li><a href="https://coderdream.github.io/201733#20173301">sql server 2008 分页，ROW_NUMBER( )函数</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/thither_shore/article/details/52206016">CSDN-markdown 页间跳转（锚点链接）的实现</a></li>
+</ol>
+<h2 id="2017年第32周（2017-8-07-2017-8-13）"><a href="#2017年第32周（2017-8-07-2017-8-13）" class="headerlink" title="2017年第32周（2017&#x2F;8&#x2F;07~2017&#x2F;8&#x2F;13）"></a>2017年第32周（2017&#x2F;8&#x2F;07~2017&#x2F;8&#x2F;13）</h2><ol>
+<li><a href="https://coderdream.github.io/201732#20173201">好文章序列</a></li>
+</ol>
+<p><escape><span id="more"></span></escape></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%91%A8%E6%8A%A5/" class="category-chain-item">周报</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/TeamViewer/" class="print-no-link">#TeamViewer</a>
+      
+        <a href="/tags/GitHub/" class="print-no-link">#GitHub</a>
+      
+        <a href="/tags/Activiti6/" class="print-no-link">#Activiti6</a>
+      
+        <a href="/tags/Spring-Boot/" class="print-no-link">#Spring-Boot</a>
+      
+        <a href="/tags/%E5%B0%8F%E6%B8%B8%E6%88%8F/" class="print-no-link">#小游戏</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2018年第51周</div>
+      <div>http://coderdream.github.io/2018/12/17/Year2018Week51/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2018年12月17日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/12/24/Year2018Week52/" title="2018年第52周">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2018年第52周</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2018/12/10/Year2018Week23/" title="2018年第50周">
+                        <span class="hidden-mobile">2018年第50周</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

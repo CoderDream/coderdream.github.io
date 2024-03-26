@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2019年第24周（2019&#x2F;06&#x2F;10~2019&#x2F;06&#x2F;16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 nssm 在Windows上部署服务  &amp;nbsp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019年第24周">
+<meta property="og:url" content="http://coderdream.github.io/2019/06/10/Year2019Week24/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="2019年第24周（2019&#x2F;06&#x2F;10~2019&#x2F;06&#x2F;16） Github Markdown 中的复选框按钮的实现 Swift-自定义UITableViewCell和View(XIB和纯代码) Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器 nssm 在Windows上部署服务  &amp;nbsp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C01.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C02.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C07.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C03.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C04.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C05.jpg">
+<meta property="og:image" content="http://coderdream.github.io/2019Week24%5C06.jpg">
+<meta property="article:published_time" content="2019-06-10T02:51:35.000Z">
+<meta property="article:modified_time" content="2024-01-29T11:16:17.693Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Sinopia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://coderdream.github.io/2019Week24%5C01.jpg">
+  
+  
+  
+  <title>2019年第24周 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="2019年第24周"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2019-06-10 10:51" pubdate>
+          2019年6月10日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          469 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2019年第24周</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="2019年第24周（2019-06-10-2019-06-16）"><a href="#2019年第24周（2019-06-10-2019-06-16）" class="headerlink" title="2019年第24周（2019&#x2F;06&#x2F;10~2019&#x2F;06&#x2F;16）"></a>2019年第24周（2019&#x2F;06&#x2F;10~2019&#x2F;06&#x2F;16）</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Erice_s/article/details/80202536">Github Markdown 中的复选框按钮的实现</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3c7995ffc4da">Swift-自定义UITableViewCell和View(XIB和纯代码)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/oxsir/p/9726602.html">Windows系统下搭建私有npm仓储服务器, 打包并推送到私有npm仓储服务器</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hai-cheng/p/8670395.html">nssm 在Windows上部署服务</a></li>
+</ol>
+<p>&nbsp;<br><escape><span id="more"></span></escape></p>
+<h2 id="Windows-系统下搭建私有-npm-仓储服务器-Sinopia"><a href="#Windows-系统下搭建私有-npm-仓储服务器-Sinopia" class="headerlink" title="Windows 系统下搭建私有 npm 仓储服务器 Sinopia"></a>Windows 系统下搭建私有 npm 仓储服务器 Sinopia</h2><ol>
+<li><p>安装 Python</p>
+</li>
+<li><p>安装 NodeJs</p>
+</li>
+<li><p>安装 Sinopia  </p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> -g sinopia<br></code></pre></td></tr></table></figure></li>
+<li><p>打开端口4873端口</p>
+<ol>
+<li>Windows 防火墙 -&gt; 高级设置 -&gt; 入站规则 -&gt; 新建规则 -&gt; 端口 -&gt; TCP、本地特定端口：4873</li>
+</ol>
+</li>
+<li><p>配置 Sinopia</p>
+<ol>
+<li>打开C:\Users\Administrator\AppData\Roaming\sinopia\config.yaml文件, (请将Administrator替换为你的windows用户名)</li>
+<li>在文件末尾增加以下代码, 保存并退出   <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># listen ip and port</span><br><span class="hljs-attribute">listen</span>: <span class="hljs-number">0.0.0.0:4873</span>  <br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>新增用户（输入用户名、密码和邮箱地址）                                        </p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">npm adduser <span class="hljs-params">--registry</span> http:<span class="hljs-string">//10.100.254.163</span><span class="hljs-function">:4873</span>    <br></code></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="/2019Week24%5C01.jpg" srcset="/img/loading.gif" lazyload><br>7. 访问并登录（用户名&#x2F;密码：pdrc&#x2F;pdrc)<br><img src="/2019Week24%5C02.jpg" srcset="/img/loading.gif" lazyload>  </p>
+<h2 id="使用-nssm-将-Sinopia-作为-Windows-服务开机启动"><a href="#使用-nssm-将-Sinopia-作为-Windows-服务开机启动" class="headerlink" title="使用 nssm 将 Sinopia 作为 Windows 服务开机启动"></a>使用 nssm 将 Sinopia 作为 Windows 服务开机启动</h2><ol>
+<li><p>下载NSSM       <a target="_blank" rel="noopener" href="http://www.nssm.cc/release/nssm-2.24.zip">download</a></p>
+</li>
+<li><p>根据自己的平台，将32&#x2F;64位nssm.exe文件解压至任意文件夹。</p>
+</li>
+<li><p>cmd定位至nssm.exe所在目录。</p>
+</li>
+<li><p>输入 nssm install {服务名称}，即注册服务的名称。注册服务弹出如下NSSM界面。<br><img src="/2019Week24%5C07.jpg" srcset="/img/loading.gif" lazyload>  </p>
+</li>
+<li><p>我们要执行的文件为sinopia.cmd， 路径为: C:\Users\Administrator\AppData\Roaming\npm\sinopia.cmd<br><img src="/2019Week24%5C03.jpg" srcset="/img/loading.gif" lazyload>  </p>
+</li>
+<li><p>完成路径配置后，Startup directory会自动配置，我们这里不用再修改，直接点击【Install service】创建服务：<br><img src="/2019Week24%5C04.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>启动服务之前先修改配置，用于支持 IP 地址访问<br>打开 C:\Windows\System32\config\systemprofile\AppData\Roaming\sinopia\config.yaml 文件，在文件末尾增加以下代码, 保存并退出  </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># listen ip and port</span><br><span class="hljs-attribute">listen</span>: <span class="hljs-number">0.0.0.0:4873</span> <br></code></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务：<br><img src="/2019Week24%5C05.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>启动成功后，任务管理器中有 node.exe 的进程：<br><img src="/2019Week24%5C06.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>本机访问 <a target="_blank" rel="noopener" href="http://10.100.254.163:4873/">http://10.100.254.163:4873</a></p>
+</li>
+<li><p>新增用户（输入用户名、密码和邮箱地址）   </p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">npm adduser <span class="hljs-params">--registry</span> http:<span class="hljs-string">//10.100.254.163</span><span class="hljs-function">:4873</span>    <br></code></pre></td></tr></table></figure>
+</li>
+<li><p>创建用户成功后，其他机器就可以通过IP地址访问并登录了。</p>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%91%A8%E6%8A%A5/" class="category-chain-item">周报</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/Github/" class="print-no-link">#Github</a>
+      
+        <a href="/tags/Sinopia/" class="print-no-link">#Sinopia</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2019年第24周</div>
+      <div>http://coderdream.github.io/2019/06/10/Year2019Week24/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2019年6月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/06/17/Year2019Week25/" title="2019年第25周">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2019年第25周</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/06/03/Year2019Week23/" title="2019年第23周">
+                        <span class="hidden-mobile">2019年第23周</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
