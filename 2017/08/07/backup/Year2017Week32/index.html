@@ -1,0 +1,856 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2017年第32周（2017&#x2F;08&#x2F;07~2017&#x2F;08&#x2F;13）Question1: Jsp file can not find the tag library descriptor for “http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core“ add code to pom.xml 12345&lt;dependency&gt;    &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017年第32周">
+<meta property="og:url" content="http://coderdream.github.io/2017/08/07/backup/Year2017Week32/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="2017年第32周（2017&#x2F;08&#x2F;07~2017&#x2F;08&#x2F;13）Question1: Jsp file can not find the tag library descriptor for “http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core“ add code to pom.xml 12345&lt;dependency&gt;    &amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img.blog.csdn.net/20150825135525560?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="http://dl2.iteye.com/upload/attachment/0110/2472/a62befbb-620f-3c96-9740-f0e828a645d2.bmp">
+<meta property="article:published_time" content="2017-08-07T06:51:35.000Z">
+<meta property="article:modified_time" content="2024-01-29T11:15:30.089Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="jQuery">
+<meta property="article:tag" content="eclipse">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20150825135525560?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+  
+  
+  
+  <title>2017年第32周 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="2017年第32周"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2017-08-07 14:51" pubdate>
+          2017年8月7日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2017年第32周</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="2017年第32周（2017-08-07-2017-08-13）"><a href="#2017年第32周（2017-08-07-2017-08-13）" class="headerlink" title="2017年第32周（2017&#x2F;08&#x2F;07~2017&#x2F;08&#x2F;13）"></a>2017年第32周（2017&#x2F;08&#x2F;07~2017&#x2F;08&#x2F;13）</h2><h3 id="Question1"><a href="#Question1" class="headerlink" title="Question1:"></a>Question1:</h3><hr>
+<p>Jsp file can not find the tag library descriptor for “<a target="_blank" rel="noopener" href="http://java.sun.com/jsp/jstl/core">http://java.sun.com/jsp/jstl/core</a>“</p>
+<p>add code to pom.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>javax.servlet<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jstl<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Question2"><a href="#Question2" class="headerlink" title="Question2:"></a>Question2:</h3><hr>
+<p>eclipse导入新工程报错：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Referenced <span class="hljs-built_in">file</span> <span class="hljs-keyword">contains</span> errors (<span class="hljs-keyword">http</span>://www.springframework.org/schema/beans/spring-beans<span class="hljs-number">-3.1</span>.xsd). <br>For more information, <span class="hljs-literal">right</span> click <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">message</span> <span class="hljs-title">in</span> <span class="hljs-title">the</span> <span class="hljs-title">Problems</span> <span class="hljs-title">View</span> <span class="hljs-title">and</span> <br>select <span class="hljs-string">&quot;Show Details...&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>解决方案：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">把<span class="hljs-keyword">project</span>菜单里的clean点击一下就OK了<br></code></pre></td></tr></table></figure>
+
+<h2 id="好文章序列"><a href="#好文章序列" class="headerlink" title="好文章序列"></a><span id= "20173201">好文章序列</span></h2><h4 id="1、Eclipse中执行maven命令"><a href="#1、Eclipse中执行maven命令" class="headerlink" title="1、Eclipse中执行maven命令"></a>1、Eclipse中执行maven命令</h4><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/u011939453/article/details/43017865">http://blog.csdn.net/u011939453/article/details/43017865</a></p>
+<h4 id="2、pom文件常用配置"><a href="#2、pom文件常用配置" class="headerlink" title="2、pom文件常用配置"></a>2、pom文件常用配置</h4><ul>
+<li>解决控制台乱码</li>
+<li>编译时不运行单元测试</li>
+</ul>
+<p>pom.xml</p>
+<pre><code class="hljs">&lt;properties&gt;
+    &lt;argLine&gt;-Dfile.encoding=UTF-8&lt;/argLine&gt;
+&lt;/properties&gt;
+&lt;build&gt;
+    &lt;finalName&gt;pdrc&lt;/finalName&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.3.2&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.8&lt;/source&gt;
+                &lt;target&gt;1.8&lt;/target&gt;
+                &lt;encoding&gt;UTF-8&lt;/encoding&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+                &lt;skip&gt;true&lt;/skip&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin --&gt;
+            &lt;groupId&gt;org.eclipse.jetty&lt;/groupId&gt;
+            &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;9.4.6.v20170531&lt;/version&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<h3 id="jQuery-获取当前页面的URL信息"><a href="#jQuery-获取当前页面的URL信息" class="headerlink" title="jQuery 获取当前页面的URL信息"></a>jQuery 获取当前页面的URL信息</h3><ul>
+<li><p>(一)设置或获取对象指定的文件名或路径  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.pathname<br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.pathname); 则输出：&#x2F;topic&#x2F;index</p>
+</li>
+<li><p>(二)设置或获取整个 URL 为字符串  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.href<br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.href); 则输出：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a></p>
+</li>
+<li><p>(三)设置或获取与 URL 关联的端口号码  </p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-title">window</span>.location.<span class="hljs-keyword">port</span><br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.port); 则输出：8086</p>
+</li>
+<li><p>(四)设置或获取 URL 的协议部分  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.protocol<br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.protocol); 则输出：http:</p>
+</li>
+<li><p>(五)设置或获取 href 属性中在井号“#”后面的分段  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.hash<br></code></pre></td></tr></table></figure></li>
+<li><p>(六)设置或获取 location 或 URL 的 hostname 和 port  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.host<br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.host); 则输出：http:localhost:8086</p>
+</li>
+<li><p>(七)设置或获取 href 属性中跟在问号后面的部分  </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">window</span>.<span class="hljs-keyword">location</span>.<span class="hljs-keyword">search</span><br></code></pre></td></tr></table></figure>
+<p>例：<a target="_blank" rel="noopener" href="http://localhost:8086/topic/index?topicId=361">http://localhost:8086/topic/index?topicId=361</a><br>alert(window.location.search); 则输出：?topicId&#x3D;361</p>
+</li>
+</ul>
+<p>(八)window.location</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">hash</td>
+<td align="left">设置或获取 href属性中在井号“#”后面的分段。</td>
+</tr>
+<tr>
+<td align="center">host</td>
+<td align="left">设置或获取 location 或 URL 的hostname 和 port 号码。</td>
+</tr>
+<tr>
+<td align="center">hostname</td>
+<td align="left">设置或获取 location 或 URL 的主机名称部分。</td>
+</tr>
+<tr>
+<td align="center">href</td>
+<td align="left">设置或获取整个 URL为字符串。</td>
+</tr>
+<tr>
+<td align="center">pathname</td>
+<td align="left">设置或获取对象指定的文件名或路径。</td>
+</tr>
+<tr>
+<td align="center">port</td>
+<td align="left">设置或获取与 URL关联的端口号码。</td>
+</tr>
+<tr>
+<td align="center">protocol</td>
+<td align="left">设置或获取 URL 的协议部分。</td>
+</tr>
+<tr>
+<td align="center">search</td>
+<td align="left">设置或获取 href属性中跟在问号后面的部分。</td>
+</tr>
+</tbody></table>
+<pre><code class="hljs">                                                                        |
+</code></pre>
+<h3 id="c-if标签用法"><a href="#c-if标签用法" class="headerlink" title="c:if标签用法"></a>c:if标签用法</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">&lt;c<span class="hljs-keyword">:if</span> <span class="hljs-attribute">test</span>=<span class="hljs-string">&quot;<span class="hljs-variable">$&#123;profileView.gender==1&#125;</span>&quot;</span>&gt;checked&lt;/c:if&gt;<br></code></pre></td></tr></table></figure>
+
+<h3 id="TestNg"><a href="#TestNg" class="headerlink" title="TestNg"></a>TestNg</h3><ul>
+<li>eclipse插件地址</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://dl.bintray.com/testng-team/testng-eclipse-release/zipped/6.11.0.201703011520/">http://dl.bintray.com/testng-team/testng-eclipse-release/zipped/6.11.0.201703011520/</a></p>
+<h3 id="sqlserver中如何修改字段类型？"><a href="#sqlserver中如何修改字段类型？" class="headerlink" title="sqlserver中如何修改字段类型？"></a>sqlserver中如何修改字段类型？</h3><p>我有一张表，字段类型是varchar,我现在要把这个字段变成text类型，sql如何写？？？？？</p>
+<p>alter table 表名 alter column 字段名  text</p>
+<h3 id="【Maven】maven工程-调试出现-Source-not-found-，开启jetty调试"><a href="#【Maven】maven工程-调试出现-Source-not-found-，开启jetty调试" class="headerlink" title="【Maven】maven工程 调试出现 Source not found ，开启jetty调试"></a>【Maven】maven工程 调试出现 Source not found ，开启jetty调试</h3><p>问题：maven工程使用jetty 调试出现 Source not found，解决如下：</p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/dracotianlong/article/details/47975969">http://blog.csdn.net/dracotianlong/article/details/47975969</a></p>
+<p>1、开启MAVEN_OPTS的调试参数<br>配置如下：  </p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm">-<span class="hljs-type">Xdebug</span> -<span class="hljs-type">Xrunjdwp</span>:trans<span class="hljs-keyword">port</span>=dt_socket,server=y,suspend=n,address=1066<br></code></pre></td></tr></table></figure>
+<p>配置的地方如下：</p>
+<p><img src="http://img.blog.csdn.net/20150825135525560?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" srcset="/img/loading.gif" lazyload></p>
+<p>2、参数含义如下：<br>-Xdebug :通知JVM工作DEBUG模式下<br>-Xrunjdwp:通知JVM使用Java Debug wire protocol来运行环境<br>transport ：调试数据的传送方式，dt_socket使用socket方式<br>server ：是否支持server模式的vm中<br>suspend：是否在调试客户端建立起来后，再执行JVM<br>address：是和调试器通信的端口，不是服务的端口号<br>-Xnoagent: 禁用默认sun.tools.debug调试器<br>-Djava.compiler&#x3D;NONE: 禁止JIT编译器的加载<br>dt_shmem: 共享内存传输，仅限于Windows </p>
+<h3 id="Map-遍历"><a href="#Map-遍历" class="headerlink" title="Map 遍历"></a>Map 遍历</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;Integer, Integer&gt;();  <br><span class="hljs-keyword">for</span> (Map.Entry&lt;Integer, Integer&gt; entry : map.entrySet()) &#123;    <br>    System.out.println(<span class="hljs-string">&quot;Key = &quot;</span> + entry.getKey() + <span class="hljs-string">&quot;, Value = &quot;</span> + entry.getValue());  <br>&#125; <br></code></pre></td></tr></table></figure>
+
+
+<h3 id="eclipse-jetty-debug-source-not-found"><a href="#eclipse-jetty-debug-source-not-found" class="headerlink" title="eclipse jetty debug source not found"></a>eclipse jetty debug source not found</h3><p>eclipse</p>
+<p> 在eclipse中用jetty maven插件debug 时，会找不到源代码， 可以用以下办法解决：<br>安装 Dynamic Source Lookup plugin 插件，<br>插件主页如下，<br> <a target="_blank" rel="noopener" href="https://github.com/ifedorenko/com.ifedorenko.m2e.sourcelookup">https://github.com/ifedorenko/com.ifedorenko.m2e.sourcelookup</a></p>
+<pre><code class="hljs">com.ifedorenko.m2e m2e extensions - http://ifedorenko.github.io/m2e-extras/
+</code></pre>
+<p><img src="http://dl2.iteye.com/upload/attachment/0110/2472/a62befbb-620f-3c96-9740-f0e828a645d2.bmp" srcset="/img/loading.gif" lazyload></p>
+<p>然后点击【Add】按钮，等待几秒钟，Name就会刷出【m2e extentensions】出来！</p>
+<h3 id="MyBatise-多个参数"><a href="#MyBatise-多个参数" class="headerlink" title="MyBatise 多个参数"></a>MyBatise 多个参数</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs clean"><span class="hljs-keyword">where</span> profileid = #&#123;param1&#125; and projectid = #&#123;param2&#125;;<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="解决Dynamic-Web-Module-3-1-requires-Java-1-7-or-newer"><a href="#解决Dynamic-Web-Module-3-1-requires-Java-1-7-or-newer" class="headerlink" title="解决Dynamic Web Module 3.1 requires Java 1.7 or newer"></a>解决Dynamic Web Module 3.1 requires Java 1.7 or newer</h3><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/qq_31614947/article/details/70231289">http://blog.csdn.net/qq_31614947/article/details/70231289</a></p>
+<p>概述：使用maven构建web项目时，经常会遇见这个问题，问题原因报错讲述的很清晰明了，就是web模块需要使用java1.7及以后的版本，目前的版本不符合。因而只需要修改java版本到1.7及以上即可。</p>
+<p>解决方法：</p>
+<ol>
+<li><p>在eclipse 构建 web中关于java版本有三处需要修改统一。</p>
+<p> （1）在 Java Build Path的libraries中修改</p>
+<p> （2）在Java Compiler 中修改</p>
+<p> （3）在Project Facet中修改</p>
+</li>
+<li><p>大部分按上上述修改就应该可以了，但总是有意外，还是报错。因为使用了 maven构建项目，因而最好在pom.xml文件中的build标签中加入以下代码：</p>
+</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span><br>       <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>             <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>             <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>             <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>             <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>                 <span class="hljs-tag">&lt;<span class="hljs-name">source</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-name">source</span>&gt;</span>     //如果是1.8，修改为1.8<br>                 <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span>      //如果是1.8，修改为1.8<br>             <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br>       <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>3.最后再右键使用maven的Update Project 即可。 </p>
+<h3 id="Maven项目配置jetty9插件"><a href="#Maven项目配置jetty9插件" class="headerlink" title="Maven项目配置jetty9插件"></a>Maven项目配置jetty9插件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.eclipse.jetty<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jetty-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>9.4.6.v20170531<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">scanIntervalSeconds</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-name">scanIntervalSeconds</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">httpConnector</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">port</span>&gt;</span>9080<span class="hljs-tag">&lt;/<span class="hljs-name">port</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">idleTimeout</span>&gt;</span>60000<span class="hljs-tag">&lt;/<span class="hljs-name">idleTimeout</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">httpConnector</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">webApp</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">contextPath</span>&gt;</span>/$&#123;project.build.finalName&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">contextPath</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">webApp</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Nginx启动报错：10013-An-attempt-was-made-to-access-a-socket-in-a-way-forbidden"><a href="#Nginx启动报错：10013-An-attempt-was-made-to-access-a-socket-in-a-way-forbidden" class="headerlink" title="Nginx启动报错：10013: An attempt was made to access a socket in a way forbidden"></a>Nginx启动报错：10013: An attempt was made to access a socket in a way forbidden</h3><p>Nginx在win7，win2008下启动报错：bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions) 。</p>
+<p>原因是Win7下nginx默认80端口被System占用，造成nginx启动报错的解决方案。</p>
+<p>在cmd窗口运行如下命令：</p>
+<pre><code class="hljs">C:\Users\Administrator&gt;netstat -aon | findstr :80  
+</code></pre>
+<p>看到80端口果真被占用。发现占用的pid是4，名字是System。怎么禁用呢？</p>
+<p>1、打开注册表：regedit</p>
+<p>2、找到：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\HTTP</p>
+<p>3、找到一个REG_DWORD类型的项Start，将其改为0</p>
+<p>4、重启系统，System进程不会占用80端口</p>
+<p>重启之后，start nginx.exe 。在浏览器中，输入127.0.01，即可看到亲爱的“Welcome to nginx!” 了。</p>
+<p><a target="_blank" rel="noopener" href="http://www.360sdn.com/Nginx/2014/0807/4044.html">http://www.360sdn.com/Nginx/2014/0807/4044.html</a></p>
+<h3 id="如何查看某个端口被谁占用"><a href="#如何查看某个端口被谁占用" class="headerlink" title="如何查看某个端口被谁占用"></a>如何查看某个端口被谁占用</h3><p><a target="_blank" rel="noopener" href="http://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html">http://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html</a></p>
+<p>查看被占用端口对应的PID，输入命令：netstat -aon|findstr “49157”，回车，记下最后一位数字，即PID,这里是2720</p>
+<h3 id="Welcome-to-the-PMD-for-Eclipse-Update-Site"><a href="#Welcome-to-the-PMD-for-Eclipse-Update-Site" class="headerlink" title="Welcome to the PMD for Eclipse Update Site"></a>Welcome to the PMD for Eclipse Update Site</h3><p>Please use from now on directly the following URL as the eclipse update site URL: </p>
+<p><a target="_blank" rel="noopener" href="https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/">https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/</a></p>
+<p>This website provides updates for the Eclipse plugin for PMD.<br>More Information</p>
+<pre><code class="hljs">Release Notes
+PMD Homepage
+Bug Reports
+Plugin installation
+</code></pre>
+<p>If you have previously installed a version of the PMD Eclipse plugin prior to November 2012, then you should remove&#x2F;uninstall it first. To install the PMD for Eclipse plugin:</p>
+<ol>
+<li>In Eclipse, click on Help -&gt; Install New Software…</li>
+<li>Click on Add..</li>
+<li>Enter the following: <ul>
+<li>Name: PMD for Eclipse Update Site</li>
+<li>URL: <a target="_blank" rel="noopener" href="https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/">https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/</a></li>
+</ul>
+</li>
+<li>and click OK.</li>
+<li>You should see PMD for Eclipse 4. Select the checkbox next to it and click Next &gt;.</li>
+<li>You’ll need to accept the license and confirm you want to install a plugin that is not digitally signed. Go ahead and install it anyway.</li>
+<li>Restart eclipse.</li>
+</ol>
+<h3 id="Maven-jetty指定端口启动"><a href="#Maven-jetty指定端口启动" class="headerlink" title="Maven jetty指定端口启动"></a>Maven jetty指定端口启动</h3><p>eclipse里修改 Goals值</p>
+<ul>
+<li>Tomcat:   <figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm">-<span class="hljs-type">Dmaven</span>.tomcat.<span class="hljs-keyword">port</span>=8080 tomcat:run<br></code></pre></td></tr></table></figure></li>
+<li>Jetty:  <figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm">-<span class="hljs-type">Djetty</span>.<span class="hljs-keyword">port</span>=8081 jetty:run<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Java-保证顺序的-Map"><a href="#Java-保证顺序的-Map" class="headerlink" title="Java 保证顺序的 Map"></a>Java 保证顺序的 Map</h3><p>LinkedHashMap 才能保证迭代的时候取出的顺序和存入的顺序相同</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%91%A8%E6%8A%A5/" class="category-chain-item">周报</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/jQuery/" class="print-no-link">#jQuery</a>
+      
+        <a href="/tags/eclipse/" class="print-no-link">#eclipse</a>
+      
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2017年第32周</div>
+      <div>http://coderdream.github.io/2017/08/07/backup/Year2017Week32/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2017年8月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/08/14/backup/Year2017Week33/" title="2017年第33周">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2017年第33周</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
