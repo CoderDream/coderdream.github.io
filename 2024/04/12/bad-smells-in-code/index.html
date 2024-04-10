@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="【C1-Listening】Bad Smells in Code-代码里的坏味道 Chapter 3: Bad Smells in Code“If it stinks, change it.” — Grandma Beck, discussing child raising philosophy By now you have a good idea of how refactoring work">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【C1-Listening】Bad Smells in Code-代码里的坏味道">
+<meta property="og:url" content="http://coderdream.github.io/2024/04/12/bad-smells-in-code/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="【C1-Listening】Bad Smells in Code-代码里的坏味道 Chapter 3: Bad Smells in Code“If it stinks, change it.” — Grandma Beck, discussing child raising philosophy By now you have a good idea of how refactoring work">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://coderdream.github.io/images/c1-listening-01-job-interview.jpg">
+<meta property="article:published_time" content="2024-04-12T04:01:00.000Z">
+<meta property="article:modified_time" content="2024-04-10T12:41:38.010Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="Listening - C1-Listening - English">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://coderdream.github.io/images/c1-listening-01-job-interview.jpg">
+  
+  
+  
+  <title>【C1-Listening】Bad Smells in Code-代码里的坏味道 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="【C1-Listening】Bad Smells in Code-代码里的坏味道"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-12 12:01" pubdate>
+          2024年4月12日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          462 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">【C1-Listening】Bad Smells in Code-代码里的坏味道</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="【C1-Listening】Bad-Smells-in-Code-代码里的坏味道"><a href="#【C1-Listening】Bad-Smells-in-Code-代码里的坏味道" class="headerlink" title="【C1-Listening】Bad Smells in Code-代码里的坏味道"></a>【C1-Listening】Bad Smells in Code-代码里的坏味道</h2><blockquote>
+<p>Chapter 3: Bad Smells in Code<br>“If it stinks, change it.”</p>
+<p>— Grandma Beck, discussing child raising philosophy By now you have a good idea of how refactoring works. But just because you know how doesn’t mean you know when. Deciding when to start refactoring (and when to stop) is just as important to refactoring as knowing how to operate the mechanics of a refactoring.</p>
+<p>Now comes the dilemma. It is easy to explain to you how to delete an instance variable or create a hierarchy. These are simple matters. Trying to explain when you should do these things is not so cut-anddried. Rather than appealing to some vague notion of programming aesthetics (which frankly is what we consultants usually do) I wanted something a bit more solid.</p>
+<p>I was mulling over this tricky issue when I visited Kent in Zurich. Perhaps he was under the influence of the odors of his new born daughter at the time, but he had come up with the notion describing the “when” of refactoring in terms of smells. “Smells,” you say, “and that is supposed to be better than vague aesthetics?” Well, yes. We look at lots of code, written by projects that span the gamut from wildly successful to nearly dead. And in doing so, we have learned to look for certain structures in the code that suggest (sometimes they scream for) the possibility of refactoring. (We are switching over to “we” in this chapter to reflect the fact that Kent and I wrote this chapter jointly. You can tell the difference because the funny jokes are mine and the others are his.)</p>
+<p>One thing we won’t try to do here is give you precise criteria for when a refactoring is overdue. In our experience there is no set of metrics that rival informed human intuition. What we will do is give you indications that there is trouble that could be solved by a refactoring. You will have to develop your own sense of how many instance variables is too many instance variables and how many lines of code in a method is too many lines.</p>
+</blockquote>
+<h3 id="Duplicated-code"><a href="#Duplicated-code" class="headerlink" title="Duplicated code"></a>Duplicated code</h3><blockquote>
+<p>Number one on the stink parade is duplicated code. If you see the same code structure in more than one place, you can be sure that your program will be better if you find a way to unify them.</p>
+<p>The simplest duplicated code problem is when you have the same expression in two methods of the same class. Then all you have to do is Extract Method (114) and invoke the code from both places.</p>
+<p>Another common duplication problem is when you have the same expression in two sibling subclasses. You can eliminate this duplication by using Extract Method (114) in both classes, then Pull Up Method (271). If the code is similar but not the same, then you need to use Extract Method (114) to separate the similar bits from the different bits.</p>
+<p>You may then find you can use Form Template Method (289). If the methods do the same thing using a different algorithm, you can choose the clearer of the two algorithms and use Substitute Algorithm (132).</p>
+<p>If you have duplicated code in two unrelated classes, consider using Extract Component (166) in one class, and then use the new component in the other. Another possibility is that the method really belongs only in one of the classes and should be invoked by the other class, or that the method belongs in a third class that should be referred to by both of the original classes. You have to decide where the method makes sense, and ensure it is there and nowhere else.</p>
+</blockquote>
+<h3 id="Long-method"><a href="#Long-method" class="headerlink" title="Long method"></a>Long method</h3><blockquote>
+<p>The object programs that live best and longest are those with short methods. Programmers new to objects often get the feeling that no computation ever takes place, that object programs are endless sequences of delegation. When you have lived with a program for a few years, however, you learn just how valuable all those little methods are. All of the pay-offs of indirection- explanation, sharing, and choosing- are supported by little methods.</p>
+<p>Since the early days of programming people have realized that the longer a procedure is, the more difficult it is to understand. Older languages carried an overhead in subroutine calls, which deterred people from small method, modern OO languages have pretty much eliminated that overhead. There is still an overhead to the reader of the code as you have to switch context to look and see what the sub-procedure does. Development environments that allow you to see two methods at once help to eliminate this; but the real key to making it easy to understand small methods is good naming. If you have a good name for a method you don’t need to look at the body.</p>
+<p>The net effect of this is that you should be much more aggressive about decomposing methods. A heuristic we follow is whenever we feel the need to comment something, we instead write a method. Such a method contains the code that was commented, but is named after what the intention of the code is, rather than how it does it. We may do this on a group of lines, or on as small as a single line of code. We will do this even if the method call is longer than the code it replaces, providing the method name explains the purpose of the code. The key here is not the method length, but the semantic distance between what the method does and how it does it.</p>
+<p>99% of the time, all you have to shorten a method is Extract Method (114). Find a part of the method that seems to go nicely together and make a new method.</p>
+<p>If you have a method with lots of parameters and temporary variables, they get in the way of extracting methods. If you try to use Extract Method, you end up passing so many of the parameters and temporary variables as parameters to the extracted method that the result is scarcely more readable than the original. You can often use Inline Temp (121) to get rid of the temps. Long lists of parameters can be slimmed down with Introduce Parameter Object (247) and Preserve Whole Object (241).</p>
+<p>If you’ve tried that, and you still have too many temps and parameters,<br>then it’s time to get out the heavy artillery: Replace Method with Method Object (130).</p>
+<p>How do you identify the clumps of code to extract? A good technique is to look for comments. They often signal this kind of semantic distance.</p>
+<p>A block of code with a comment that tells you what it is doing can be replaced by a method whose name is based on the comment.</p>
+<p>Even a single line is worth extracting if it needs explanation.</p>
+<p>Conditionals and loops also give signs for extractions. Use Decompose Conditional (136) to deal with conditional expressions. With loops extract the loop and the code within the loop into its own method.</p>
+</blockquote>
+<h3 id="Large-Class"><a href="#Large-Class" class="headerlink" title="Large Class"></a>Large Class</h3><blockquote>
+<p>When a class is trying to do too much, it often shows up as too many instance variables. When a class has too many instance variables, duplicated code cannot be far behind.</p>
+<p>You can Extract Component (166) to bundle up a number of the variables.</p>
+<p>Choose variables to go together in the component that makes sense with each other. For example, “depositAmount” and “deposit-Currency” are likely to belong together in a component. More generally, common prefixes or suffixes for some subset of the variables in a class suggest the opportunity for a component. If the component makes sense as a subclass you’ll find Extract Subclass (277) often is easier.</p>
+<p>However you can only do this if the subset of instance variables that are used do not change during an object’s lifetime.</p>
+<p>Sometimes a class will not be using all of its instance variables all of the time. If so, you may be able to Extract Component (166) or Extract Subclass (277) many times.</p>
+<p>As with a class with too many instance variables, a class with too much code is prime breeding ground for duplicated code, chaos, and death.</p>
+<p>The simplest solution (have we mentioned that we like simple solutions?)</p>
+<p>is if you can eliminate redundancy in the class itself. If you have five hundred line methods with lots of code in common, you may be able to turn them into five ten line methods with another ten two line methods extracted from the original.</p>
+<p>As with a class with a huge wad of variables, the usual solution for a class with too much code is either to Extract Component (166) or Extract Subclass (277).</p>
+</blockquote>
+<h3 id="Long-Parameter-List"><a href="#Long-Parameter-List" class="headerlink" title="Long Parameter List"></a>Long Parameter List</h3><blockquote>
+<p>In our early programming days we were taught to pass everything a routine needed in as parameters. This was understandable because the alternative was global data, and global data is evil and usually painful.</p>
+<p>Objects change this situation because if you don’t have something you need, you can always ask another object to get it for you. Thus with objects you don’t pass in everything the method needs, instead you pass enough so that the method can get to everything it needs. A lot of what a method needs is available on method’s host class. Thus in object-oriented programs parameter lists tend to be much smaller than on traditional programs.</p>
+<p>This is good because long parameter lists are hard to understand, they get inconsistent and difficult to use, and because you are forever changing them as you need more data. Most changes are removed by passing objects because you are much more likely to just need to make a couple of requests to get at a new piece of data.</p>
+<p>Use Replace Parameter with Method (245) when you can get the data in one parameter by making a request of an object you already know about. This object might be a field or it might be another parameter.</p>
+<p>Use Preserve Whole Object (241) to take a bunch of data gleaned from an object and replace it with the object itself. If you have several data items with no logical object, then Introduce Parameter Object (247).</p>
+<p>There is one important exception to doing these changes. This is when you explicitly do not wish to create a dependency from the called object to the larger object. In those cases unpacking data and sending it along as parameters is reasonable, but pay attention to the pain involved. If the parameter list is too long or changes too often you will need to rethink your dependency structure.</p>
+</blockquote>
+<h3 id="Divergent-Change"><a href="#Divergent-Change" class="headerlink" title="Divergent Change"></a>Divergent Change</h3><blockquote>
+<p>We structure our software to make change easier, after all software is meant to be soft. So when we make a change we want to be able to jump to a single clear point in the system and make the change.</p>
+<p>If you look at a class and say, “Well, I will have to change these three methods every time I get a new database. I have to change these four methods every time there is a new financial instrument.” you likely have a situation where two objects are better than one. Of course you often discover this only after you’ve added a few databases or financial instruments. Any change to handle a variation should change a single class and all the typing in the new class should be expressing the variation.</p>
+<p>So for this you identify those things you are changing and use Extract Component (166) to put them all together.</p>
+</blockquote>
+<h3 id="Shotgun-Surgery"><a href="#Shotgun-Surgery" class="headerlink" title="Shotgun Surgery"></a>Shotgun Surgery</h3><blockquote>
+<p>You whiff this when every time you add some variation, you have to make a lot of little changes to a lot of different classes. When the changes are all over the place, they are hard to find, and it’s easy to miss an important change. In this case you want to use Move Method (160) and Move Field (164) to get all the changes into a single class. If no current class looks like a good candidate, then create one. Often you can use Inline Component (170) to bring a whole bunch of behavior together. You then get a small dose of Divergent Change, but you can easily deal with that.</p>
+</blockquote>
+<h3 id="Feature-Envy"><a href="#Feature-Envy" class="headerlink" title="Feature Envy"></a>Feature Envy</h3><blockquote>
+<p>The whole point of objects is that they are a packaging technique that packages data together with the processes upon that data. A classic smell is thus a method that seems more interested in another class than the one it’s actually in. The most common focus of the envy is the data.</p>
+<p>We’ve lost count of the times we’ve seen a method that invokes half-adozen getting methods on another object in order to calculate some value. Fortunately the cure is obvious, the method clearly wants to be elsewhere so you use Move Method (160) to get it there. Sometimes only part of the method suffers from envy, in that case use Extract Method (114) on the jealous bit and then Move Method (160) to give it a dream home.</p>
+<p>Of course not all cases are so cut and dried. Often a method uses features of several classes, so which one should it live with? The heuristic we use is to which class has most of the data and put the method with that data. This is often made easier by using Extract Method (114) to break into methods that go into different places.</p>
+<p>Of course there several sophisticated patterns that break this rule.</p>
+<p>From the [Gang of Four] Strategy and Visitor immediately leap to mind. Kent’s Self Delegation is another. You do these to combat the Divergent Change smell. The fundamental rule of thumb is to put things together that change together. Data and the behavior that references that data usually change together, but there are exceptions.</p>
+<p>When those exceptions occur we move the behavior to keep changes in one place. Strategy and Visitor allow you to change behavior easily because it isolates the small amount of behavior that needs to be overridden, at the cost of further indirection.</p>
+</blockquote>
+<h3 id="Data-Clumps"><a href="#Data-Clumps" class="headerlink" title="Data Clumps"></a>Data Clumps</h3><blockquote>
+<p>Data items tend to be like children — they enjoy hanging around in groups together. Often you’ll see the same three or four data items together in lots of places: fields in a couple of classes, parameters in many method signatures. Bunches of data that hang around together really ought to be made into their own object. The first step is to look for where they appear as fields. Use Extract Component (166) on the fields to turn them into an object. Then turn your attention to method signatures, using Introduce Parameter Object (247) or Preserve Whole Object (241) to slim them down. The immediate benefit here is that you can shrink a lot of parameter lists and make method calling a lot simpler.</p>
+<p>Don’t worry about data clumps that only use some of the fields of the new object. As long as you are replacing a couple or more fields with the new object, you’ll come out ahead.</p>
+<p>A good test is to consider deleting one of the data values: if you did this would the others make any sense? If they don’t that’s a sure sign that you have an object that’s dying to be born.</p>
+<p>Reducing field lists and parameter lists will certainly remove a few bad smells, but once you have the objects you get the opportunity to make a nice perfume. You can now look for cases of Divergent Change which will suggest behavior that can be moved into your new classes.</p>
+<p>Before long these classes will be productive members of society.</p>
+</blockquote>
+<h3 id="Case-Statements"><a href="#Case-Statements" class="headerlink" title="Case Statements"></a>Case Statements</h3><blockquote>
+<p>One of the most obvious symptoms of object-oriented code is its lack of case (or switch) statements. The problem with case statements is essentially that of duplication. Often you find the same case statement scattered about a program for different purposes. If you add a type to the case you have to find all these case statements and change them. The object-oriented notion of polymorphism gives you an elegant way to deal with this problem.</p>
+<p>So most times you see a case statement you should think about polymorphism, the issue is where should the polymorphism occur. Usually case statement will switch on a type code. You will want the method on class that hosts the type code value. So use Extract Method (114) to extract the switch statement and then Move Method (160) to get it onto the class where the polymorphism is needed. At that point you have to decide whether to Replace Type Code with Subclasses (224) or Replace Type Code with State&#x2F;Strategy (227). When you have set up the inheritance structure you can then Replace Switch with Polymorphism (147).</p>
+</blockquote>
+<h3 id="Parallel-Inheritance-Hierarchies"><a href="#Parallel-Inheritance-Hierarchies" class="headerlink" title="Parallel Inheritance Hierarchies"></a>Parallel Inheritance Hierarchies</h3><blockquote>
+<p>This smell is really a special case of “the same rate off change in two objects”. In this case, every time you make a subclass of one class you also have to make a subclass of another. You can recognize this smell because the prefixes of the class names in one hierarchy are the same as the prefixes in another hierarchy.</p>
+<p>The general strategy for eliminating the duplication is to make sure that instances of one hierarchy refer to instances of the other, then use Move Method (160) and Move Field (164) the hierarchy disappears on the referring class.</p>
+</blockquote>
+<h3 id="Lazy-Class"><a href="#Lazy-Class" class="headerlink" title="Lazy Class"></a>Lazy Class</h3><blockquote>
+<p>Each class you create costs money. If there is a class that isn’t doing enough to pay for itself, it should be eliminated.</p>
+<p>If you have subclasses that aren’t doing enough, try to use Collapse Hierarchy (288). Nearly useless components should be subjected to Inline Component (170).</p>
+</blockquote>
+<h3 id="Similar-subclasses"><a href="#Similar-subclasses" class="headerlink" title="Similar subclasses"></a>Similar subclasses</h3><blockquote>
+<p>Sometimes you will see a class with four subclasses, each of which only implements three simple methods. Often you will get a vague feeling that the class doesn’t deserve subclasses, but you won’t immediately be able to see how to eliminate them. This feeling can last for months or even years. Don’t worry. If you keep nibbling away at the problems you can see how to solve, eventually you will find yourself looking at the subclasses again, and all the difficult issues to resolve will have disappeared.</p>
+<p>Once you’ve done this, look for new opportunities to use inheritance now that you are no longer wasting it.</p>
+</blockquote>
+<h3 id="Temporary-Field"><a href="#Temporary-Field" class="headerlink" title="Temporary Field"></a>Temporary Field</h3><blockquote>
+<p>Sometimes you will see an object where an instance variable is only set in certain circumstances. Such code is difficult to understand, because you expect an object to need all of its variables. Trying to understand why a variable is there when it doesn’t seem to be used can drive you nuts.</p>
+<p>Use Extract Component (166) to create a home for the poor orphan variables. Put all the code that concerns the variables in the component.</p>
+<p>You may also be able to eliminate conditional code by using Introduce Null Object (151) to create an alternative component for when the variables aren’t valid.</p>
+</blockquote>
+<h3 id="Middle-Man"><a href="#Middle-Man" class="headerlink" title="Middle Man"></a>Middle Man</h3><blockquote>
+<p>One of the prime features of objects is encapsulation: hiding internal details from the rest of the world. Often this encapsulation comes with delegation, you ask a director if she is free a meeting, she delegates the message to her diary, and gives you an answer. All well and good,there is no need to know whether the director uses a diary, an electronic gizmo, or a secretary to keep track of her appointments.</p>
+<p>However this can go too far (particularly with those who take the Law of Demeter too seriously). You look at a class’s interface and find half the methods are delegating to this other class. After a while it’s time to cut out the middle man and talk to the object that really knows what’s going on. Use Move Method (160) and Move Field (164) to move features out of the middle man into the other objects until the middle man has nothing left.</p>
+</blockquote>
+<h3 id="Alternative-classes-with-different-interfaces"><a href="#Alternative-classes-with-different-interfaces" class="headerlink" title="Alternative classes with different interfaces"></a>Alternative classes with different interfaces</h3><blockquote>
+<p>Use Rename Method (234) on any methods that do the same thing but have different signatures for what they do. Often this doesn’t go far enough. In these cases the classes aren’t doing enough yet. Keep using Move Method (160) to move behavior to them until the protocols are the same. If you have to redundantly move code to accomplish this, you may be able to use Extract Superclass (282) to atone.</p>
+</blockquote>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><blockquote>
+<p>Don’t worry, we aren’t saying that people shouldn’t write comments.</p>
+<p>In our olfactory analogy, comments aren’t a bad smell, indeed they are a sweet smell.</p>
+<p>The reason we mention them here is because comments are often used as a deodorant. It’s surprising how often you look at thickly commented code, and notice that the comments are there because the code is bad.</p>
+<p>Thus comments lead us to bad code that has all the rotten whiffs we’ve discussed in the rest of this chapter. Our first action to remove the bad smells by refactoring. When we’re done we often find that the comments are now superfluous.</p>
+<p>When you feel the need to write a comment, try first to refactor the code so that any comment would be superfluous.</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C1-Listening/" class="category-chain-item">C1-Listening</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Listening-C1-Listening-English/" class="print-no-link">#Listening - C1-Listening - English</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>【C1-Listening】Bad Smells in Code-代码里的坏味道</div>
+      <div>http://coderdream.github.io/2024/04/12/bad-smells-in-code/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月12日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/05/01/english-learning-plan/" title="英语学习计划">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">英语学习计划</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/27/a2-writing-02-accommodation-form/" title="【A2-Writing】02 An accommodation form-住宿表格">
+                        <span class="hidden-mobile">【A2-Writing】02 An accommodation form-住宿表格</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
