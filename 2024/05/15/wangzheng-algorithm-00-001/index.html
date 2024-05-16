@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="王争的算法训练营(第5期)2023课程介绍课程既包含基础数据结构和算法知识点的详解，也包括针对刷题、大厂算法面试总结的题型、套路、解题技巧的讲解，还有200道LeetCode真题的详细讲解（注意，200+道每道题目都会详细讲）。 这几年，互联网行业越来越卷。不只是大厂，现在稍微知名点的公司，基本上都要考算法，要求现场写代码，甚至很多小厂也开始考算法，就是可能题目要相对简单些。 算法这个东西，不像八">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【王争算法训练营】00-01">
+<meta property="og:url" content="http://coderdream.github.io/2024/05/15/wangzheng-algorithm-00-001/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="王争的算法训练营(第5期)2023课程介绍课程既包含基础数据结构和算法知识点的详解，也包括针对刷题、大厂算法面试总结的题型、套路、解题技巧的讲解，还有200道LeetCode真题的详细讲解（注意，200+道每道题目都会详细讲）。 这几年，互联网行业越来越卷。不只是大厂，现在稍微知名点的公司，基本上都要考算法，要求现场写代码，甚至很多小厂也开始考算法，就是可能题目要相对简单些。 算法这个东西，不像八">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://coderdream.github.io/images/b1-writing-07-email-explain-accommodation-problem.jpg">
+<meta property="article:published_time" content="2024-05-15T02:04:00.000Z">
+<meta property="article:modified_time" content="2024-05-15T01:31:32.316Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="B1-Writing - Writing - English">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://coderdream.github.io/images/b1-writing-07-email-explain-accommodation-problem.jpg">
+  
+  
+  
+  <title>【王争算法训练营】00-01 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="【王争算法训练营】00-01"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-15 10:04" pubdate>
+          2024年5月15日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">【王争算法训练营】00-01</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="王争的算法训练营-第5期-2023"><a href="#王争的算法训练营-第5期-2023" class="headerlink" title="王争的算法训练营(第5期)2023"></a>王争的算法训练营(第5期)2023</h2><h3 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h3><p>课程既包含基础数据结构和算法知识点的详解，也包括针对刷题、大厂算法面试总结的题型、套路、解题技巧的讲解，还有200道LeetCode真题的详细讲解（注意，200+道每道题目都会详细讲）。</p>
+<p>这几年，互联网行业越来越卷。不只是大厂，现在稍微知名点的公司，基本上都要考算法，要求现场写代码，甚至很多小厂也开始考算法，就是可能题目要相对简单些。</p>
+<p>算法这个东西，不像八股文，是没法突击的。所以，只要有跳槽需求，不管是当下，还是以后，都免不了算法面试，相信哥一句忠告:早准备早受益。</p>
+<h3 id="课程目录"><a href="#课程目录" class="headerlink" title="课程目录"></a>课程目录</h3><blockquote>
+<p>课程目录:<br>├──01-往期回顾<br>├──01-001-4期开营公开课 .mp4 1.23G<br>└──01-002-5期开营公开课 .mp4 527.15M<br>├──02-第一周<br>├──02-001-复杂度分析 .mp4 431.53M<br>├──02-002-纯编程题和找规律题 .mp4 437.97M<br>├──02-003-纯编程题配套习题 .md 1.22kb<br>├──02-004-找规律题配套习题 .md 1.00kb<br>├──02-005-习题课.纯编程题 .mp4 1.23G<br>├──02-006-习题课:找规律题 .mp4 1.47G<br>└──02-007-直播写代码 .mp4 1.26G<br>├──03-第二周<br>├──03-001-数组和链表(基础知识讲解) .mp4 123.64M<br>├──03-002-数组和链表(基础知识讲解） .mp4 411.25M<br>├──03-003-数组和链表(题型套路讲解） .mp4 316.23M<br>├──03-004-配套习题:链表 .md 1.45kb<br>├──03-005-直播:习题课:链表-1 .mp4 900.07M<br>├──03-006-直播:习题课:链表-2 .mp4 1.48G<br>└──03-007-直播:直播写代码 .mp4 1.48G<br>├──04-第三周<br>├──04-001-栈(基础知识讲解) .mp4 70.70M<br>├──04-002-队列(基础知识讲解) .mp4 156.03M<br>├──04-003-栈和队列(题型套路讲解) .mp4 352.81M<br>├──04-004-配套习题:栈 .md 1.94kb<br>├──04-005-直播:习题课:栈-1 .mp4 1.10G<br>├──04-006-直播:习题课:栈-2 .mp4 1.22G<br>└──04-006-直播:直播写代码 .mp4 972.63M<br>├──05-第四周<br>├──05-001-递归和分治（基础知识讲解） .mp4 510.88M<br>├──05-002-递归和分治（题型套路讲解） .mp4 510.88M<br>├──05-003-排序（基础知识讲解）-1 .mp4 473.74M<br>├──05-004-排序（基础知识讲解）-2 .mp4 478.25M<br>├──05-005-排序（题型套路讲解） .mp4 362.86M<br>├──05-006-配套习题:递归 .md 0.99kb<br>├──05-007-配套习题:排序 .md 1.36kb<br>├──05-008-直播习题课:递归 .mp4 1.15G<br>├──05-009-直播习题课:排序 .mp4 1.19G<br>└──05-010-直播:直播写代码 .mp4 898.28M<br>├──06-第五周<br>├──06-001-二分查找(基础知识讲解) .mp4 246.09M<br>├──06-002-二分查找(题型套路讲解) .mp4 401.90M<br>├──06-003-哈希表（基础知识讲解 ） .mp4 341.56M<br>├──06-004-哈希表（题型套路讲解 ） .mp4 276.95M<br>├──06-005-配套习题:二分查找 .md 2.26kb<br>├──06-006-配套习题:哈希表 .md 1.84kb<br>├──06-007-直播:习题课:二分查找 .mp4 524.57M<br>├──06-008-直播:习题课:哈希表 .mp4 756.50M<br>└──06-009-直播:直播写代码 .mp4 593.67M<br>├──07-第六周<br>├──07-001-视频二叉树（基础知识讲解）-1 .mp4 194.42M<br>├──07-002-二叉树（基础知识讲解）-2 .mp4 170.49M<br>├──07-003-二叉树（题型套路讲解）-1 .mp4 249.94M<br>├──07-004-配套习题:二叉树-1 .md 1.33kb<br>├──07-005-直播 习题课:二叉树-周四 .mp4 517.15M<br>├──07-006-直播习题课:二叉树-周日 .mp4 646.79M<br>└──07-007-直播:直播写代码 .mp4 665.67M<br>├──08 第七周<br>├──08-001-视频二叉树:题型套路-2 .mp4 221.83M<br>├──08-002-堆:基础知识讲解 .mp4 217.74M<br>├──08-003-堆:题型套路讲解 .mp4 151.18M<br>├──08-004-字符串匹配算法 .mp4 199.40M<br>├──08-005-配套习题:二叉树-2 .md 2.04kb<br>├──08-006-图文配套习题:Trie+堆 .md 0.91kb<br>├──08-007-直播:习题课:二叉树-2 .mp4 546.85M<br>├──08-008-直播:习题课:二叉树+Trie+堆 .mp4 693.99M<br>└──08-009-直播:直播写代码 .mp4 693.99M<br>├──09 第八周<br>├──09-001-回溯 .mp4 371.97M<br>├──09-002-配套习题:回溯 .md 1.63kb<br>├──09-003-直播:习题课:回溯-1 .mp4 571.95M<br>├──09-004-直播:习题课:回溯-2 .mp4 452.06M<br>└──09-005-直播:直播写代码 .mp4 677.45M<br>├──10-第九周<br>├──10-001-DFS&amp;BFS（基础知识讲解） .mp4 365.95M<br>├──10-002-DFS&amp;BFS（题型套路讲解） .mp4 298.33M<br>├──10-003-海量数据处理 .mp4 204.05M<br>├──10-004-配套习题:DFS&amp;BFS .md 1.40kb<br>├──10-005-直播:扯淡直播 .mp4 400.69M<br>├──10-006-直播:习题课:DFS&amp;BFS .mp4 678.95M<br>└──10-007-直播:直播写代码 .mp4 594.57M<br>├──11-第十周<br>├──11-001-动态规划:题型套路整体介绍 .mp4 37.76M<br>├──11-002-动态规划专题:适用问题 .mp4 269.88M<br>├──11-003-视频动态规划专题:解题步骤 .mp4 162.63M<br>├──11-004-动态规划专题:最值、可行、计数 .mp4 91.82M<br>├──11-005-动态规划专题:空间优化 .mp4 72.65M<br>├──11-006-配套习题:动态规划-1 .md 1.35kb<br>├──11-007-直播:习题课:背包模型&amp;路径模型 .mp4 920.75M<br>├──11-008-直播:习题课:打家劫舍&amp;股票买卖 .mp4 635.54M<br>└──11-009-直播:直播写代码 .mp4 540.78M<br>├──12-第十一周<br>├──12-001-图文配套习题:动态规划-2 .md 0.89kb<br>├──12-002-习题课:爬楼梯模型 .mp4 1.24G<br>├──12-003-直播:习题课:匹配模型&amp;其他 .mp4 1.39G<br>└──12-004-直播:直播写代码 .mp4 409.06M<br>└──13-第十二周<br>├──13-001-双指针 .mp4 154.11M<br>├──13-002-滑动窗口 .mp4 82.74M<br>├──13-003-前缀后缀统计 .mp4 108.13M<br>├──13-004-位运算 .mp4 66.38M<br>├──13-005-配套习题:双指针&amp;滑动窗口&amp;前缀后缀统计&amp;位运算 .md 3.17kb<br>├──13-006-直播:习题课:双指针&amp;滑动窗口 .mp4 821.27M<br>├──13-007-直播:习题课:前后缀统计&amp;位运算 .mp4 814.37M<br>└──13-008-直播:直播写代码 .mp4 477.44M</p>
+</blockquote>
+<h2 id="00-001-4期开营公开课"><a href="#00-001-4期开营公开课" class="headerlink" title="00-001-4期开营公开课"></a>00-001-4期开营公开课</h2><img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515091933934.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515091933934">
+
+ <img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515091955518.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515091955518">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092038976.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092038976">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092018907.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092018907">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092206002.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092206002">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092550617.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092550617">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092620361.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092620361">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092650872.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092650872">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092811298.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092811298">
+
+<img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092831844.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092831844">
+
+<h2 id="00-002-5期开营公开课"><a href="#00-002-5期开营公开课" class="headerlink" title="00-002-5期开营公开课"></a>00-002-5期开营公开课</h2><img src="/2024/05/15/wangzheng-algorithm-00-001/image-20240515092944395.png" srcset="/img/loading.gif" lazyload class="" title="image-20240515092944395">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%8E%8B%E4%BA%89%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%90%A5/" class="category-chain-item">王争算法训练营</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/B1-Writing-Writing-English/" class="print-no-link">#B1-Writing - Writing - English</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>【王争算法训练营】00-01</div>
+      <div>http://coderdream.github.io/2024/05/15/wangzheng-algorithm-00-001/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/05/15/wangzheng-algorithm-01-Week01/" title="【王争算法训练营】第一周">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【王争算法训练营】第一周</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/10/speaking-fluency-05-04/" title="【流利说英语】05-04">
+                        <span class="hidden-mobile">【流利说英语】05-04</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
