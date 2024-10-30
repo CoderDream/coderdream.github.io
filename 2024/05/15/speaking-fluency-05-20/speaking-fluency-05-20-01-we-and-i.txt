@@ -1,0 +1,19 @@
+﻿翻译下面的文字，返回一句英文一句中文：
+A: Thanks for taking part in this video, Henry.
+B: No problem.
+A: So, how does it feel having a star in your family?
+B: We're proud of what Cora has accomplished. She works really hard.
+A: I'm curious, why did she decide to make such a big change?
+B: It just became clear to her that she needed to make music.
+A: Why do you say that?
+B: Well, when we first met, she was involved in the local music scene and played a lot of open mics around town.
+A: She was a cheerful and outgoing person then.
+B: Was?
+A: After we settled into family life, her personality changed.
+B: She became really unhappy and we fought all the time. It felt like we were on the point of ending our marriage if something didn't change.
+A: That sounds tough. Did you try talking to her about this? About the change of her personality?
+B: Yeah. She told me that between kids and work, she didn't have time for music. She felt stifled.
+A: Do you think the move helped?
+B: It sure did. During our last video call, she seemed so lively and determined to succeed. I can tell that the old Cora is back.
+A: That's great. I think it's amazing of you to support her choice.
+B: Well, I love her and I only want what's best for her.
