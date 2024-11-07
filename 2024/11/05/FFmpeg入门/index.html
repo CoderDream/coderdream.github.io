@@ -1,0 +1,1082 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/babyking_v4_128_128.png">
+  <link rel="icon" href="/img/babyking_v4_128_128.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CoderDream">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="FFmpeg 最最强大的视频工具 (转码&#x2F;压缩&#x2F;剪辑&#x2F;滤镜&#x2F;水印&#x2F;录屏&#x2F;Gif&#x2F;…)https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1AT411J7cH&#x2F;奇乐编程学院 2022-07-11 14:43:53 简介嗨大家好，我是罗斯，今天我们来讲一个最最强大的视频处理工具， Ffmpeg ，没有之一，几乎你能想到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFmpeg 最最强大的视频工具">
+<meta property="og:url" content="http://coderdream.github.io/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="CoderDream Studio">
+<meta property="og:description" content="FFmpeg 最最强大的视频工具 (转码&#x2F;压缩&#x2F;剪辑&#x2F;滤镜&#x2F;水印&#x2F;录屏&#x2F;Gif&#x2F;…)https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1AT411J7cH&#x2F;奇乐编程学院 2022-07-11 14:43:53 简介嗨大家好，我是罗斯，今天我们来讲一个最最强大的视频处理工具， Ffmpeg ，没有之一，几乎你能想到">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://coderdream.github.io/images/duolingo.jpg">
+<meta property="article:published_time" content="2024-11-05T01:20:39.000Z">
+<meta property="article:modified_time" content="2024-11-05T15:49:05.773Z">
+<meta property="article:author" content="CoderDream">
+<meta property="article:tag" content="FFmpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://coderdream.github.io/images/duolingo.jpg">
+  
+  
+  
+  <title>FFmpeg 最最强大的视频工具 - CoderDream Studio</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"coderdream.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CoderDream</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="FFmpeg 最最强大的视频工具"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-11-05 09:20" pubdate>
+          2024年11月5日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          72 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">FFmpeg 最最强大的视频工具</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="FFmpeg-最最强大的视频工具-转码-压缩-剪辑-滤镜-水印-录屏-Gif-…"><a href="#FFmpeg-最最强大的视频工具-转码-压缩-剪辑-滤镜-水印-录屏-Gif-…" class="headerlink" title="FFmpeg 最最强大的视频工具 (转码&#x2F;压缩&#x2F;剪辑&#x2F;滤镜&#x2F;水印&#x2F;录屏&#x2F;Gif&#x2F;…)"></a>FFmpeg 最最强大的视频工具 (转码&#x2F;压缩&#x2F;剪辑&#x2F;滤镜&#x2F;水印&#x2F;录屏&#x2F;Gif&#x2F;…)</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1AT411J7cH/">https://www.bilibili.com/video/BV1AT411J7cH/</a><br>奇乐编程学院 2022-07-11 14:43:53</p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>嗨大家好，我是罗斯，今天我们来讲一个最最强大的视频处理工具， <strong>Ffmpeg</strong> ，没有之一，几乎你能想到的所有功能，比如视频格式的转换，压缩拼接，添加水印，甚至包括声音的处理，录屏GIF动图的转换都可以用它来完成。</p>
+<p>它本身是一个命令行工具，很尽量完全免费，所有平台通用。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105090424899.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105090424899">
+
+<p>正因为它是一个命令行工具，你可以很方便的在脚本中调用它，创建批处理，用来进行自动化等等。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105090511548.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105090511548">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105090621522.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105090621522">
+
+<p>可能你之前没有听过他，但其实相当多的视频工具平台播放器都用到了， <strong>Ffmpeg</strong>  或者它的核心库，另外有些观众可能知道，我的视频都是用脚本剪辑的，渲染的部分自然也用到了它，所以今天我想跟大家介绍一下， <strong>Ffmpeg</strong> 的基本用法和一些实用的小技巧。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先我们还是稍微啰嗦一下， <strong>Ffmpeg</strong> 的下载和安装，大家也可以直接跳过这段，在Linux Mac下最简单的动作方式，还是使用包管理工具，但是在Windows下也可以用第三方的choco，scoop来安装等等。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105090940071.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105090940071">
+
+<p>否则大家可以去官网这里，我以Windows为例，选择最下面的这个地址，然后找到win64gpl shared（ffmpeg-master-latest-win64-gpl-shared.zip）这个文件。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds/releases">https://github.com/BtbN/FFmpeg-Builds/releases</a></p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105093209086.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105093209086">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105091044100.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105091044100">
+
+ <img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105094147173.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105094147173">
+
+<p>这是一个动态链接的版本，文件体积会稍微小一些，里面包含了所有要用到的组件和解码器。</p>
+<p>最后我们解压缩，在bin目录下可以找到这三个可执行文件，这里的 <strong>Ffmpeg</strong> 就是我们要用到的命令。另外如果你希望在全局范围内，都可以调用到这个命令，那么还需要将bin目录的路径，添加到path环境变量中。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105092622932.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105092622932">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105092729426.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105092729426">
+
+<h3 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h3><p>配置完毕之后，我们先来小试牛刀一下，先来介绍一下 <strong>Ffmpeg</strong> 最最基本的用法。</p>
+<p>首先我们通过GUI指定输入文件的名字，然后在最后一个参数指定要输出的文件名，那么 <strong>Ffmpeg</strong> 会自动根据扩展名转换，视频文件的格式。</p>
+<blockquote>
+<p>ffmpeg -i test.avi test.mp4</p>
+<p>mpv test.mp4</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105091352018.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105091352018">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105091322225.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105091322225">
+
+<blockquote>
+<p>C:\Users\CoderDream\Videos\ffmpeg&gt;ffmpeg -i test.avi test.mp4<br>ffmpeg version 6.0-essentials_build-<a target="_blank" rel="noopener" href="http://www.gyan.dev/">www.gyan.dev</a> Copyright (c) 2000-2023 the FFmpeg developers<br>  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)<br>  configuration: –enable-gpl –enable-version3 –enable-static –disable-w32threads –disable-autodetect –enable-fontconfig –enable-iconv –enable-gnutls –enable-libxml2 –enable-gmp –enable-bzlib –enable-lzma –enable-zlib –enable-libsrt –enable-libssh –enable-libzmq –enable-avisynth –enable-sdl2 –enable-libwebp –enable-libx264 –enable-libx265 –enable-libxvid –enable-libaom –enable-libopenjpeg –enable-libvpx –enable-mediafoundation –enable-libass –enable-libfreetype –enable-libfribidi –enable-libvidstab –enable-libvmaf –enable-libzimg –enable-amf –enable-cuda-llvm –enable-cuvid –enable-ffnvcodec –enable-nvdec –enable-nvenc –enable-d3d11va –enable-dxva2 –enable-libvpl –enable-libgme –enable-libopenmpt –enable-libopencore-amrwb –enable-libmp3lame –enable-libtheora –enable-libvo-amrwbenc –enable-libgsm –enable-libopencore-amrnb –enable-libopus –enable-libspeex –enable-libvorbis –enable-librubberband<br>  libavutil      58.  2.100 &#x2F; 58.  2.100<br>  libavcodec     60.  3.100 &#x2F; 60.  3.100<br>  libavformat    60.  3.100 &#x2F; 60.  3.100<br>  libavdevice    60.  1.100 &#x2F; 60.  1.100<br>  libavfilter     9.  3.100 &#x2F;  9.  3.100<br>  libswscale      7.  1.100 &#x2F;  7.  1.100<br>  libswresample   4. 10.100 &#x2F;  4. 10.100<br>  libpostproc    57.  1.100 &#x2F; 57.  1.100<br>Guessed Channel Layout for Input Stream #0.1 : stereo<br>Input #0, avi, from ‘test.avi’:<br>  Metadata:<br>    software        : Lavf58.19.102<br>  Duration: 00:00:07.17, start: 0.000000, bitrate: 1658 kb&#x2F;s<br>  Stream #0:0: Video: h264 (High) (H264 &#x2F; 0x34363248), yuv420p(progressive), 640x300, 224 kb&#x2F;s, 24 fps, 24 tbr, 24 tbn<br>  Stream #0:1: Audio: pcm_s16le ([1][0][0][0] &#x2F; 0x0001), 44100 Hz, 2 channels, s16, 1411 kb&#x2F;s<br>Stream mapping:<br>  Stream #0:0 -&gt; #0:0 (h264 (native) -&gt; h264 (libx264))<br>  Stream #0:1 -&gt; #0:1 (pcm_s16le (native) -&gt; aac (native))<br>Press [q] to stop, [?] for help<br>[libx264 @ 000001818e9391c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2<br>[libx264 @ 000001818e9391c0] profile High, level 2.1, 4:2:0, 8-bit<br>[libx264 @ 000001818e9391c0] 264 - core 164 r3106 eaa68fa - H.264&#x2F;MPEG-4 AVC codec - Copyleft 2003-2023 - <a target="_blank" rel="noopener" href="http://www.videolan.org/x264.html">http://www.videolan.org/x264.html</a> - options: cabac&#x3D;1 ref&#x3D;3 deblock&#x3D;1:0:0 analyse&#x3D;0x3:0x113 me&#x3D;hex subme&#x3D;7 psy&#x3D;1 psy_rd&#x3D;1.00:0.00 mixed_ref&#x3D;1 me_range&#x3D;16 chroma_me&#x3D;1 trellis&#x3D;1 8x8dct&#x3D;1 cqm&#x3D;0 deadzone&#x3D;21,11 fast_pskip&#x3D;1 chroma_qp_offset&#x3D;-2 threads&#x3D;9 lookahead_threads&#x3D;1 sliced_threads&#x3D;0 nr&#x3D;0 decimate&#x3D;1 interlaced&#x3D;0 bluray_compat&#x3D;0 constrained_intra&#x3D;0 bframes&#x3D;3 b_pyramid&#x3D;2 b_adapt&#x3D;1 b_bias&#x3D;0 direct&#x3D;1 weightb&#x3D;1 open_gop&#x3D;0 weightp&#x3D;2 keyint&#x3D;250 keyint_min&#x3D;24 scenecut&#x3D;40 intra_refresh&#x3D;0 rc_lookahead&#x3D;40 rc&#x3D;crf mbtree&#x3D;1 crf&#x3D;23.0 qcomp&#x3D;0.60 qpmin&#x3D;0 qpmax&#x3D;69 qpstep&#x3D;4 ip_ratio&#x3D;1.40 aq&#x3D;1:1.00<br>Output #0, mp4, to ‘test.mp4’:<br>  Metadata:<br>    software        : Lavf58.19.102<br>    encoder         : Lavf60.3.100<br>  Stream #0:0: Video: h264 (avc1 &#x2F; 0x31637661), yuv420p(progressive), 640x300, q&#x3D;2-31, 24 fps, 12288 tbn<br>    Metadata:<br>      encoder         : Lavc60.3.100 libx264<br>    Side data:<br>      cpb: bitrate max&#x2F;min&#x2F;avg: 0&#x2F;0&#x2F;0 buffer size: 0 vbv_delay: N&#x2F;A<br>  Stream #0:1: Audio: aac (LC) (mp4a &#x2F; 0x6134706D), 44100 Hz, stereo, fltp, 128 kb&#x2F;s<br>    Metadata:<br>      encoder         : Lavc60.3.100 aac<br>frame&#x3D;  174 fps&#x3D;0.0 q&#x3D;-1.0 Lsize&#x3D;     277kB time&#x3D;00:00:07.15 bitrate&#x3D; 317.2kbits&#x2F;s dup&#x3D;2 drop&#x3D;0 speed&#x3D;22.9x<br>video:185kB audio:85kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.458137%<br>[libx264 @ 000001818e9391c0] frame I:4     Avg QP:11.92  size:  4427<br>[libx264 @ 000001818e9391c0] frame P:67    Avg QP:21.49  size:  1704<br>[libx264 @ 000001818e9391c0] frame B:103   Avg QP:21.61  size:   556<br>[libx264 @ 000001818e9391c0] consecutive B-frames: 14.9% 12.6% 17.2% 55.2%<br>[libx264 @ 000001818e9391c0] mb I  I16..4: 80.0% 12.3%  7.7%<br>[libx264 @ 000001818e9391c0] mb P  I16..4:  5.1% 17.6%  1.7%  P16..4: 12.6%  4.7%  1.3%  0.0%  0.0%    skip:57.0%<br>[libx264 @ 000001818e9391c0] mb B  I16..4:  3.3%  1.0%  0.1%  B16..8: 13.2%  2.5%  0.2%  direct: 2.0%  skip:77.8%  L0:48.6% L1:46.4% BI: 5.0%<br>[libx264 @ 000001818e9391c0] 8x8 transform intra:53.6% inter:72.0%<br>[libx264 @ 000001818e9391c0] coded y,uvDC,uvAC intra: 13.0% 34.4% 19.7% inter: 1.9% 7.4% 2.4%<br>[libx264 @ 000001818e9391c0] i16 v,h,dc,p: 76%  9%  8%  7%<br>[libx264 @ 000001818e9391c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 11% 43%  3%  2%  3%  2%  3%  2%<br>[libx264 @ 000001818e9391c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 22% 27%  4%  4%  6%  3%  5%  3%<br>[libx264 @ 000001818e9391c0] i8c dc,h,v,p: 66% 13% 12%  8%<br>[libx264 @ 000001818e9391c0] Weighted P-Frames: Y:6.0% UV:6.0%<br>[libx264 @ 000001818e9391c0] ref P L0: 70.8%  7.9% 14.7%  6.6%<br>[libx264 @ 000001818e9391c0] ref B L0: 85.2% 12.9%  1.9%<br>[libx264 @ 000001818e9391c0] ref B L1: 96.6%  3.4%<br>[libx264 @ 000001818e9391c0] kb&#x2F;s:208.71<br>[aac @ 000001818eabb980] Qavg: 17834.014</p>
+<p>C:\Users\CoderDream\Videos\ffmpeg&gt;</p>
+</blockquote>
+<p>既然说到了格式，我们就先来定义一下什么是视频文件的格式，像我们平时用到mp4，准确来说是视频文件的一种封装格式，或者也叫容器格式，它里面包含了视频流，音频流，甚至包括字幕章节和一些其他的元数据。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105095802961.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105095802961">
+
+<p>而其中的音频视频流，又可以采用不同的编码格式，那么什么是编码呢？</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105095836779.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105095836779">
+
+<p>编码解决的是如何将每一帧的画面存储成二进制的数据保存在硬盘上，或者通过网络传输。显然不同的编码，对于视频的质量和压缩率有很大的影响，对mp4文件，目前使用最广泛的视频编码是H264。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105095912509.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105095912509">
+
+<p>它有很多不同的名字，但实际上说的都是同一个东西，这样显得比较专业一些，可以看到 <strong>Ffmpeg</strong> ，也默认帮我们选择了H264编码。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105095947180.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105095947180">
+
+<p>当然我们可以通过更新冒号V，去手动指定一个视频编码器，这里的lb x264，其实就是 <strong>Ffmpeg</strong> 默认提供的一个，用纯软件实现的H264编码器，如果你使用的是NVIDIA显卡的话，还可以用nb encoder进行硬件加速，这里我做了一个简单的时间比较，分别用lb x264和nb encoder，对同一段视频进行编码，可以看到第二种明显快了不少，所以如果你显卡支持的话，还是建议首选NBENCODER，因为它可以帮你节省不少时间。</p>
+<blockquote>
+<p>timeit ffmpeg -i test.avi -loglevel error -c:v libx264 output.mp4 -y</p>
+<p>timeit ffmpeg -i test.avi -loglevel error -c:v libx264_nvenc output.mp4 -y</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105100035352.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105100035352">
+
+
+
+<p>当然H264并不是唯一的视频编码格式，我们还可以选择宣称拥有更高压缩率的，H265，VP9等等，但考虑到硬件支持度，编码效率，当然还有使用许可的限制，目前应用最广泛的视频编码依然还是H264，比如大家现在看到的视频，包括B站上的绝大多数视频，都是用H264编码的。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105103442780.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105103442780">
+
+<p>接下来我们以它为例，那么除了视频软件之外，我们还可以用F <strong>Ffmpeg</strong> 来转换音频。</p>
+<blockquote>
+<p>ffmpeg -i sound.wav sound.mp3</p>
+</blockquote>
+<p>，甚至可以用它来转换图片， 或者更常见的用法是用它来提取视频中的缩略图等等，这个我们待会讲到。  </p>
+<blockquote>
+<p>ffmpeg -i test.mp4 -vf “fps&#x3D;1&#x2F;10,scale&#x3D;-2:720” thumbnail-%3d.jpg</p>
+</blockquote>
+<h4 id="preset"><a href="#preset" class="headerlink" title="preset"></a>preset</h4><p>另外在转换视频的时候，我们可以设置一些其他的参数，来压缩视频文件的大小，比如对于H264编码器，我们可以设置一个预设preset，它可以是下面这些取值。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105110629841.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105110629841">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105103358502.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105103358502">
+
+<p>最上面的ultra fast，拥有最快的编码速度，但同时会产生一个较大的文件，最下面的very slow，虽然速度最慢，但生成的文件较小，这个参数呢允许你在编码速度和文件大小时间，做一些取舍。</p>
+<h4 id="crf"><a href="#crf" class="headerlink" title="crf"></a>crf</h4><p>第二个非常重要的参数是crf，大家不用过于纠结他名字的具体含义，它是用来控制图片的质量的，取值范围是0<del>51，这个值越大代表图片的质量越差，其中零代表无损压缩输出的文件较大，51代表最差的质量，但可以生成较小的文件，实际使用中，我们最常用到的范围是19</del>28。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105103623934.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105103623934">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105103643002.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105103643002">
+
+<p>下面我以不同的CRF值来编码了同一个视频，大家可以观察，他们在图像质量和文件大小上的区别。</p>
+<blockquote>
+<p>ffmpeg -i test.avi -c:v libx264 -crf 20 output_20.mp4<br>ffmpeg -i test.avi -c:v libx264 -crf 30 output_30.mp4<br>ffmpeg -i test.avi -c:v libx264 -crf 40 output_40.mp4<br>ffmpeg -i test.avi -c:v libx264 -crf 50 output_50.mp4</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105103734345.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105103734345">
+
+<p>和之前preset不一样的是，这里的crf，允许我们在视频文件大小和图像质量，之间做一些权衡。</p>
+<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>说完了脚本的格式转换之后，我们来讲一下FFPX中另一个重要的功能过滤器。过滤器可以对视频图像进行变换，比如修改它的尺寸，裁剪旋转，添加滤镜等等，并且我们可以去指定一系列的过滤器，前一个过滤器的输出，会直接作为下一个过滤器的输入。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105110826333.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105110826333">
+
+<h5 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h5><p>比如我们可以将视频先缩放为原先的0.5倍，然后再将它旋转90度，这里我们用参数杠VF来指定一个过滤器，如果要修改视频的尺寸，我们可以用scale，后面我们输入缩放之后的长度和宽度，中间以冒号分隔</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105111008300.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105111008300">
+
+<p>我们也可以将其中任意一个参数设置为-2，让 <strong>Ffmpeg</strong> 根据另外一个参数帮我们自动推算。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105110946181.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105110946181">
+
+<p>比如想将视频转化为720P，那么可以简写为-2冒号720。</p>
+<h5 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h5><p>如果要旋转视频，我们可以用另一个过滤器，transpose后面的数字代表旋转的方向，我们可以在文档中看到，这里的2代表将视频90度逆时针旋转。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105111113777.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105111113777">
+
+<p>当然不同的过滤器可以相互组合，比如我们可以先缩放再旋转，我们只需要将它们以逗号分隔即可。</p>
+<blockquote>
+<p>ffmpeg -i test.avi -c:v libx264 -vf “scale&#x3D;256:256,transpose&#x3D;1” output.mp4</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105111223522.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105111223522">
+
+<h5 id="裁剪"><a href="#裁剪" class="headerlink" title="裁剪"></a>裁剪</h5><p>如果我们想要裁剪视频中的某一块区域，可以用到另一个过滤器crop，这里的四个数字分别代表区域的宽和高，以及左上角的XY坐标，另外他们也可以是一个表达式，比如我们可以将宽高设为1&#x2F;3，原始视频的宽度和高度，这里的iw根据名字可以猜到，它代表输出视频的宽度。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105113931767.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105113931767">
+
+<p>除了之前讲到的这三种过滤器之外，我们还可以在文档中找到其他上百种的过滤器，它们的用法都一样，首先通过参数 <strong>-vf</strong> 指定一个视频过滤器，然后输入过滤器的名字加等号，后面指定不同的参数参数之间用冒号分隔。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105114613330.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105114613330">
+
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105114352827.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105114352827">
+
+<p>如果希望将多个过滤器组合起来使用的话，还需要将它们用逗号分隔，那么过滤器的部分我们就暂时讲到这里。</p>
+<h5 id="剪切与合并"><a href="#剪切与合并" class="headerlink" title="剪切与合并"></a>剪切与合并</h5><p>接下来我们来讲一下， <strong>Ffmpeg</strong> 对视频的剪切与合并，如果要剪切出视频的某个片段，我们会用到两个参数，第一个 <strong>-ss</strong> 指定了片段的起始位置，第二个 <strong>-t</strong> 表示片段的时长，这里我们可以用十分秒的格式，也可以直接填写描述，但需要注意的是，**-ss** 需要放在 <strong>-t</strong> 参数的后面，这样才能做到分毫不差的剪切。如果将 <strong>-ss</strong> 放在 -t 参数之前，我们虽然可以快速定位片段的起点，但由于使用的是关键帧定位，所以剪切的起始位置可能会稍有偏差。这种方式呢比较适合于较长的视频，因为定位的速度很快，另外我们可以用 <strong>-to</strong> 来替代 <strong>-t</strong> ，指定一个片段的中止位置，这两个参数都可以用于指定片段的时间范围，只不过表示的方式不同而已。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105115057062.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105115057062">
+
+<p>如果要合并视频的话，我们需要先将所有的文件列举在一个，文本文档中，使用下面这种格式，然后通过 <strong>-f concat</strong> 指定，接下来要输入的文件是一个视频列表，后面的 <strong>-i</strong> 传入了这个列表，文件在后面的 <strong>-c copy</strong> 代表我们不希望重新编码，而是直接拷贝原始视频的数据，因为我们输出的视频格式是完全一样的，重新编码自然会浪费很多时间。</p>
+<blockquote>
+<p>ffmpeg -f concat -i mylist.txt -c copy output.mp4</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105115228967.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105115228967">
+
+<h5 id="音频过滤器"><a href="#音频过滤器" class="headerlink" title="音频过滤器"></a>音频过滤器</h5><p>和视频过滤器一样，我们同样可以用过滤器对音频进行处理，不过这次我们用到的是GIF参数， <strong>Ffmpeg</strong> ，对音频的支持同样是相当齐全的，比如我们可以用volume来调节音量的大小，用LOL来统一视频的音量，添加高通低通滤波器甚至均衡器等等。</p>
+<blockquote>
+<p>ffmpeg -i test.mp4 -af “volume&#x3D;1.5” output.mp4<br>ffmpeg -i test.mp4 -af “loudnorm&#x3D;I&#x3D;-5:LRA&#x3D;A” output.mp4<br>ffmpeg -i test.mp4 -af “equalizer&#x3D;f&#x3D;1000:width_type&#x3D;h:width&#x3D;200:g&#x3D;-10” output.mp4</p>
+</blockquote>
+<p>有时候我们还希望删除视频中的音频轨，比如创建一个无声的视频，那么可以用到 <strong>-an</strong> 参数类似的 <strong>Ffmpeg</strong> ，还提供 <strong>-vn</strong>， <strong>-sn</strong>， <strong>-dn</strong>，分别用来删除视频轨、字幕，还有数据流等等。</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105115739996.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105115739996">
+
+<p>到这里呢我们就讲完了， <strong>Ffmpeg</strong> 最最基本的概念和用法，在视频的最后，我想给大家介绍一些比较实用的小技巧。</p>
+<h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><h4 id="创建缩略图"><a href="#创建缩略图" class="headerlink" title="创建缩略图"></a>创建缩略图</h4><p>首先第一个创建视频的缩略图，这里用到了两个过滤器，第一个 <strong>fps</strong> 指定了输出文件的帧率，1&#x2F;10代表每十秒输出一帧画面，而后面的 <strong>scale</strong> 指定了输出图像的大小，最后是图片的文件名，由thumbnail加上编号组成，格式为jpg。</p>
+<blockquote>
+<p>ffmpeg -i test.mp4 -vf “fps&#x3D;1&#x2F;10, scale&#x3D;-2:720” thumbnail-%03d.jpg</p>
+</blockquote>
+<p>这个命令会在当前目录下输出，若干张视频的缩略图</p>
+<h4 id="添加水印"><a href="#添加水印" class="headerlink" title="添加水印"></a>添加水印</h4><p>第二个技巧给视频添加水印，我们需要先准备一张图片，然后将原始视频和水印图片同时输入给 <strong>Ffmpeg</strong> ，后面的过滤器，overlay用于将水印叠加在原始视频的上面，在后面的这两个参数，指定了水印在图像中的位置</p>
+<blockquote>
+<p>ffmpeg -i test.mp4 -i cat.jpg -filter_complex “overlay&#x3D;100:100” output.mp4</p>
+</blockquote>
+<h4 id="GIF动图的转换"><a href="#GIF动图的转换" class="headerlink" title="GIF动图的转换"></a>GIF动图的转换</h4><p>第三个技巧，GIF动图的转换，由于GIF自身编码格式的限制，不太适合于较大或者较长的视频，所以我们需要先剪切出一个片段，然后用过滤器播放视频，并且降低视频的帧率，最后这部分的纯粹是，因为GIF自身256色的限制，因此需要单独创建一个调色板，运行命令可以帮我们生成一个高质量的GIF动图。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -i test.avi -ss 0 -t 3 -filter_complex [0:v]fps=15,scale=-1:256,split[a][b];[a]palettegen[p];[b][p]paletteuse output.gif<br></code></pre></td></tr></table></figure>
+
+<h4 id="屏幕录像"><a href="#屏幕录像" class="headerlink" title="屏幕录像"></a>屏幕录像</h4><p>最后的一个技巧，利用 <strong>Ffmpeg</strong> 来进行屏幕录像，也是我目前自己使用的录屏方式</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105121527732.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105121527732">
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -hide_banner -loglevel error -stats -f gdigrab -framerate 60 -offset_x 0 -offset_y 0 -video_size 1920x1080 -draw_mouse 1 -i desktop -c:v libx264 -r 60 -preset ultrafast -pix_fmt yuv420p -y screen_record.mp4<br></code></pre></td></tr></table></figure>
+
+<p>它虽然效率上不如OBS、ShadowPlay这些工具，但是由于不需要额外安装软件配合，让过滤器可以轻易实现各种效果，用起来是相当顺手的。</p>
+<p>说了这么多，我们今天也不过只提到了 <strong>Ffmpeg</strong> 的冰山一角，不过希望大家能够认识到，这样一款强大的视频处理工具，并且慢慢使用起来，它更多的用法和细节全都在官方详尽的文档中，非常值得去研究一下。</p>
+<blockquote>
+<p>ffmpeg -i in.flac -acodec libmp3lame -ar 44100 -ab 320k -ac 2 out.mp3</p>
+</blockquote>
+<blockquote>
+<p>这个命令使用 <strong>FFmpeg</strong> 工具将一个 <strong>FLAC</strong> 音频文件转换为 <strong>MP3</strong> 格式。具体来说，命令的每个部分执行不同的任务。下面是对该命令每个选项的详细解释：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i in.flac -acodec libmp3lame -ar 44100 -ab 320k -ac 2 out.mp3<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-ffmpeg"><a href="#1-ffmpeg" class="headerlink" title="1. ffmpeg"></a>1. <strong><code>ffmpeg</code></strong></h3><ul>
+<li>这是 FFmpeg 的命令行工具，用于处理多媒体文件的转换、编辑等操作。</li>
+<li>FFmpeg 是一个强大的开源框架，支持处理音视频数据，包括格式转换、剪切、合并、录制等。</li>
+</ul>
+<h3 id="2-i-in-flac"><a href="#2-i-in-flac" class="headerlink" title="2. -i in.flac"></a>2. <strong><code>-i in.flac</code></strong></h3><ul>
+<li><code>-i</code> 是输入文件的参数，用来指定你想要转换的原始音频文件。</li>
+<li><code>in.flac</code> 是输入文件名，指的是你要转换的音频文件，它是 <strong>FLAC</strong> 格式（无损音频格式）。你可以把这个名字换成你自己的文件路径。</li>
+</ul>
+<h3 id="3-acodec-libmp3lame"><a href="#3-acodec-libmp3lame" class="headerlink" title="3. -acodec libmp3lame"></a>3. <strong><code>-acodec libmp3lame</code></strong></h3><ul>
+<li><code>-acodec</code> 参数指定输出音频的编解码器（audio codec）。在这里，它设置输出音频的编码器为 <strong>libmp3lame</strong>。</li>
+<li><strong>libmp3lame</strong> 是 FFmpeg 使用的 MP3 编码器，它实现了将音频数据转换为 MP3 格式的功能。</li>
+</ul>
+<p>   因此，这个选项告诉 FFmpeg 将音频编码为 MP3 格式。</p>
+<h3 id="4-ar-44100"><a href="#4-ar-44100" class="headerlink" title="4. -ar 44100"></a>4. <strong><code>-ar 44100</code></strong></h3><ul>
+<li><code>-ar</code> 是用于设置输出音频的采样率（audio sample rate）的参数。采样率指的是每秒钟采集多少次音频数据。</li>
+<li><code>44100</code> 表示将音频转换为 <strong>44.1 kHz</strong>（每秒 44,100 次采样），这是 CD 音质的标准采样率。</li>
+</ul>
+<p>   如果不指定该选项，FFmpeg 会默认使用输入音频的采样率。</p>
+<h3 id="5-ab-320k"><a href="#5-ab-320k" class="headerlink" title="5. -ab 320k"></a>5. <strong><code>-ab 320k</code></strong></h3><ul>
+<li><code>-ab</code> 用来设置音频比特率（audio bitrate）。比特率控制了音频的质量和文件的大小，单位是比特每秒（bps）。</li>
+<li><code>320k</code> 表示将输出音频的比特率设置为 <strong>320 kbps</strong>，这是一种高质量的音频比特率，适合用来生成高保真度的 MP3 文件。</li>
+</ul>
+<p>   如果你选择一个较低的比特率（例如 128k 或 192k），音频文件会更小，但质量可能会下降。</p>
+<h3 id="6-ac-2"><a href="#6-ac-2" class="headerlink" title="6. -ac 2"></a>6. <strong><code>-ac 2</code></strong></h3><ul>
+<li><code>-ac</code> 参数设置输出音频的通道数（audio channels）。音频通道指的是声音的输出方式，例如单声道（Mono）或立体声（Stereo）。</li>
+<li><code>2</code> 表示输出为 <strong>立体声（Stereo）</strong>，即两个通道（左声道和右声道）。如果你想要单声道音频，可以将 <code>2</code> 改为 <code>1</code>。</li>
+</ul>
+<h3 id="7-out-mp3"><a href="#7-out-mp3" class="headerlink" title="7. out.mp3"></a>7. <strong><code>out.mp3</code></strong></h3><ul>
+<li>这是输出文件的名称和格式。FFmpeg 会将转换后的音频保存为 <code>out.mp3</code>，即 MP3 格式的音频文件。</li>
+<li>你可以根据需要修改输出文件的路径和名称。</li>
+</ul>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>这个命令的作用是将一个 <strong>FLAC</strong> 音频文件（<code>in.flac</code>）转换为 <strong>MP3</strong> 格式（<code>out.mp3</code>）。转换过程中，它会：</p>
+<ul>
+<li>使用 <strong>libmp3lame</strong> 编解码器来编码音频；</li>
+<li>设置输出音频的采样率为 <strong>44.1 kHz</strong>（标准 CD 音质）；</li>
+<li>设置音频比特率为 <strong>320 kbps</strong>（高质量音频）；</li>
+<li>设置输出为 <strong>立体声</strong>（2 通道）。</li>
+</ul>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><p>假设你有一个 <code>music.flac</code> 文件，执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i music.flac -acodec libmp3lame -ar 44100 -ab 320k -ac 2 music.mp3<br></code></pre></td></tr></table></figure>
+
+<p>这将会把 <code>music.flac</code> 转换为 <code>music.mp3</code>，并确保音频质量高且符合常见的标准。</p>
+<h3 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h3><ul>
+<li><code>-ar</code> 采样率（单位：Hz），常见值有 44100、48000、96000。</li>
+<li><code>-ab</code> 比特率（单位：bps），常见值有 128k、192k、320k，数字越大，音质越高，文件越大。</li>
+<li><code>-ac</code> 通道数（1 为单声道，2 为立体声）。</li>
+</ul>
+<p>希望这些解释对你有帮助！如果你有其他问题，随时告诉我！</p>
+</blockquote>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/image-20241105123943831.png" srcset="/img/loading.gif" lazyload class="" title="image-20241105123943831">
+
+
+
+<h2 id="常用的音频转换参数"><a href="#常用的音频转换参数" class="headerlink" title="常用的音频转换参数"></a>常用的音频转换参数</h2><blockquote>
+<p>在使用 <strong>FFmpeg</strong> 进行音频转换时，有许多参数可以帮助你控制音频的输出格式、质量、通道、采样率等。以下是一些常用的音频转换参数及其详细解释和示例。</p>
+<h3 id="常用的音频转换参数-1"><a href="#常用的音频转换参数-1" class="headerlink" title="常用的音频转换参数"></a>常用的音频转换参数</h3><ol>
+<li><strong><code>-acodec</code></strong>: 指定音频编码器</li>
+<li><strong><code>-ab</code></strong>: 设置音频比特率</li>
+<li><strong><code>-ar</code></strong>: 设置音频采样率</li>
+<li><strong><code>-ac</code></strong>: 设置音频通道数（单声道或立体声）</li>
+<li><strong><code>-vn</code></strong>: 禁用视频（如果输入文件包含视频）</li>
+<li><strong><code>-sample_fmt</code></strong>: 设置音频样本格式</li>
+<li><strong><code>-channels</code></strong>: 设置音频通道数（与 <code>-ac</code> 类似）</li>
+<li><strong><code>-f</code></strong>: 强制输出格式</li>
+<li><strong><code>-metadata</code></strong>: 设置输出音频文件的元数据（如标题、艺术家等）</li>
+<li><strong><code>-t</code></strong>: 设置输出文件的持续时间</li>
+<li><strong><code>-ss</code></strong>: 设置从输入文件的某个时间点开始转换</li>
+<li><strong><code>-vol</code></strong>: 调整音频的音量</li>
+</ol>
+<h3 id="详细解释和示例"><a href="#详细解释和示例" class="headerlink" title="详细解释和示例"></a>详细解释和示例</h3><h4 id="1-acodec-指定音频编码器"><a href="#1-acodec-指定音频编码器" class="headerlink" title="1. -acodec: 指定音频编码器"></a>1. <strong><code>-acodec</code></strong>: 指定音频编码器</h4><ul>
+<li><strong>描述</strong>: 设置要使用的音频编解码器（audio codec）。常用的音频编解码器有 <strong>libmp3lame</strong>（MP3 编码器），<strong>aac</strong>（AAC 编码器），<strong>flac</strong>（FLAC 编码器）等。</li>
+<li><strong>示例</strong>: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-ab-设置音频比特率"><a href="#2-ab-设置音频比特率" class="headerlink" title="2. -ab: 设置音频比特率"></a>2. <strong><code>-ab</code></strong>: 设置音频比特率</h4><ul>
+<li><strong>描述</strong>: 设置音频的比特率（单位为 bps）。比特率越高，音质越好，但文件也越大。</li>
+<li><strong>常用值</strong>: 128k、192k、256k、320k。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -acodec libmp3lame -ab 192k output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="3-ar-设置音频采样率"><a href="#3-ar-设置音频采样率" class="headerlink" title="3. -ar: 设置音频采样率"></a>3. <strong><code>-ar</code></strong>: 设置音频采样率</h4><ul>
+<li><strong>描述</strong>: 设置音频的采样率（单位为 Hz）。常见的采样率有 <strong>44100 Hz</strong>（标准 CD 音质）和 <strong>48000 Hz</strong>（用于视频制作的标准）。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -ar 44100 -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="4-ac-设置音频通道数"><a href="#4-ac-设置音频通道数" class="headerlink" title="4. -ac: 设置音频通道数"></a>4. <strong><code>-ac</code></strong>: 设置音频通道数</h4><ul>
+<li><strong>描述</strong>: 设置输出音频的通道数。1 表示单声道，2 表示立体声，更多通道则用于环绕声等。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -ac 2 -acodec libmp3lame output.mp3  <span class="hljs-comment"># 立体声</span><br>ffmpeg -i input.wav -ac 1 -acodec libmp3lame output.mp3  <span class="hljs-comment"># 单声道</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="5-vn-禁用视频"><a href="#5-vn-禁用视频" class="headerlink" title="5. -vn: 禁用视频"></a>5. <strong><code>-vn</code></strong>: 禁用视频</h4><ul>
+<li><strong>描述</strong>: 如果输入文件包含视频，该选项将忽略视频流，只处理音频。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i video.mp4 -vn -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="6-sample-fmt-设置音频样本格式"><a href="#6-sample-fmt-设置音频样本格式" class="headerlink" title="6. -sample_fmt: 设置音频样本格式"></a>6. <strong><code>-sample_fmt</code></strong>: 设置音频样本格式</h4><ul>
+<li><strong>描述</strong>: 设置音频样本的格式。常见格式有 <code>s16</code>（16位整数）、<code>flt</code>（浮点数格式）等。这个参数对于特定的音频编码器有用。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -sample_fmt s16 -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="7-channels-设置音频通道数（与-ac-类似）"><a href="#7-channels-设置音频通道数（与-ac-类似）" class="headerlink" title="7. -channels: 设置音频通道数（与 -ac 类似）"></a>7. <strong><code>-channels</code></strong>: 设置音频通道数（与 <code>-ac</code> 类似）</h4><ul>
+<li><strong>描述</strong>: 该参数可以替代 <code>-ac</code>，设置音频的通道数。1 是单声道，2 是立体声。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -channels 2 output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="8-f-强制输出格式"><a href="#8-f-强制输出格式" class="headerlink" title="8. -f: 强制输出格式"></a>8. <strong><code>-f</code></strong>: 强制输出格式</h4><ul>
+<li><strong>描述</strong>: 强制设置输出文件格式。对于某些特殊需求时，强制使用特定格式。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -f mp3 output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="9-metadata-设置输出音频的元数据"><a href="#9-metadata-设置输出音频的元数据" class="headerlink" title="9. -metadata: 设置输出音频的元数据"></a>9. <strong><code>-metadata</code></strong>: 设置输出音频的元数据</h4><ul>
+<li><strong>描述</strong>: 可以设置输出文件的标签，如标题、艺术家、专辑等。元数据对于管理音乐文件非常有用。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -metadata title=<span class="hljs-string">&quot;My Song&quot;</span> -metadata artist=<span class="hljs-string">&quot;My Artist&quot;</span> -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="10-t-设置输出文件的持续时间"><a href="#10-t-设置输出文件的持续时间" class="headerlink" title="10. -t: 设置输出文件的持续时间"></a>10. <strong><code>-t</code></strong>: 设置输出文件的持续时间</h4><ul>
+<li><strong>描述</strong>: 设置输出音频文件的时长，可以截取输入文件的部分内容。单位为秒。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -t 30 -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure>
+这将截取前 30 秒的音频并保存为 MP3 文件。</li>
+</ul>
+<h4 id="11-ss-设置从输入文件的某个时间点开始转换"><a href="#11-ss-设置从输入文件的某个时间点开始转换" class="headerlink" title="11. -ss: 设置从输入文件的某个时间点开始转换"></a>11. <strong><code>-ss</code></strong>: 设置从输入文件的某个时间点开始转换</h4><ul>
+<li><strong>描述</strong>: 设置开始处理的时间点，单位为秒或 <code>hh:mm:ss</code> 格式。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -ss 00:01:30 -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure>
+这将从 1 分 30 秒开始进行转换。</li>
+</ul>
+<h4 id="12-vol-调整音量"><a href="#12-vol-调整音量" class="headerlink" title="12. -vol: 调整音量"></a>12. <strong><code>-vol</code></strong>: 调整音量</h4><ul>
+<li><strong>描述</strong>: 调整音频文件的音量，单位为百分比。例如，<code>-vol 200</code> 表示音量为原来的 2 倍。</li>
+<li><strong>示例</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.wav -vol 256 -acodec libmp3lame output.mp3<br></code></pre></td></tr></table></figure>
+这将音量调高为原来的两倍。</li>
+</ul>
+<h3 id="综合示例"><a href="#综合示例" class="headerlink" title="综合示例"></a>综合示例</h3><p>假设你有一个 WAV 文件 <code>music.wav</code>，你想将其转换为 MP3 格式，设置为 320 kbps 比特率，44.1 kHz 采样率，立体声，且从文件的 1 分钟开始，持续转换 30 秒的内容，同时添加元数据：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i music.wav -ss 00:01:00 -t 30 -acodec libmp3lame -ab 320k -ar 44100 -ac 2 -metadata title=<span class="hljs-string">&quot;Song Title&quot;</span> -metadata artist=<span class="hljs-string">&quot;Artist Name&quot;</span> output.mp3<br></code></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>FFmpeg 提供了丰富的参数来控制音频转换的各个方面，包括音频编解码器、采样率、比特率、通道数等。通过合理选择这些参数，可以定制化音频输出，确保其符合你的需求。</p>
+<p>如果你有更多问题或具体需求，欢迎继续提问！</p>
+</blockquote>
+<h1 id="常用ffmpeg命令"><a href="#常用ffmpeg命令" class="headerlink" title="常用ffmpeg命令"></a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/">常用ffmpeg命令</a></h1><p><a target="_blank" rel="noopener" href="https://xugaoxiang.com/category/streaming/ffmpeg/"> ffmpeg</a> <a target="_blank" rel="noopener" href="https://xugaoxiang.com/author/xugaoxiang/">迷途小书童</a> 4年前 (2020-09-29) 7477次浏览 <a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#respond">0个评论</a></p>
+<p>文章目录</p>
+<p><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%BD%AF%E7%A1%AC%E4%BB%B6%E7%8E%AF%E5%A2%83">软硬件环境</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%A7%86%E9%A2%91%E7%9C%8B%E8%BF%99%E9%87%8C">视频看这里</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85">下载及安装</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%8E%B7%E5%8F%96%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF">获取音频&#x2F;视频文件信息</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F">转换视频格式</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%A7%86%E9%A2%91%E6%88%AA%E5%8F%96">视频截取</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%A7%86%E9%A2%91%E6%8B%BC%E6%8E%A5">视频拼接</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E6%9B%B4%E6%94%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%88%86%E8%BE%A8%E7%8E%87">更改视频的分辨率</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E6%94%B9%E5%8F%98%E9%9F%B3%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F">改变音视频的编码方式</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91">提取视频中的音频</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E6%8F%90%E5%8F%96%E5%9B%BE%E5%83%8F">提取图像</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#m3u8%E5%88%87%E7%89%87">m3u8切片</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E8%B0%83%E6%95%B4%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E9%80%9F%E5%BA%A6">调整视频播放速度</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E7%BC%96%E8%BE%91%E8%A7%86%E9%A2%91">编辑视频</a><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/09/29/ffmpeg-cmd/#%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9">寻求帮助</a></p>
+<h2 id="软硬件环境"><a href="#软硬件环境" class="headerlink" title="软硬件环境"></a>软硬件环境</h2><ul>
+<li>windows 10 64bit</li>
+<li>ffmpeg 3.4.8</li>
+</ul>
+<h2 id="视频看这里"><a href="#视频看这里" class="headerlink" title="视频看这里"></a>视频看这里</h2><p>此处是 <code>youtube</code> 的播放链接，需要科学上网。喜欢我的视频，请记得订阅我的频道，打开旁边的小铃铛，点赞并分享，感谢您的支持。</p>
+<h2 id="下载及安装"><a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><p>从官网下载编译好的二进制文件 <a target="_blank" rel="noopener" href="http://ffmpeg.org/download.html%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E8%B7%AF%E5%BE%84%E5%8A%A0%E5%85%A5%E5%88%B0%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%AD">http://ffmpeg.org/download.html，并将其路径加入到系统环境变量中</a></p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/b336bef47a3571ba.webp" srcset="/img/loading.gif" lazyload class="" title="ffmpeg">
+
+<h2 id="获取音频-视频文件信息"><a href="#获取音频-视频文件信息" class="headerlink" title="获取音频&#x2F;视频文件信息"></a>获取音频&#x2F;视频文件信息</h2><p>显示媒体文件的信息，执行 <code>ffmpeg -i test.mp4</code></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">(base) PS C:\Users\Administrator\Desktop&gt; ffmpeg<span class="hljs-selector-class">.exe</span> -<span class="hljs-selector-tag">i</span> .\test<span class="hljs-selector-class">.mp4ffmpeg</span> version N-<span class="hljs-number">93125</span>-gdbfd042983 Copyright (c) <span class="hljs-number">2000</span>-<span class="hljs-number">2019</span> the FFmpeg developers  built with gcc <span class="hljs-number">8.2</span>.<span class="hljs-number">1</span> (GCC) <span class="hljs-number">20190212</span>  configuration: <span class="hljs-attr">--enable-gpl</span> <span class="hljs-attr">--enable-version3</span> <span class="hljs-attr">--enable-sdl2</span> <span class="hljs-attr">--enable-fontconfig</span> <span class="hljs-attr">--enable-gnutls</span> <span class="hljs-attr">--enable-iconv</span> <span class="hljs-attr">--enable-libass</span> <span class="hljs-attr">--enable-libdav1d</span> <span class="hljs-attr">--enable-libbluray</span> <span class="hljs-attr">--enable-libfreetype</span> <span class="hljs-attr">--enable-libmp3lame</span> <span class="hljs-attr">--enable-libopencore-amrnb</span> <span class="hljs-attr">--enable-libopencore-amrwb</span> <span class="hljs-attr">--enable-libopenjpeg</span> <span class="hljs-attr">--enable-libopus</span> <span class="hljs-attr">--enable-libshine</span> <span class="hljs-attr">--enable-libsnappy</span> <span class="hljs-attr">--enable-libsoxr</span> <span class="hljs-attr">--enable-libtheora</span> <span class="hljs-attr">--enable-libtwolame</span> <span class="hljs-attr">--enable-libvpx</span> <span class="hljs-attr">--enable-libwavpack</span> <span class="hljs-attr">--enable-libwebp</span> <span class="hljs-attr">--enable-libx264</span> <span class="hljs-attr">--enable-libx265</span> <span class="hljs-attr">--enable-libxml2</span> <span class="hljs-attr">--enable-libzimg</span> <span class="hljs-attr">--enable-lzma</span> <span class="hljs-attr">--enable-zlib</span> <span class="hljs-attr">--enable-gmp</span> <span class="hljs-attr">--enable-libvidstab</span> <span class="hljs-attr">--enable-libvorbis</span> <span class="hljs-attr">--enable-libvo-amrwbenc</span> <span class="hljs-attr">--enable-libmysofa</span> <span class="hljs-attr">--enable-libspeex</span> <span class="hljs-attr">--enable-libxvid</span> <span class="hljs-attr">--enable-libaom</span> <span class="hljs-attr">--enable-libmfx</span> <span class="hljs-attr">--enable-amf</span> <span class="hljs-attr">--enable-ffnvcodec</span> <span class="hljs-attr">--enable-cuvid</span> <span class="hljs-attr">--enable-d3d11va</span> <span class="hljs-attr">--enable-nvenc</span> <span class="hljs-attr">--enable-nvdec</span> <span class="hljs-attr">--enable-dxva2</span> <span class="hljs-attr">--enable-avisynth</span> <span class="hljs-attr">--enable-libopenmpt</span>  libavutil      <span class="hljs-number">56</span>. <span class="hljs-number">26.100</span> / <span class="hljs-number">56</span>. <span class="hljs-number">26.100</span>  libavcodec     <span class="hljs-number">58</span>. <span class="hljs-number">47.100</span> / <span class="hljs-number">58</span>. <span class="hljs-number">47.100</span>  libavformat    <span class="hljs-number">58</span>. <span class="hljs-number">26.101</span> / <span class="hljs-number">58</span>. <span class="hljs-number">26.101</span>  libavdevice    <span class="hljs-number">58</span>.  <span class="hljs-number">6.101</span> / <span class="hljs-number">58</span>.  <span class="hljs-number">6.101</span>  libavfilter     <span class="hljs-number">7</span>. <span class="hljs-number">48.100</span> /  <span class="hljs-number">7</span>. <span class="hljs-number">48.100</span>  libswscale      <span class="hljs-number">5</span>.  <span class="hljs-number">4.100</span> /  <span class="hljs-number">5</span>.  <span class="hljs-number">4.100</span>  libswresample   <span class="hljs-number">3</span>.  <span class="hljs-number">4.100</span> /  <span class="hljs-number">3</span>.  <span class="hljs-number">4.100</span>  libpostproc    <span class="hljs-number">55</span>.  <span class="hljs-number">4.100</span> / <span class="hljs-number">55</span>.  <span class="hljs-number">4.100</span>Input #<span class="hljs-number">0</span>, mov,mp4,m4a,<span class="hljs-number">3</span>gp,<span class="hljs-number">3</span>g2,mj2, from <span class="hljs-string">&#x27;.\test.mp4&#x27;</span>:  Metadata:    major_brand     : isom    minor_version   : <span class="hljs-number">512</span>    compatible_brands: isomiso2mp41    encoder         : Lavf57.<span class="hljs-number">83.100</span>  Duration: <span class="hljs-number">00</span>:<span class="hljs-number">01</span>:<span class="hljs-number">08.40</span>, start: <span class="hljs-number">0.000000</span>, bitrate: <span class="hljs-number">5947</span> kb/s    Stream #<span class="hljs-number">0</span>:<span class="hljs-number">0</span>(und): Video: mpeg4 (Simple Profile) (mp4v / <span class="hljs-number">0</span>x7634706D), yuv420p, <span class="hljs-number">1920</span>x1080 <span class="hljs-selector-attr">[SAR 1:1 DAR 16:9]</span>, <span class="hljs-number">5945</span> kb/s, <span class="hljs-number">25</span> fps, <span class="hljs-number">25</span> tbr, <span class="hljs-number">12800</span> tbn, <span class="hljs-number">25</span> tbc (default)    Metadata:      handler_name    : VideoHandlerAt least one output file must be <span class="hljs-built_in">specified</span>(base) PS C:\Users\Administrator\Desktop&gt;<br></code></pre></td></tr></table></figure>
+
+<p>在上面的输出中可以看到媒体文件的信息，以及 <code>ffmpeg</code> 的信息，例如版本、配置细节、版权标记、构建参数和库选项等</p>
+<h2 id="转换视频格式"><a href="#转换视频格式" class="headerlink" title="转换视频格式"></a>转换视频格式</h2><p>从 <code>mp4</code> 转换成 <code>avi</code></p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">ffmpeg -i <span class="hljs-keyword">test</span>.mp4 <span class="hljs-keyword">test</span>.avi<br></code></pre></td></tr></table></figure>
+
+<h2 id="视频截取"><a href="#视频截取" class="headerlink" title="视频截取"></a>视频截取</h2><p>从视频的第10秒开始，截取长度为30秒的视频，维持编码方式不变</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -ss <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">10</span> -t <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">30</span> -i test.mp4 -vcodec copy -acodec copy output.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="视频拼接"><a href="#视频拼接" class="headerlink" title="视频拼接"></a>视频拼接</h2><p>用一个 <code>txt</code> 文件将需要拼接在一起的视频文件组织起来，格式是</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs delphi"><span class="hljs-keyword">file</span> <span class="hljs-string">&#x27;test1.mp4&#x27;</span><span class="hljs-keyword">file</span> <span class="hljs-string">&#x27;test2.mp4&#x27;</span><span class="hljs-keyword">file</span> <span class="hljs-string">&#x27;test3.mp4&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>有了上面的文本文件，就可以使用 <code>ffmpeg</code> 进行拼接了，命令是</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua">ffmpeg -f <span class="hljs-built_in">concat</span> -i filelist.txt -v:c copy <span class="hljs-built_in">output</span>.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="更改视频的分辨率"><a href="#更改视频的分辨率" class="headerlink" title="更改视频的分辨率"></a>更改视频的分辨率</h2><p>将原视频中的分辨率更改为1280×720，音频编码方式不变</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs processing">ffmpeg -i test.<span class="hljs-property">mp4</span> -<span class="hljs-built_in">filter</span>:v <span class="hljs-built_in">scale</span>=<span class="hljs-number">1280</span>:<span class="hljs-number">720</span> -c:a <span class="hljs-built_in">copy</span> output.<span class="hljs-property">mp4</span><br></code></pre></td></tr></table></figure>
+
+<p>如果还想更改视频比例的话，可以这样</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i test.mp4 -vf scale=<span class="hljs-number">1280</span>x720,setdar=<span class="hljs-number">16</span>:<span class="hljs-number">9</span> output.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="改变音视频的编码方式"><a href="#改变音视频的编码方式" class="headerlink" title="改变音视频的编码方式"></a>改变音视频的编码方式</h2><p>也就是转码，可以指定编码方式</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ffmpeg -<span class="hljs-selector-tag">i</span> test<span class="hljs-selector-class">.avi</span> -c:v libx264 -c:<span class="hljs-selector-tag">a</span> aac output.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="提取视频中的音频"><a href="#提取视频中的音频" class="headerlink" title="提取视频中的音频"></a>提取视频中的音频</h2><p>使用参数 <code>-vn</code>，就是 <code>disable video</code> 的意思</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">ffmpeg -i <span class="hljs-keyword">test</span>.mp4 -vn <span class="hljs-keyword">test</span>.mp3<br></code></pre></td></tr></table></figure>
+
+<p>对应的，如果想去掉音频，使用参数 <code>-an</code></p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs smali">ffmpeg -i test.mp4 -an output.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="提取图像"><a href="#提取图像" class="headerlink" title="提取图像"></a>提取图像</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i test.mp4 -r <span class="hljs-number">1</span> -f image2 image_%<span class="hljs-number">2</span>d.png<br></code></pre></td></tr></table></figure>
+
+<p>其中 <code>-r</code> 表示帧速度，<code>-r 1</code> 就是每一秒提取一张图片的意思，提取出来的图片命名格式是 <code>image_01.png</code>、<code>image_02.png</code>、<code>image_03.png</code>，以此类推</p>
+<h2 id="m3u8切片"><a href="#m3u8切片" class="headerlink" title="m3u8切片"></a>m3u8切片</h2><p><code>m3u8</code> 非常适合在网络上播放，<code>ffmpeg</code> 可以将本地视频文件转化成 <code>m3u8</code> 索引加 <code>ts</code> 视频的组合。这样，只要将生成的文件拷贝到类似 <code>nginx</code> 这样的 <code>web</code> 服务上，就可以实现视频点播了</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i test.mp4 -vcodec libx264 -strict -<span class="hljs-number">2</span> -acodec aac -hls_list_size <span class="hljs-number">0</span> -f hls index.m3u8<br></code></pre></td></tr></table></figure>
+
+<h2 id="调整视频播放速度"><a href="#调整视频播放速度" class="headerlink" title="调整视频播放速度"></a>调整视频播放速度</h2><p>下面的示例是2倍速的转换，如果是原来的1&#x2F;2速度，则参数变为 <code>setpts=2*PTS</code></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ffmpeg -<span class="hljs-selector-tag">i</span> test<span class="hljs-selector-class">.mp4</span> -vf <span class="hljs-string">&quot;setpts=0.5*PTS&quot;</span> output.mp4<br></code></pre></td></tr></table></figure>
+
+<h2 id="编辑视频"><a href="#编辑视频" class="headerlink" title="编辑视频"></a>编辑视频</h2><p>可以修改 <code>original_network_id</code>、<code>transport_stream_id</code>、<code>service_id</code> 等等，<code>streamid</code> 代表音视频 <code>pid</code>，可以修改 <code>video pid</code> 和 <code>audio pid</code></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i test.mp4 -vcodec libx264 -strict -<span class="hljs-number">2</span> -acodec aac -streamid <span class="hljs-number">1</span>:<span class="hljs-number">2595</span> -mpegts_original_network_id <span class="hljs-number">0</span>x1122 -mpegts_transport_stream_id <span class="hljs-number">0</span>x3344 -mpegts_service_id <span class="hljs-number">0</span>x02 -mpegts_pmt_start_pid <span class="hljs-number">0</span>x0A20 -mpegts_start_pid0x0A21 -metadata service_provider=<span class="hljs-string">&quot;yakir&quot;</span> -metadata service_name=<span class="hljs-string">&quot;yakir&quot;</span>-bsf h264_mp4toannexb -f mpegts output.ts<br></code></pre></td></tr></table></figure>
+
+<h2 id="寻求帮助"><a href="#寻求帮助" class="headerlink" title="寻求帮助"></a>寻求帮助</h2><p>最后放出终极大招，超级详细的官方帮助信息</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">ffmpeg -h full</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="使用ffmpeg将图片合成为视频-附完整参数介绍"><a href="#使用ffmpeg将图片合成为视频-附完整参数介绍" class="headerlink" title="使用ffmpeg将图片合成为视频(附完整参数介绍)"></a>使用ffmpeg将图片合成为视频(附完整参数介绍)</h1><p>xindoo</p>
+<p>已于 2022-08-25 10:05:39 修改</p>
+<p>本文介绍下如何使用ffmpeg将大量图片拼接成一个视频，并介绍其中部分参数的含义。</p>
+<p>使用ffmpeg将图片拼接成视频前，需要将图片文件名做下预处理，文件名中必须有数字将其次序标记出来，这里我直接使用数字将图片重命名了，如下：</p>
+<img src="/2024/11/05/FFmpeg%E5%85%A5%E9%97%A8/f9228fb50bf64ae99f9e115c78626820.png#pic_center" srcset="/img/loading.gif" lazyload class="" title="请添加图片描述">
+
+<p>直接使用命令就可以将其转为mp4视频。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -f image2 -i %03d.jpg output_v1.mp4 <br></code></pre></td></tr></table></figure>
+
+<p>命令中的%03d是数字编号占位符，ffmpeg会按次序加载001-250.jpg做为输入。这里我们没有指定如何其他参数，所以ffmpeg使用了默认的参数，比如帧率是25fps，视频使用了h264编码，分辨率直接使用了图片原始分辨率……</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Input</span> #<span class="hljs-number">0</span>, mov,mp4,m4a,<span class="hljs-number">3</span>gp,<span class="hljs-number">3</span>g2,mj2, from &#x27;output.mp4&#x27;:<br>  <span class="hljs-attribute">Metadata</span>:<br>    <span class="hljs-attribute">major_brand</span>     : isom<br>    <span class="hljs-attribute">minor_version</span>   : <span class="hljs-number">512</span><br>    <span class="hljs-attribute">compatible_brands</span>: isomiso2avc1mp41<br>    <span class="hljs-attribute">encoder</span>         : Lavf58.<span class="hljs-number">76</span>.<span class="hljs-number">100</span><br>  <span class="hljs-attribute">Duration</span>: <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">10</span>.<span class="hljs-number">00</span>, start: <span class="hljs-number">0</span>.<span class="hljs-number">000000</span>, bitrate: <span class="hljs-number">28144</span> kb/s<br>  <span class="hljs-attribute">Stream</span> #<span class="hljs-number">0</span>:<span class="hljs-number">0</span>(und): Video: h264 (High) (avc1 / <span class="hljs-number">0</span>x31637661), yuvj420p(pc, bt470bg/unknown/unknown), <span class="hljs-number">2816</span>x2160<span class="hljs-meta"> [SAR 1:1 DAR 176:135], 28141 kb/s, 25 fps, 25 tbr, 12800 tbn, 50 tbc (default)</span><br><span class="hljs-meta">    Metadata:</span><br><span class="hljs-meta">      handler_name    : VideoHandler</span><br><span class="hljs-meta">      vendor_id       : [0][0][0][0]</span><br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>我们可以调整其参数，生成更符合我们需求的视频，下面介绍下几个常见的参数。</p>
+</blockquote>
+<h4 id="r-调整帧率"><a href="#r-调整帧率" class="headerlink" title="-r 调整帧率"></a>-r 调整帧率</h4><p>不指定帧率的话，ffmpeg会使用默认的25帧，也就是1秒钟拼接25张图片，我们可以通过调整帧率的大小来控制最终生成视频的时长。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -r 10 -f image2 -i %03d.jpg output_v2.mp4 <br></code></pre></td></tr></table></figure>
+
+<p>如上命令每秒会拼接10张图片，250张图片最终会生成25秒的视频。</p>
+<p>这里需要注意 <strong>-r 10</strong> 参数的位置，在-i %03d.jpg前面和在后面的效果是不一样的。放在-i后面只会改变输出的视频帧率，而输入的还是默认值25 ，比如ffmpeg -f image2 -i %03d.jpg -r 10 output1.mp4，250张图片依旧只会生成10s的视频，但视频的播放征率会减小到10。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -f image2 -i %03d.jpg -r 10 output_v3.mp4 <br></code></pre></td></tr></table></figure>
+
+<h3 id="b-v-调整视频码率"><a href="#b-v-调整视频码率" class="headerlink" title="-b:v 调整视频码率"></a>-b:v 调整视频码率</h3><p>-b:v bitrate of video。如果原始图片比较大，默认参数生成的视频大小会比较大。比如上文中我使用的图片都是2k的高清图，最终生成的10s视频就有35MB，码率有近30Mb&#x2F;s（码率是只1s播过的数据量，注意这里单位是小b）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -r 10 -f image2 -i %03d.jpg -b:v 4M output_v4.mp4<br></code></pre></td></tr></table></figure>
+
+
+<p>这里额外提醒下，改变码率会影响到视频清晰度，但并不意味着高码率的视频一定比低码率的视频清晰度更高，这还取决于视频编码格式，比如h265编码可以用更小的码率生成h264同等的视频质量，像av1、v8、v9等编码也优于h264。</p>
+<h3 id="crf-调整视频质量"><a href="#crf-调整视频质量" class="headerlink" title="-crf 调整视频质量"></a>-crf 调整视频质量</h3><p>-crf Constant Rate Factor，用以平衡视频质量和文件大小的参数，FFMPEG里取值范围为0-51，取值越高内容损失越多，视频质量更差。 ffmpeg的默认值是23，建议的取值范围是17-28。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -r 10 -f image2 -i %03d.jpg -b:v 4M -crf 17 output_v5.mp4<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="c-v-调整视频的编码格式"><a href="#c-v-调整视频的编码格式" class="headerlink" title="-c:v 调整视频的编码格式"></a>-c:v 调整视频的编码格式</h3><p>-c:v codec of video。目前ffmpeg针对于mp4默认使用的是h264，你可以使用-c:v libx265生成同等质量，但文件更小的h265视频。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -r 10 -f image2 -i %03d.jpg -c:v libx265 output_v6.mp4<br></code></pre></td></tr></table></figure>
+
+
+<p>output4.mp4相比于上文中生成的output.mp4，视频文件大小减少了60%，但视频质量不变。你也可以使用-c:v libvpx -c:v libvpx-vp9分别生成v8和v9编码的webm文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -f image2 -i %03d.jpg -c:v libvpx output-v8.webm<br></code></pre></td></tr></table></figure>
+
+
+
+<p>#注意webm默认生成的是低质量的视频，可使用-crf或者-b:v参数调整视频质量。</p>
+<h3 id="vf-scale-调整视频分辨率"><a href="#vf-scale-调整视频分辨率" class="headerlink" title="-vf scale 调整视频分辨率"></a>-vf scale 调整视频分辨率</h3><p>-vf scale: Video Filter Scale</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shel">ffmpeg -f image2 -i %03d.jpg -s 640x480 output_v7.mp4<br></code></pre></td></tr></table></figure>
+
+
+<p>上面的命令会将视频直接调整为640x480的分辨率，如果原始图片不是4:3 肯定是会对原始图像做拉伸的。可以使用下面的命令等比例缩放</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -f image2 -i %03d.jpg -vf scale=-2:480 output_v8.mp4 <br></code></pre></td></tr></table></figure>
+
+
+
+<p>#-2表示比例缩放，也可-vf scale&#x3D;640:-2固定宽度缩放高度</p>
+<p>以上就是几个常用的参数，这几个参数不仅限于图片转视频，视频转视频时也可以使用。<br>————————————————</p>
+<pre><code class="hljs">版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+</code></pre>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xindoo/article/details/121451318">https://blog.csdn.net/xindoo/article/details/121451318</a></p>
+<h1 id="使用FFmpeg工具将一个图片和一个音频合成一个视频以及在window系统下使用脚本运行"><a href="#使用FFmpeg工具将一个图片和一个音频合成一个视频以及在window系统下使用脚本运行" class="headerlink" title="使用FFmpeg工具将一个图片和一个音频合成一个视频以及在window系统下使用脚本运行"></a>使用FFmpeg工具将一个图片和一个音频合成一个视频以及在window系统下使用脚本运行</h1><p>悟空、大师兄</p>
+<p>于 2020-02-05 17:00:08 发布</p>
+<p>阅读量2.8k<br> 收藏 6</p>
+<p>点赞数 3<br>分类专栏： # ffmpeg 文章标签： ffmpeg<br>版权</p>
+<p>ffmpeg<br>专栏收录该内容<br>1 篇文章0 订阅<br>订阅专栏<br>注意：使用命令前检查正在使用的电脑是否安装的有ffmpeg工具以及是否配置环境变量。</p>
+<p>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ffmpeg -r 10 -f image2 -loop 1 -i D:\ffmpeg\001.jpg -i D:\ffmpeg\001.mp3 -s 1920x1080 -pix_fmt yuvj420p -t 278 -vcodec libx264 D:\ffmpeg\001.mp4<br></code></pre></td></tr></table></figure>
+
+
+
+<p>参数介绍：</p>
+<p>-r 10：fps设置为10帧&#x2F;秒（不同位置有不同含义）</p>
+<p>-f image2：表示输入或输出文件的格式是image2格式， -f是format（格式）的意思</p>
+<p>-loop 1：因为只有一张图片所以必须加入这个参数（循环这张图片）</p>
+<p>-i：输入</p>
+<p>-s：指定视频的分辨率</p>
+<p>-pix_fmt：指定图片输入格式(有yuv420,yuv444等各种格式)</p>
+<p>-t：图片转换成视频的持续时长，单位是秒（S），必须指定该值，否则会无限制生成视频</p>
+<p>-vcodec：生成视频的编码格式，这里指定的是x264</p>
+<p>window系统下脚本运行命令：<br>创建一个txt文件，然后将后缀改为bat</p>
+<p>@echo off<br>start cmd &#x2F;k “ffmpeg -r 10 -f image2 -loop 1 -i F:\javatest\3.jpg -i F:\javatest\lx.mp3 -s<br>1920x1080 -pix_fmt yuvj420p -t 278 -vcodec libx264 F:\javatest\lx1.mp4”<br>使用心得：</p>
+<p>1.-r后面的参数会影响到合成速度，参数越大耗时越长</p>
+<p>2.-t后面的参数要设置为和音频一样的长度</p>
+<p>3.音频格式我只测试了MP3、m4a两种格式，都是可行的<br>————————————————</p>
+<pre><code class="hljs">                        版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+</code></pre>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/it_erge/article/details/104184710">https://blog.csdn.net/it_erge/article/details/104184710</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/FFmpeg/" class="print-no-link">#FFmpeg</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>FFmpeg 最最强大的视频工具</div>
+      <div>http://coderdream.github.io/2024/11/05/FFmpeg入门/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CoderDream</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年11月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/11/06/FFmpeg%E5%85%A5%E9%97%A82/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/11/04/002_%E4%B8%AD%E6%96%87%E4%B9%A6%E7%B1%8D/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
