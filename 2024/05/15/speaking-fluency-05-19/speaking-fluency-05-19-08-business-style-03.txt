@@ -1,9 +1,0 @@
-﻿翻译下面的英文，返回结果为一句英文一句中文：
-Well everyone, it's a new year and there are going to be some changes around here.
-At my former company, we had a strict dress code.
-And as you know, I like to see my employees looking sharp.
-That said, my present team of advisors tells me that I need to relax.
-They showed me an article about current trends in today's major companies.
-So this year, I'll allow you to dress business casual every day.
-Our future plan is to let you wear anything you want on Fridays.
-But whatever you wear, just make sure it isn't wrinkled, okay?

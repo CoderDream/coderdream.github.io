@@ -1,7 +1,0 @@
-﻿翻译下面的英文，返回结果为一句英文一句中文：
-In former times, most American work environments had formal dress codes.
-Most men and women wore suits to work.
-In present times, however, work dress codes range from very casual to very formal to a combination of styles.
-Many companies, for example, have business casual dress codes.
-Business casual attire typically consists of slacks and button-down shirts, or dresses, skirts and closed-toed shoes.
-
